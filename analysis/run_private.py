@@ -14,6 +14,7 @@ def main():
     parser.add_argument('--database',help='Local PostgreSQL database for SQL extraction')
     parser.add_argument('--rscript',default='Rscript',help='Installed Rscript executable')
     parser.add_argument('--check',action='store_true',help='Validate the boundary without executing')
+    parser.add_argument('script_args',nargs=argparse.REMAINDER,help='Arguments passed unchanged to Python/R after --')
     args=parser.parse_args()
     supplied=str(args.workspace) if args.workspace else os.environ.get('CUFF_WORKSPACE','')
     if not supplied or '@' in supplied or not Path(supplied).is_absolute():parser.error('Set an absolute prepared private workspace')
@@ -29,6 +30,9 @@ def main():
     elif path.suffix.lower()=='.py':command=[sys.executable,str(path)]
     elif path.suffix.lower()=='.r':command=[args.rscript,str(path)]
     else:parser.error('Only Python, R or PostgreSQL extraction scripts are supported')
+    forwarded=args.script_args[1:] if args.script_args[:1]==['--'] else args.script_args
+    if path.suffix.lower()=='.sql' and forwarded:parser.error('SQL options belong to the launcher; argument forwarding is for Python/R scripts')
+    command+=forwarded
     if args.check:print('Prepared script boundary verified; no data read or analysis executed.');return
     subprocess.run(command,cwd=work,check=True)
 

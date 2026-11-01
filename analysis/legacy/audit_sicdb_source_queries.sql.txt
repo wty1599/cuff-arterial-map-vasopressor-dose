@@ -1,0 +1,11 @@
+-- Non-executable DuckDB query companion: run its owning guarded Python audit.
+-- Requires private registered tables/views; this .sql.txt file is for inspection.
+SELECT x.*,m.drug,m.unitname FROM read_csv_auto('@SICDB_ROOT@/medication.csv.gz',all_varchar=true) x JOIN vaso_concepts m ON x.DrugID=m.itemid WHERE x.CaseID IN (SELECT sid FROM checks) AND x.IsSingleDose='0';
+
+SELECT CaseID sid,ICUOffset,TimeOfStay,TRY_CAST(WeightOnAdmission AS DOUBLE)/1000 AS weight_kg FROM read_csv_auto('@SICDB_ROOT@/cases.csv.gz',all_varchar=true) WHERE CaseID IN (SELECT sid FROM checks);
+
+CREATE OR REPLACE TABLE source_triplets AS SELECT sid,ts,modality,family,quantile_cont(measurement,.5) FILTER(WHERE component='map') pressure,quantile_cont(measurement,.5) FILTER(WHERE component='sbp') systolic,quantile_cont(measurement,.5) FILTER(WHERE component='dbp') diastolic FROM source_bp GROUP BY sid,ts,modality,family;
+
+CREATE OR REPLACE TABLE source_clean AS SELECT sid,ts,modality,quantile_cont(pressure,.5) pressure FROM source_triplets WHERE pressure>=20 AND pressure<=200 AND (systolic IS NULL OR systolic<=300) AND (systolic IS NULL OR diastolic IS NULL OR (systolic>diastolic AND systolic-diastolic>=10)) GROUP BY sid,ts,modality;
+
+SELECT r.audit_id,r.source_start,r.source_stop,r.source_nee,(SELECT quantile_cont(b.pressure,.5) FROM source_clean b WHERE b.sid=r.sid AND b.modality='cuff' AND abs(b.ts-r.t)<.000001) source_cuff,(SELECT quantile_cont(b.pressure,.5) FROM source_clean b WHERE b.sid=r.sid AND b.modality='arterial' AND b.ts BETWEEN r.t-300 AND r.t+300 AND b.ts>=r.source_start AND b.ts<r.source_stop) source_art,(SELECT min(abs(b.ts-r.t)) FROM source_clean b WHERE b.sid=r.sid AND b.modality='arterial' AND b.ts BETWEEN r.t-300 AND r.t+300 AND b.ts>=r.source_start AND b.ts<r.source_stop) source_diff FROM reconstructed r;

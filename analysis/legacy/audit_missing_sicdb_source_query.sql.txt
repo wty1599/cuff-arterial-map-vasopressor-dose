@@ -1,0 +1,6 @@
+-- Non-executable DuckDB query companion: run its owning guarded Python audit.
+-- Requires private registered tables/views; this .sql.txt file is for inspection.
+WITH dictionary AS (
+      SELECT DISTINCT ReferenceGlobalID AS itemid,CASE WHEN ReferenceValue LIKE 'BloodPressureNI%' THEN 'cuff' ELSE 'arterial' END AS target
+      FROM read_csv_auto('@SICDB_ROOT@/d_references.csv.gz',all_varchar=true) WHERE ReferenceName='SignalFloat' AND regexp_matches(ReferenceValue,'^BloodPressure(Arterial|NI)MAP$'))
+      SELECT i.sid,i.target,i.lo,i.hi,x.Offset,x.rawdata,x.cnt FROM read_csv_auto('@SICDB_ROOT@/data_float_h.csv.gz',all_varchar=true) x JOIN dictionary d ON x.DataID=d.itemid JOIN input i ON x.CaseID=i.sid AND d.target=i.target AND TRY_CAST(x.Offset AS DOUBLE)<i.hi AND TRY_CAST(x.Offset AS DOUBLE)+3600>i.lo;

@@ -1,6 +1,6 @@
 # Privacy scan
 
-Status: **PASS**. Scanned 152 text files; parsed 64 Python source files. Secret scan: gitleaks 8.30.1 (pass). No patient data were read by this static scanner.
+Status: **PASS**. Scanned 220 text files; parsed 103 Python source files. Secret scan: gitleaks 8.30.1 (pass). No patient data were read by this static scanner.
 
 The checks cover secrets/tokens, private keys, absolute workstation paths, database connection strings, email addresses, literal patient-ID filters, forbidden aggregate columns, full-precision aggregate values, file types and notebook outputs. Matched secret values are never written to this report. The machine-readable companion contains rule locations and file hashes.
 

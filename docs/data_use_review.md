@@ -11,4 +11,12 @@ Official sources checked on 2026-11-02. This review records the applicable publi
 
 The ten-patient rule is a conservative project disclosure choice and the explicit author instruction for this repository, not a claim that every database license prescribes the same cutoff. Exact counts, marginal totals and full-precision ratios are withheld to reduce cross-table reconstruction. Source licenses remain controlling. The [AmsterdamUMCdb GitHub MIT license](https://github.com/AmsterdamUMC/AmsterdamUMCdb/blob/master/LICENSE) applies to its software and must not be mistaken for a license to redistribute patient data.
 
-The current private staging repository does not itself fulfill PhysioNet's publication-code availability condition. An author-controlled public code release is prepared but has not been performed. Before public release, confirm the signed AmsterdamUMCdb agreement and review the repository together with the manuscript's existing disclosures.
+## Investigator-supplied AmsterdamUMCdb code clause
+
+On 2026-11-02 the investigator supplied the applicable EULA code clause: "We will deposit all code behind our publications based on AmsterdamUMCdb in a public repository, preferably the AmsterdamUMCdb GitHub repository, no later than at publication."
+
+The release plan uses this main investigator-owned repository for the complete cross-database study code. The official AmsterdamUMCdb repository is the preferred location in that wording; a separate submission directory or pull request to the official repository is not part of this plan. The author checklist sets an earlier operational deadline: public visibility and a versioned release by manuscript acceptance, before formal publication. This repository remains private during submission.
+
+The supplied code clause does not establish permission to redistribute clinical records or exact aggregate counts. The conservative aggregate-release policy above remains in effect. The study's AmsterdamUMCdb v1.0.2 data release was verified by matching the current local admissions-file fingerprints to the archived official download review dated 2026-09-29. This is a local historical-provenance check; a new live confirmation from the archive API was unavailable in this follow-up.
+
+The current private staging repository does not itself fulfill the publication-code availability conditions. An author-controlled public code release is prepared but has not been performed. Before public release, review the applicable signed agreement and the repository together with the manuscript's existing disclosures.

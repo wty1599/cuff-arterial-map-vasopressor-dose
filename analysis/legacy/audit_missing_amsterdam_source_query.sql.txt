@@ -1,0 +1,6 @@
+-- Non-executable DuckDB query companion: run its owning guarded Python audit.
+-- Requires private registered tables/views; this .sql.txt file is for inspection.
+CREATE OR REPLACE TABLE found AS WITH dictionary AS (
+      SELECT DISTINCT itemid,CASE WHEN lower(item_en) LIKE 'non-invasive%' OR lower(item) LIKE 'niet invasieve%' THEN 'cuff' ELSE 'arterial' END AS target
+      FROM read_csv_auto('@CUFF_WORKSPACE@/phase0/amsterdam_dictionary_all.csv',all_varchar=true) WHERE lower(item_en) LIKE '%mean arterial pressure%' OR lower(item) LIKE 'abp gemiddeld%' OR lower(item)='picco apm')
+      SELECT DISTINCT i.sid,i.target FROM read_csv_auto('@CUFF_WORKSPACE@/phase0/_restricted/amsterdam_numeric_source.csv',all_varchar=true,encoding='latin-1') x JOIN dictionary d ON x.itemid=d.itemid JOIN input i ON x.admissionid=i.sid AND d.target=i.target AND TRY_CAST(x.measuredat AS DOUBLE)/1000>=i.lo AND TRY_CAST(x.measuredat AS DOUBLE)/1000<i.hi WHERE TRY_CAST(x.value AS DOUBLE) IS NOT NULL;

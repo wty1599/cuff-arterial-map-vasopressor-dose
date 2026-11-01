@@ -4,9 +4,9 @@ No release, public visibility change, Zenodo connection, deposition or DOI modif
 
 1. Confirm the final manuscript status and replace author placeholders in `CITATION.cff` and `.zenodo.json`. The phrase “submitted to Critical Care” is a requested label awaiting confirmation, not an established fact.
 2. Review the applicable signed database agreements, the disclosure policy and the final manuscript together. Confirm the final repository contains only approved code and aggregates.
-3. Change the GitHub repository from private to public when ready. Review the visibility confirmation carefully.
+3. **Hard deadline: complete public visibility and the versioned code release in steps 3–5 by manuscript acceptance, before formal publication.** Make this main GitHub repository public. Include the full study analysis code across all four databases, as required by the investigator's applicable AmsterdamUMCdb EULA. Preserve the verified AmsterdamUMCdb v1.0.2 data-release label. Review the visibility confirmation carefully.
 4. Sign in to Zenodo, connect the intended GitHub account, and enable archival capture for this repository. Check the imported title, authors, keywords, related manuscript and code-only MIT scope.
-5. Create and publish the `v1.0.0` GitHub release. Check the resulting Zenodo record, version DOI and concept DOI. Do not treat a draft or reserved DOI as a published archive.
+5. Create and publish the `v1.0.0` GitHub release by the deadline in step 3, after enabling Zenodo capture. Check the resulting Zenodo record, version DOI and concept DOI. Do not treat a draft or reserved DOI as a published archive.
 6. Add the verified code DOI and repository URL to the manuscript placeholders and final citation metadata. Check both manuscript versions and supplementary documentation for consistency.
 
 Reference: [Zenodo GitHub integration guidance](https://help.zenodo.org/docs/github/).

@@ -36,8 +36,9 @@ def main():
             if src.is_file():render(src,work/'sql'/src.relative_to(REPO/folder))
     for record in json.loads((REPO/'config/parameter_targets.json').read_text()):render(REPO/record['file'],work/record['workspace_target'])
     for src in (REPO/'config/mappings').glob('*.csv'):render(src,work/'phase0'/src.name)
-    for phase in ['phase0','phase1','phase2','phase3','phase4','phase5','phase6','phase3/icm_revision4']:
+    for phase in ['phase0','phase1','phase2','phase3','phase4','phase5','phase6','phase3/icm_revision4','phase3/revision8a']:
         for directory in ['_restricted','_logs','figures','qa','analysis']:(work/phase/directory).mkdir(parents=True,exist_ok=True)
+    (work/'phase3/icm_revision4/analysis/_restricted').mkdir(parents=True,exist_ok=True)
     print('Private workspace source templates prepared. No data were read and no analysis was run.')
 
 if __name__=='__main__':main()
