@@ -1,0 +1,61 @@
+{
+  "written_at": "2026-10-28T20:49:23.777977+08:00",
+  "specified_before_S1_S2_results": true,
+  "definitions_from_phase1_phase2_unchanged": true,
+  "S1": {
+    "name": "Exclude cardiac/cardiovascular surgical index ICU",
+    "source": {
+      "mimic": "mimiciv_icu.icustays.first_careunit",
+      "eicu": "public.patient.unittype"
+    },
+    "excluded_index_units": {
+      "mimic": [
+        "Cardiac Vascular Intensive Care Unit (CVICU)"
+      ],
+      "eicu": [
+        "CSICU",
+        "CTICU",
+        "CCU-CTICU"
+      ]
+    },
+    "missing_index_unit": "unknown; not retained in S1",
+    "supplementary_databases": {
+      "amsterdam": "not_performed: admissions.location identifies IC/MC, not cardiac-surgical unit; specialty is not an ICU unit and is not substituted",
+      "sicdb": "not_performed: source unit dictionary distinguishes care intensity, not cardiac-surgical ICU; surgical diagnosis/admission type is not a unit and is not substituted"
+    }
+  },
+  "S2": {
+    "name": "Restrict to source-confirmed sepsis population",
+    "mimic": "At least one existing mimiciv_derived.sepsis3 row with sepsis3=true for index stay, without imposing a new onset-time window",
+    "mimic_absence": "Existing derived table contains positive rows only. No matching row is not source-confirmed non-sepsis; report as not listed in positive-derived table and exclude from the restriction. Null/false rows, if present, remain separately classified.",
+    "eicu": "Case-insensitive substring sepsis in nonempty public.patient.apacheadmissiondx; source field is APACHE admission diagnosis",
+    "eicu_missing": "Null/empty/unknown diagnosis is unascertainable; nonempty non-sepsis diagnosis is recorded other APACHE diagnosis, not a claim that infection is absent",
+    "supplementary_databases": "not_requested"
+  },
+  "scope": "Main endpoint overall and five original-known dose strata; deep missed hypotension arterial<55 overall and >1.0; arterial<65 given cuff>=65 overall and >1.0. Add layer arterial<65 prevalence, counts, source ascertainment, flow checks. No additional tests, models, pooled estimates, outcomes, or phenotype analyses.",
+  "units": {
+    "dose": "micrograms/kg/min norepinephrine equivalent",
+    "MAP": "mmHg"
+  },
+  "dose_strata": [
+    "<=0.1",
+    ">0.1-0.25",
+    ">0.25-0.5",
+    ">0.5-1.0",
+    ">1.0"
+  ],
+  "overall": "All selected pairs including unknown dose",
+  "known_dose": "Original phase1 range-checked known doses; no recovery",
+  "bootstrap": {
+    "replicates": 2000,
+    "seed": 20261027,
+    "unit": "patient within selected database and sensitivity population",
+    "statistic": "pair-weighted numerator/denominator",
+    "interval": "percentile 95%",
+    "implementation": "Phase1 summarize and phase2 ratio_engine resampling mechanics retained: sorted patient index, multinomial whole-patient weights in batches of50, no pair resampling",
+    "boundary": "Keep event and denominator counts; mark degenerate zero/all-event CI as boundary_not_informative; empty denominator not_estimable",
+    "precision": "denominator<30 or CI width>0.30 marked insufficient, never combine/delete"
+  },
+  "audit": "20 patients per main database, deterministically sampled over joint S1/S2 states. Independently query source careunit and diagnosis/Sepsis-3 rows with separate SQL; row-level records retained in _restricted.",
+  "earlier_work": "Phase2 baseline/range/pair audits reused for unchanged variables; no claim of new full extraction verification."
+}

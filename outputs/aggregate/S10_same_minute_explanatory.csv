@@ -1,0 +1,12 @@
+database,scenario,metric,stratum,category,layer_prevalence_ci_upper,ci_upper,estimate,ci_lower,layer_prevalence_ci_lower,condition_low_arterial_prevalence,layer_low_arterial_prevalence,precision,source_csv,source_line
+MIMIC-IV,Same-minute pairing,Deep missed hypotension rate (arterial reference MAP <55 mmHg),all,all,,0.258,0.226,0.196,,,0.246,adequate,S10_same_minute_explanatory.csv,2
+MIMIC-IV,Same-minute pairing,Probability of arterial reference MAP <65 given cuff MAP >=65 mmHg,all,all_normal_cuff,,0.137,0.126,0.117,,0.126,0.246,insufficient precision,S10_same_minute_explanatory.csv,3
+MIMIC-IV,Same-minute pairing,Deep missed hypotension rate (arterial reference MAP <55 mmHg),>1.0,all,,0.376,0.190,0.086,,,0.529,adequate,S10_same_minute_explanatory.csv,4
+MIMIC-IV,Same-minute pairing,Probability of arterial reference MAP <65 given cuff MAP >=65 mmHg,>1.0,all_normal_cuff,,0.444,0.320,0.211,,0.320,0.529,adequate,S10_same_minute_explanatory.csv,5
+eICU,Same-minute pairing,Deep missed hypotension rate (arterial reference MAP <55 mmHg),all,all,,0.277,0.242,0.208,,,0.250,adequate,S10_same_minute_explanatory.csv,6
+eICU,Same-minute pairing,Probability of arterial reference MAP <65 given cuff MAP >=65 mmHg,all,all_normal_cuff,,0.161,0.143,0.128,,0.143,0.250,adequate,S10_same_minute_explanatory.csv,7
+eICU,Same-minute pairing,Deep missed hypotension rate (arterial reference MAP <55 mmHg),>1.0,all,,0.340,0.225,0.121,,,0.463,adequate,S10_same_minute_explanatory.csv,8
+eICU,Same-minute pairing,Probability of arterial reference MAP <65 given cuff MAP >=65 mmHg,>1.0,all_normal_cuff,,0.378,0.286,0.180,,0.286,0.463,adequate,S10_same_minute_explanatory.csv,9
+AmsterdamUMCdb,Same-minute pairing,Deep missed hypotension rate (arterial reference MAP <55 mmHg),all,all,,0.509,0.400,0.300,,,,adequate,S10_same_minute_explanatory.csv,10
+AmsterdamUMCdb,Same-minute pairing,Deep missed hypotension rate (arterial reference MAP <55 mmHg),>1.0,all,,0.699,0.356,0.051,,,,insufficient,S10_same_minute_explanatory.csv,11
+SICdb,Same-minute pairing,Deep missed hypotension rate (arterial reference MAP <55 mmHg),all,all,,0.297,0.212,0.147,,,,adequate,S10_same_minute_explanatory.csv,12

@@ -1,0 +1,11 @@
+metric,stratum,estimate,ci_lower,ci_upper,I2,precision,display,source_csv,source_line
+Deep missed hypotension rate (arterial reference MAP <55 mmHg),known,0.315,0.226,0.420,66.8,adequate,estimate,S2_pooled_deep_missed_hypotension.csv,2
+Deep missed hypotension rate (arterial reference MAP <55 mmHg),<=0.1,0.327,0.268,0.391,0.0,adequate,estimate,S2_pooled_deep_missed_hypotension.csv,3
+Deep missed hypotension rate (arterial reference MAP <55 mmHg),>0.1-0.25,0.337,0.273,0.407,0.0,adequate,estimate,S2_pooled_deep_missed_hypotension.csv,4
+Deep missed hypotension rate (arterial reference MAP <55 mmHg),>0.25-0.5,0.328,0.201,0.487,59.5,adequate,estimate,S2_pooled_deep_missed_hypotension.csv,5
+Deep missed hypotension rate (arterial reference MAP <55 mmHg),>1.0,0.220,0.106,0.402,0.0,adequate,estimate,S2_pooled_deep_missed_hypotension.csv,7
+Missed hypotension conditional on arterial reference MAP <60 mmHg,known,0.359,0.316,0.404,0.0,adequate,estimate,S2_pooled_deep_missed_hypotension.csv,8
+Missed hypotension conditional on arterial reference MAP <60 mmHg,<=0.1,0.358,0.296,0.425,50.2,adequate,estimate,S2_pooled_deep_missed_hypotension.csv,9
+Missed hypotension conditional on arterial reference MAP <60 mmHg,>0.1-0.25,0.368,0.307,0.433,27.4,adequate,estimate,S2_pooled_deep_missed_hypotension.csv,10
+Missed hypotension conditional on arterial reference MAP <60 mmHg,>0.25-0.5,0.376,0.272,0.494,49.1,adequate,estimate,S2_pooled_deep_missed_hypotension.csv,11
+Missed hypotension conditional on arterial reference MAP <60 mmHg,>1.0,0.281,0.160,0.447,0.0,adequate,estimate,S2_pooled_deep_missed_hypotension.csv,13

@@ -1,0 +1,77 @@
+{
+  "recorded_at": "2026-10-30T07:40:21.017238+08:00",
+  "recorded_before": "Any S5 outcome estimates or fits; existing phase1-4 results are already known.",
+  "population": "Original phase1 pairs with original known NE-eq; MIMIC-IV and eICU separately. No new exclusions or imputations.",
+  "source": "phase1/_restricted/pairs_<db>.parquet",
+  "outcome": "cuff_map >=65",
+  "conditioning_event": "art_map <65",
+  "dose_strata": [
+    "<=0.1",
+    ">0.1-0.25",
+    ">0.25-0.5",
+    ">0.5-1.0",
+    ">1.0"
+  ],
+  "primary": {
+    "family": "Binomial logistic, unpenalized maximum likelihood",
+    "covariate": "arterial MAP only, no dose",
+    "spline": "restricted cubic spline with linear tails, 5 knots",
+    "knot_quantiles": [
+      0.05,
+      0.275,
+      0.5,
+      0.725,
+      0.95
+    ],
+    "quantile_definition": "Type 7 quantile on pair-weighted distribution; recompute knots within every patient-cluster replicate",
+    "default_documentation": "https://search.r-project.org/CRAN/refmans/Hmisc/html/rcspline.eval.html",
+    "fit_implementation": "Exact binomial sufficient counts at distinct arterial MAP values, equivalent to individual pair likelihood; scaled truncated-power basis; Newton/IRLS with backtracking",
+    "convergence": "max 100 iterations; scaled score <1e-10 or parameter step <1e-8; rank/finite-likelihood checks",
+    "nonconvergence": "If original fit fails, empirical 1-mmHg method becomes primary for the entire database. Bootstrap failures are counted, not silently replaced with another model."
+  },
+  "expected_miss": "sum(n(a,dose)*P(cuff>=65|a) over a<65) / sum(n(a,dose) over a<65)",
+  "expected_cuff_conditional": "sum(n(a,dose)*P(cuff>=65|a) over a<65) / sum(n(a,dose)*P(cuff>=65|a) over all a)",
+  "observed_minus_expected": "Paired within the same bootstrap sample; not independent-CI subtraction.",
+  "explained_ratio": "(expected cuff-conditional risk at >1.0 minus <=0.1) / corresponding observed difference; no truncation to [0,1]. This is descriptive and not a causal mediation fraction.",
+  "bootstrap": {
+    "replicates": 2000,
+    "seed": 20261027,
+    "unit": "patient, all original known-dose pairs retained with resampling multiplicity",
+    "resampling_frame": "patients with at least one known-dose pair within each database",
+    "CI": "2.5th and 97.5th percentiles; finite replicate count reported",
+    "refit": true,
+    "zero_denominator": "If abs(observed high-low contrast)<1e-12, ratio undefined; report undefined count and valid replicates. Negative or >100% ratios remain valid."
+  },
+  "sensitivity": {
+    "relation": "Empirical cuff>=65 fraction by arterial MAP bin, recomputed within each bootstrap",
+    "bins": "Raw arterial MAP <40 and >120 as separate tails; floor to integer for 40<=a<120, exact 120 a separate level. No rounding of threshold membership. Empty bins have zero contribution to all sums, not an inferred negative event.",
+    "report": "Only >1.0 results for both metrics and explained ratio; low-dose quantities retained in ratio columns for reproducibility."
+  },
+  "interpretation": {
+    "dominant": "ratio >=0.75 AND CI of observed-minus-expected cuff-conditional risk at >1.0 includes zero",
+    "partial": "0.25<=ratio<0.75; state residual difference",
+    "low": "ratio<0.25: descriptive only, first issue",
+    "uncovered_high_ratio": "ratio>=0.75 but high-dose residual CI excludes zero: report substantial distribution contribution plus residual; do not force dominant/no-dose-effect claim",
+    "nonestimable": "Report unavailable and reason; no mechanistic interpretation",
+    "caution": "Even dominant branch supports compatibility with a common threshold relation, not proof of constant error variance, physical randomness, equivalence or absence of a device effect."
+  },
+  "precision": "dose stratum <500 pairs flagged; retain all results",
+  "locked": [
+    "cohort",
+    "pairing",
+    "artifact/quality rules",
+    "dose conversion and bins",
+    "prior analysis results",
+    "CC Background",
+    "CC Conclusions",
+    "main Figures 1-3"
+  ],
+  "writing": {
+    "discussion_words": [
+      900,
+      1050
+    ],
+    "icm": "Only conditional-overestimation correction",
+    "source_audit": "Reuse source-level checks for unchanged pairs; independent S5 computational check. No new deep-artifact review."
+  }
+}

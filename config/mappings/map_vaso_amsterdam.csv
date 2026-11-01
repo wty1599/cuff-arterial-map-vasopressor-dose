@@ -1,0 +1,12 @@
+itemid,label,drug,ordercategory,selected
+6818,Adrenaline (Epinefrine),epinephrine,2. Spuitpompen | Injecties Circulatie/Diuretica,1
+7179,Dopamine (Inotropin),dopamine,2. Spuitpompen,1
+7229,Noradrenaline (Norepinefrine),norepinephrine,2. Spuitpompen | Niet iv CZS/Sedatie/Analgetica,1
+9126,Fenylefrine (phenylephrine),phenylephrine,Niet iv Zalven/Crèmes/Druppels,0
+10196,Noradrenaline (serum),norepinephrine,,0
+10197,Adrenaline  (bloed),epinephrine,,0
+10198,Noradrenaline (plasma),norepinephrine,,0
+10199,Adrenaline (bloed),epinephrine,,0
+15640,Dopamine (bloed),dopamine,,0
+16962,SEPSIS_VASOPRESSOREN,vasopressin,,0
+19929,Fenylefrine,phenylephrine,2. Spuitpompen,1

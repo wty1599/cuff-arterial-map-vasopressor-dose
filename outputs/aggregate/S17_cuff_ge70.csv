@@ -1,0 +1,17 @@
+database,grouping,stratum,ci_upper,cuff_ge65_risk,estimate,ci_lower,precision,source_csv,source_line
+mimic,five_strata,<=0.1,0.108,0.138,0.100,0.091,insufficient precision,S17_cuff_ge70.csv,2
+mimic,five_strata,>0.1-0.25,0.126,0.153,0.113,0.101,adequate,S17_cuff_ge70.csv,3
+mimic,five_strata,>0.25-0.5,0.150,0.176,0.129,0.109,adequate,S17_cuff_ge70.csv,4
+mimic,five_strata,>0.5-1.0,0.172,0.191,0.145,0.120,adequate,S17_cuff_ge70.csv,5
+mimic,five_strata,>1.0,0.350,0.333,0.266,0.193,adequate,S17_cuff_ge70.csv,6
+mimic,three_groups,<=0.25,0.113,0.144,0.105,0.097,insufficient precision,S17_cuff_ge70.csv,7
+mimic,three_groups,>0.25-1.0,0.153,0.181,0.134,0.116,adequate,S17_cuff_ge70.csv,8
+mimic,three_groups,>1.0,0.350,0.333,0.266,0.193,adequate,S17_cuff_ge70.csv,9
+eicu,five_strata,<=0.1,0.113,0.133,0.101,0.090,adequate,S17_cuff_ge70.csv,10
+eicu,five_strata,>0.1-0.25,0.137,0.154,0.120,0.105,adequate,S17_cuff_ge70.csv,11
+eicu,five_strata,>0.25-0.5,0.154,0.158,0.126,0.100,adequate,S17_cuff_ge70.csv,12
+eicu,five_strata,>0.5-1.0,0.270,0.256,0.211,0.159,adequate,S17_cuff_ge70.csv,13
+eicu,five_strata,>1.0,0.249,0.226,0.174,0.114,adequate,S17_cuff_ge70.csv,14
+eicu,three_groups,<=0.25,0.120,0.141,0.108,0.097,adequate,S17_cuff_ge70.csv,15
+eicu,three_groups,>0.25-1.0,0.191,0.194,0.157,0.127,adequate,S17_cuff_ge70.csv,16
+eicu,three_groups,>1.0,0.249,0.226,0.174,0.114,adequate,S17_cuff_ge70.csv,17

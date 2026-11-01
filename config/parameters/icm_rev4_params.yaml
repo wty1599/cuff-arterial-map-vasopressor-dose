@@ -1,0 +1,62 @@
+{
+  "created_at": "2026-10-31T15:30:09.685775+08:00",
+  "seen_results": "All earlier analyses and user-supplied A1 counts/A2 rounded points were seen; A1/A2 bootstrap intervals have not been computed or viewed.",
+  "databases": [
+    "mimic",
+    "eicu"
+  ],
+  "pairing": "Original phase1 ±5-minute cuff-anchor paired arterial median; unchanged",
+  "population": "Original adult first-ICU paired observations; original known NE-eq only",
+  "dose_strata": [
+    "<=0.1",
+    ">0.1-0.25",
+    ">0.25-0.5",
+    ">0.5-1.0",
+    ">1.0"
+  ],
+  "dose_groups": [
+    "<=0.25",
+    ">0.25-1.0",
+    ">1.0"
+  ],
+  "bootstrap": {
+    "replicates": 2000,
+    "seed": 20261027,
+    "cluster": "patient",
+    "frame": "All original-known-dose paired patients within each database, matching phase5 S5; use same patient multiplicities for every A1/A2 stratum and metric",
+    "interval": "percentile 2.5/97.5; retain zero/all event boundary flags; no pseudocount; undefined LR denominator flagged; count valid finite replicates"
+  },
+  "A1": "P(arterial_MAP<65 | cuff_MAP>=70)",
+  "A2": {
+    "test_positive": "cuff_MAP<65",
+    "reference_positive": "arterial_MAP<65",
+    "LR_negative": "[FN/(TP+FN)]/[TN/(TN+FP)]",
+    "LR_positive": "[TP/(TP+FN)]/[FP/(TN+FP)]",
+    "interpretation": "Evaluate LR-negative five-stratum CI overlap descriptively; overlap is not equivalence or proof of identical device accuracy. If highest dose LR-negative is greater and disjoint from lowest-dose CI, omit the similar-likelihood-ratio sentence. If neither prespecified branch applies, report observed direction descriptively in ESM and use S5 in the letter; do not force similarity."
+  },
+  "quality": {
+    "A2_expected_rounded": {
+      "mimic": [
+        0.53,
+        0.53,
+        0.57,
+        0.5,
+        0.44
+      ],
+      "eicu": [
+        0.55,
+        0.57,
+        0.49,
+        0.56,
+        0.36
+      ]
+    },
+    "source_sample": "50 original >1.0 pairs per database, deterministic SHA256 ordering; independent SQL reconstruction of cuff/arterial values, timestamps, infusion rate and NE-eq; individual rows remain restricted",
+    "precision": "Flag denominator pairs<30 or patients<30; probability CI width>0.30. For LR also report contributing positive/negative patient counts; no probability range restriction on LR.",
+    "monotonic_check": "Compare A1 with cuff>=65 risk within each stratum; if reversal occurs verify interval boundaries and sources. This relation is an empirical diagnostic, not a probability identity."
+  },
+  "source_threshold_caveat": "A1 >=70 is the requested threshold; Lakhal >70 and averaging four readings are not identical. Do not change threshold or call A1 a formal replication.",
+  "time_sensitivity": "Reuse phase6 common-anchor selection/window evidence in ESM S9; no rerun. In letter use requested same-minute deep-missed 22.6%/24.2%.",
+  "clinical_claim": "Requested confirmation-before-reduction statement is an implication, not a tested strategy; retain dual-monitoring selection and no outcome evaluation; do not claim transportability was established.",
+  "protected": "All original manuscripts, original analyses, phase6/rev5 and ICM rev3 unchanged"
+}

@@ -1,0 +1,10 @@
+metric,stratum,estimate,ci_lower,ci_upper,I2,precision,display,source_csv,source_line
+Missed hypotension rate,known,0.440,0.372,0.510,66.3,adequate,estimate,S2_pooled_missed_and_false_alarm.csv,2
+Missed hypotension rate,<=0.1,0.441,0.384,0.501,61.8,adequate,estimate,S2_pooled_missed_and_false_alarm.csv,3
+Missed hypotension rate,>0.1-0.25,0.445,0.312,0.586,88.2,adequate,estimate,S2_pooled_missed_and_false_alarm.csv,4
+Missed hypotension rate,>0.25-0.5,0.447,0.375,0.520,25.9,adequate,estimate,S2_pooled_missed_and_false_alarm.csv,5
+Missed hypotension rate,>1.0,0.341,0.208,0.505,0.0,adequate,estimate,S2_pooled_missed_and_false_alarm.csv,7
+False-alarm rate,known,0.192,0.077,0.404,98.9,insufficient,Not pooled,S2_pooled_missed_and_false_alarm.csv,8
+False-alarm rate,<=0.1,0.195,0.062,0.470,98.9,insufficient,Not pooled,S2_pooled_missed_and_false_alarm.csv,9
+False-alarm rate,>0.1-0.25,0.155,0.084,0.269,93.7,adequate,Not pooled,S2_pooled_missed_and_false_alarm.csv,10
+False-alarm rate,>1.0,0.218,0.077,0.481,67.6,insufficient,Not pooled,S2_pooled_missed_and_false_alarm.csv,13

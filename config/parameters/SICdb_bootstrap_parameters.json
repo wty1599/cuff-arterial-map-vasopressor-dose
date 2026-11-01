@@ -1,0 +1,43 @@
+{
+  "diagnostic": "SICdb false-alarm and missed-hypotension bootstrap diagnostic only",
+  "recorded_at_utc": "2026-11-01T18:28:15.437800+00:00",
+  "timing": "After original results and rev8a audit; before this new diagnostic results",
+  "seed": 20261027,
+  "replicates": 2000,
+  "scenario": "primary_5min overall, including known and unknown doses",
+  "resampling_frame": "All original paired SICdb patients; include patients with zero endpoint denominator; never replace frame with endpoint-denominator patients",
+  "patient_order": "sorted(df.patient.unique()) as production sql/phase1/02_rates.py",
+  "rng": "numpy.random.default_rng(seed); original environment bit generator recorded at run",
+  "weights": "rng.multinomial(N, numpy.full(N,1/N), size=min(50,B-b)); shared weights across all endpoints/strata",
+  "estimand": "Pair-weighted ratio of weighted event counts to weighted eligible counts, not mean patient-specific rates",
+  "percentile": "numpy.quantile finite ratios at 0.025 and 0.975, linear interpolation",
+  "invalid": "Zero replicate denominator -> missing; report valid replicates",
+  "BCa": "Same 2000 bootstrap ratios. z0 from strict-less plus half equal fraction; acceleration from delete-one-patient jackknife over the same full paired-patient frame. If not finite, mark unavailable; no replacement rule. Quantiles via linear interpolation.",
+  "logit_Wald": "expit(logit(observed) +/- normal(0.975) * SD(bootstrap logits,ddof=1)); production boundary-only 0.5 event/non-event correction; no change to reported main CIs",
+  "contribution": "Rank by endpoint-event counts; all contribution and deletion summaries remain in the private diagnostic directory and must not be released.",
+  "exclusion": "Remove complete patient clusters of top1 and top5 event contributors, recalculate point estimate only; this is influence analysis not a revised target population",
+  "quantiles": [
+    0,
+    0.005,
+    0.01,
+    0.025,
+    0.05,
+    0.1,
+    0.25,
+    0.5,
+    0.75,
+    0.9,
+    0.95,
+    0.975,
+    0.99,
+    0.995,
+    1
+  ],
+  "BCa_author_issue": "Flag when either BCa endpoint differs from percentile endpoint by >0.05 absolute probability (>5pp)",
+  "scope_prohibitions": [
+    "Do not edit main results or DOCX",
+    "No patient or replicate-level outputs outside restricted/rev8d_bootstrap",
+    "Do not attribute skewness uniquely to contributor concentration",
+    "No new raw-source query; reuse the existing source-audit report."
+  ]
+}

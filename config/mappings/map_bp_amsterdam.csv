@@ -1,0 +1,115 @@
+itemid,label,label_en,category,unitname,classification,component,family,selected
+6640,Hartfrequentie,heart rate,HD-Hartritme,/min,other,,,0
+6641,ABP systolisch,invasive systolic arterial pressure,HD-Bloeddrukken,mmHg,arterial,sbp,art1,1
+6642,ABP gemiddeld,invasive mean arterial pressure,HD-Bloeddrukken,mmHg,arterial,map,art1,1
+6643,ABP diastolisch,invasive diastolic arterial pressure,HD-Bloeddrukken,mmHg,arterial,dbp,art1,1
+6644,PAP systolisch,pulmonary artery systolic pressure,HD-Profiel,mmHg,other,,,0
+6645,PAP gemiddeld,pulmonary artery mean pressure,HD-Profiel,mmHg,other,,,0
+6646,PAP diastolisch,pulmonary artery diastolic pressure,HD-Profiel,mmHg,other,,,0
+6658,IABP Frequentie,intra-aortic balloon pump frequency,HD-IABP,,other,,,0
+6671,Hartritme,heart rhythm,HD-Hartritme,,other,,,0
+6678,Niet invasieve bloeddruk systolisch,non-invasive systolic arterial pressure,HD-Bloeddrukken,mmHg,cuff,sbp,cuff,1
+6679,Niet invasieve bloeddruk gemiddeld,non-invasive mean arterial pressure,HD-Bloeddrukken,mmHg,cuff,map,cuff,1
+6680,Niet invasieve bloeddruk diastolisch,non-invasive diastolic arterial pressure,HD-Bloeddrukken,mmHg,cuff,dbp,cuff,1
+6707,End tidal CO2 concentratie,end tidal carbon dioxide partial pressure,RESP-Servo Patiëntgegevens,mmHg,other,,,0
+6846,PCO2,partial pressure of carbon dioxide in blood,LAB ASTRUPS,mmHg,other,,,0
+7166,Losartan (Cozaar),,Medicatie,,other,,,0
+7433,PO2,partial pressure of oxygen blood,LAB ASTRUPS,mmHg,other,,,0
+7666,Arteriele druk,CRRT access pressure,CVVH-Gegevens,mmHg,other,,,0
+8647,IABP Trigger,intra-aortic balloon pump trigger,HD-IABP,,other,,,0
+8649,IABP Systole,intra-aortic balloon pump systolic pressure,HD-IABP,mmHg,other,,,0
+8650,IABP Curve,intra-aortic balloon pump curve,HD-IABP,,other,,,0
+8654,IABP Pulsatie,intra-aortic balloon pump pulsations,HD-IABP,,other,,,0
+8655,IABP Augmentatie,intra-aortic balloon pump augmentation,HD-IABP,mmHg,other,,,0
+8840,ABP Plaats,,HD-Bloeddrukken,,other,,,0
+8841,ABP systolisch II,invasive systolic arterial pressure,HD-Overig,mmHg,arterial,sbp,art2,1
+8842,ABP diastolisch II,invasive diastolic arterial pressure,HD-Overig,mmHg,arterial,dbp,art2,1
+8843,ABP gemiddeld II,invasive mean arterial pressure,HD-Overig,mmHg,arterial,map,art2,1
+8884,End Tidal CO2 %,end tidal carbon dioxide partial pressure,ZZ-OUD-Resp-PatientGeg.,None,other,,,0
+8885,End Tidal CO2 mmHG,end tidal carbon dioxide partial pressure,ZZ-OUD-Resp-PatientGeg.,mmHg,other,,,0
+9159,Arterielijn Radialis,,PROC. Lijnen/Catheter/Drains,,other,,,0
+9160,Arterielijn Femoralis,,PROC. Lijnen/Catheter/Drains,,other,,,0
+9164,IABP femoralis,,PROC. Lijnen/Catheter/Drains,,other,,,0
+9186,Arterielijn Brachialis,,PROC. Lijnen/Catheter/Drains,,other,,,0
+9286,Arterielijn verschonen,,OPDR. Lijnen/Catheter/Drains,,other,,,0
+9303,Consult KNO-arts,,OPDR. Overig,,other,,,0
+9309,Consult Longarts,,OPDR. Respiratie,,other,,,0
+9317,Consult Oogarts,,OPDR. Overig,,other,,,0
+9462,Herstart protocol lijnen verschonen,,OPDR. Lijnen/Catheter/Drains,,other,,,0
+9466,.CVVH starten,,OPDR. CVVH,,other,,,0
+9467,CVVH anti-coagulantia starten,,OPDR. CVVH,,other,,,0
+9500,Liquor labwaarts,,OPDR. Lab. afnemen,,other,,,0
+9579,SDD-Protocol starten,,OPDR. Infectie,,other,,,0
+9605,IABP flush,,OPDR. Circulatie,,other,,,0
+9658,End Tidal CO2% (2),end tidal carbon dioxide partial pressure,ZZ-OUD-Resp-PatientGeg(2),None,other,,,0
+9990,pCO2 (bloed),partial pressure of carbon dioxide in blood,LAB-Astr-bloed,mmHg,other,,,0
+9996,PO2 (bloed),partial pressure of oxygen blood,LAB-Astr-bloed,mmHg,other,,,0
+10430,IABP,,PROC. Lijnen/Catheter/Drains,,other,,,0
+10431,IABP pulsaties,,OPDR. Circulatie,,other,,,0
+10432,IABP Cath. & Insteekopening controle,,OPDR. Circulatie,,other,,,0
+10434,IABP drukzak verwisselen,,OPDR. Circulatie,,other,,,0
+10591,Kunstneuzen starten,,OPDR. Respiratie,,other,,,0
+10611,HI-schema starten,,OPDR. Overig,,other,,,0
+10619,Arterielijn Ulnaris,,PROC. Lijnen/Catheter/Drains,,other,,,0
+10620,Arterielijn Dorsalis Pedis,,PROC. Lijnen/Catheter/Drains,,other,,,0
+10949,Bartonella henselae DNA PCR (biopt),,LAB-Viro-Micro-biopt,,other,,,0
+10950,Bartonella henselae DNA PCR (overig),,LAB-Viro-Micro-diversen,,other,,,0
+12356,End tidal CO2 concentratie (2),end tidal carbon dioxide partial pressure,RESP-Servo Patiëntgegevens(2),mmHg,other,,,0
+12421,Start Opdrachtenset Hypothermie reanismatie SET2,,OPDR. Overig,,other,,,0
+12440,IABP HF,intra-aortic balloon pump heart rate,HD-IABP,/min,other,,,0
+12441,IABP Mean Sys. Blood Pressure,intra-aortic balloon pump systolic pressure,HD-IABP,mmHG/lsb.,other,,,0
+12442,IABP Mean Dia. Blood Pressure,intra-aortic balloon pump diastolic pressure,HD-IABP,mmHG/lsb.,other,,,0
+12443,IABP Mean Blood Pressure,intra-aortic balloon pump mean pressure,HD-IABP,mmHG/lsb.,other,,,0
+12539,Arteriële sheet,,PROC. Lijnen/Catheter/Drains,,other,,,0
+12950,Candesartan (Atacand),,Medicatie,,other,,,0
+12955,CVVH-citraat Calciumpomp starten,,OPDR. CVVH,,other,,,0
+13007,Valsartan (Diovan),,Medicatie,,other,,,0
+13075,A_Hartfrequentie,,APACHE-II,/min,other,,,0
+13080,A_Arteriële_PH,,APACHE-II,Geen,other,,,0
+13093,A_ABPm,,APACHE-II,mmHg,other,,,0
+13099,Arterielijn Axillaris,,PROC. Lijnen/Catheter/Drains,,other,,,0
+14055,PiCCO HF Hartfrequentie,PiCCO heart rate,PiCCO-plus,/min,other,,,0
+14056,PiCCO APs,PiCCO systolic arterial pressure,PiCCO-plus,mmHg,arterial,sbp,picco,1
+14057,PiCCO APd,PiCCO diastolic arterial pressure,PiCCO-plus,mmHg,arterial,dbp,picco,1
+14058,PiCCO APm,PiCCO mean arterial pressure,PiCCO-plus,mmHg,arterial,map,picco,1
+14136,Consult Revalidatie arts,,OPDR. Houding & Beweging,,other,,,0
+14183,Lijnen_Arterieel_Complicaties,,P_Lijnen_Arterieel,,other,,,0
+14454,RA_ABPm,,APACHE II RESEARCH,mmHg,other,,,0
+14467,RA_Arteriële_PH,,APACHE II RESEARCH,Geen,other,,,0
+14608,ART-123 (AKPA) studie,,Research-Processen,,other,,,0
+14689,Start realiteitsoriëntatie,,Delier-Overig,,other,,,0
+14736,Streef Onderwaarde ABPm,,HD-Bloeddrukken,mmHg,other,,,0
+14737,Streef Onderwaarde NIBPm,,HD-Bloeddrukken,mmHg,other,,,0
+14835,MFT_Arteriele druk,CRRT access pressure,CVVH-MFT,mmHg,other,,,0
+14841,MFT_Arteriele ondergrens,,CVVH-MFT,mmHg,other,,,0
+14842,MFT_Arteriele bovengrens,,CVVH-MFT,mmHg,other,,,0
+15277,Streef Bovenwaarde ABPm,,HD-Bloeddrukken,mmHg,other,,,0
+15278,Streef Bovenwaarde ABPs,,HD-Bloeddrukken,mmHg,other,,,0
+15279,Streef Onderwaarde ABPs,,HD-Bloeddrukken,mmHg,other,,,0
+15280,Streef Bovenwaarde NIBPm,,HD-Bloeddrukken,mmHg,other,,,0
+15281,Streef Onderwaarde NIBPs,,HD-Bloeddrukken,mmHg,other,,,0
+15282,Streef Bovenwaarde NIBPs,,HD-Bloeddrukken,mmHg,other,,,0
+15296,Research ART-123/Placebo,,Medicatie,,other,,,0
+15471,Bartonella henselae DNA PCR (bloed),,LAB-Viro-Micro-edta-bloed,,other,,,0
+15708,Pat_Ontslag_Bijzonderheden_Overdracht_Zaalarts,,Transfer_Medisch_Checklist,,other,,,0
+16612,MCA_ABPm,,APACHE II MICV,mmHg,other,,,0
+16625,MCA_Arteriële_PH,,APACHE II MICV,Geen,other,,,0
+16902,IABP check drukzak,,OPDR. Circulatie,,other,,,0
+16904,Drukzak IABP,,INFUUS-Crystalloïd,,other,,,0
+17075,Bartonella henselae DNA PCR (punctaat),,LAB-Viro-Micro-punctaat,,other,,,0
+17077,Bartonella henselae IgM (bloed),,LAB-Viro-Micro-bloed,,other,,,0
+17079,"Bataviae, Bataviae, Swart (bloed)",,LAB-Hem-bloed,,other,,,0
+19129,Insuline aspart (Novorapid),insulin aspart,Medicatie,,other,,,0
+19225,Irbesartan (Aprovel),,Medicatie,,other,,,0
+20650,ECMO - Part,,ECMO,mmHg,other,,,0
+20654,ECMO - Tart,,ECMO,°C,other,,,0
+21056,PiCCO arterielijn brachialis (22 cm),,PROC. Lijnen/Catheter/Drains,,other,,,0
+21057,PiCCO arterielijn femoralis (20 cm) ,,PROC. Lijnen/Catheter/Drains,,other,,,0
+21091,ECMO canule arterieel,,PROC. ECMO,,other,,,0
+21093,Bypass canule (art femoralis),,PROC. ECMO,,other,,,0
+21189,Pulsaties Arteria Radialis Li,pulsations left radial artery,HD-Pulsaties,,other,,,0
+21190,Pulsaties Arteria Radialis Re,pulsations right radial artery,HD-Pulsaties,,other,,,0
+21191,Pulsaties Arteria Femoralis Re,pulsations right femoral artery,HD-Pulsaties,,other,,,0
+21192,Pulsaties Arteria Femoralis Li,pulsations left femoral artery,HD-Pulsaties,,other,,,0
+21213,PCO2 (bloed) - kPa,partial pressure of carbon dioxide in blood,LAB-Astr-bloed,kPa,other,,,0
+21214,PO2 (bloed) - kPa,partial pressure of oxygen blood,LAB-Astr-bloed,kPa,other,,,0

@@ -1,0 +1,11 @@
+database,stratum,method,observed,observed_ci_lower,observed_ci_upper,expected,expected_ci_lower,expected_ci_upper,arterial_hypotension_prevalence,source_csv,source_line
+MIMIC-IV,<=0.1,restricted_cubic_spline_5_knots,0.138,0.129,0.147,0.144,0.135,0.152,0.232,phase5_S5_counterfactual.csv,3
+MIMIC-IV,>0.1-0.25,restricted_cubic_spline_5_knots,0.153,0.140,0.165,0.158,0.147,0.169,0.255,phase5_S5_counterfactual.csv,5
+MIMIC-IV,>0.25-0.5,restricted_cubic_spline_5_knots,0.176,0.153,0.200,0.167,0.149,0.187,0.273,phase5_S5_counterfactual.csv,7
+MIMIC-IV,>0.5-1.0,restricted_cubic_spline_5_knots,0.191,0.162,0.222,0.192,0.166,0.219,0.318,phase5_S5_counterfactual.csv,9
+MIMIC-IV,>1.0,restricted_cubic_spline_5_knots,0.333,0.261,0.409,0.356,0.294,0.421,0.530,phase5_S5_counterfactual.csv,11
+eICU,<=0.1,restricted_cubic_spline_5_knots,0.133,0.120,0.147,0.134,0.122,0.147,0.218,phase5_S5_counterfactual.csv,17
+eICU,>0.1-0.25,restricted_cubic_spline_5_knots,0.154,0.137,0.170,0.151,0.135,0.167,0.242,phase5_S5_counterfactual.csv,19
+eICU,>0.25-0.5,restricted_cubic_spline_5_knots,0.158,0.132,0.186,0.168,0.146,0.194,0.277,phase5_S5_counterfactual.csv,21
+eICU,>0.5-1.0,restricted_cubic_spline_5_knots,0.256,0.200,0.321,0.236,0.191,0.288,0.379,phase5_S5_counterfactual.csv,23
+eICU,>1.0,restricted_cubic_spline_5_knots,0.226,0.156,0.314,0.277,0.194,0.378,0.450,phase5_S5_counterfactual.csv,25

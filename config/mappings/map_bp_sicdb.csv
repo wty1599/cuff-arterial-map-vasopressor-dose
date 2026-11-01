@@ -1,0 +1,9 @@
+itemid,label,category,unitname,classification,component,family,selected
+701,BloodPressureArterialSystolic,SignalFloat,mmHg,arterial,sbp,art1,1
+702,BloodPressureArterialDiastolic,SignalFloat,mmHg,arterial,dbp,art1,1
+703,BloodPressureArterialMAP,SignalFloat,mmHg,arterial,map,art1,1
+704,BloodPressureNISystolic,SignalFloat,mmHg,cuff,sbp,cuff,1
+705,BloodPressureNIDiastolic,SignalFloat,mmHg,cuff,dbp,cuff,1
+706,BloodPressureNIMAP,SignalFloat,mmHg,cuff,map,cuff,1
+2296,Arterial,LaboratoryType,,other,,,0
+3045,ArterialLine,Line,,other,,,0

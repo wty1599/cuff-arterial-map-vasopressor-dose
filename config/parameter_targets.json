@@ -1,0 +1,38 @@
+[
+  {
+    "file": "config/parameters/phase0_parameters.json",
+    "workspace_target": "sql/phase0_parameters.json"
+  },
+  {
+    "file": "config/parameters/phase1_parameters.json",
+    "workspace_target": "sql/phase1/phase1_parameters.json"
+  },
+  {
+    "file": "config/parameters/phase2_parameters.json",
+    "workspace_target": "sql/phase2/phase2_parameters.json"
+  },
+  {
+    "file": "config/parameters/population_parameters.json",
+    "workspace_target": "sql/phase3/population_parameters.json"
+  },
+  {
+    "file": "config/parameters/phase4_params.yaml",
+    "workspace_target": "phase4/phase4_params.yaml"
+  },
+  {
+    "file": "config/parameters/phase5_params.yaml",
+    "workspace_target": "phase5/phase5_params.yaml"
+  },
+  {
+    "file": "config/parameters/phase6_params.yaml",
+    "workspace_target": "phase6/phase6_params.yaml"
+  },
+  {
+    "file": "config/parameters/icm_rev4_params.yaml",
+    "workspace_target": "phase3/icm_revision4/analysis/icm_rev4_params.yaml"
+  },
+  {
+    "file": "config/parameters/SICdb_bootstrap_parameters.json",
+    "workspace_target": "restricted/rev8d_bootstrap/diagnostics/SICdb_bootstrap_parameters.json"
+  }
+]

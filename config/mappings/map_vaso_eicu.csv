@@ -1,0 +1,102 @@
+itemid,label,drug,unitname,selected
+DOPamine MAX 800 mg Dextrose 5% 250 ml  Premix (mcg/kg/min),DOPamine MAX 800 mg Dextrose 5% 250 ml  Premix (mcg/kg/min),dopamine,mcg/kg/min,1
+DOPamine STD 15 mg Dextrose 5% 250 ml  Premix (mcg/kg/min),DOPamine STD 15 mg Dextrose 5% 250 ml  Premix (mcg/kg/min),dopamine,mcg/kg/min,1
+DOPamine STD 400 mg Dextrose 5% 250 ml  Premix (mcg/kg/min),DOPamine STD 400 mg Dextrose 5% 250 ml  Premix (mcg/kg/min),dopamine,mcg/kg/min,1
+DOPamine STD 400 mg Dextrose 5% 500 ml  Premix (mcg/kg/min),DOPamine STD 400 mg Dextrose 5% 500 ml  Premix (mcg/kg/min),dopamine,mcg/kg/min,1
+Dopamine,Dopamine,dopamine,,1
+Dopamine (),Dopamine (),dopamine,,1
+Dopamine (Unknown),Dopamine (Unknown),dopamine,Unknown,1
+Dopamine (mcg/hr),Dopamine (mcg/hr),dopamine,mcg/hr,1
+Dopamine (mcg/kg/hr),Dopamine (mcg/kg/hr),dopamine,mcg/kg/hr,1
+Dopamine (mcg/kg/min),Dopamine (mcg/kg/min),dopamine,mcg/kg/min,1
+Dopamine (mcg/min),Dopamine (mcg/min),dopamine,mcg/min,1
+Dopamine (mg/hr),Dopamine (mg/hr),dopamine,mg/hr,1
+Dopamine (ml/hr),Dopamine (ml/hr),dopamine,ml/hr,1
+Dopamine (nanograms/kg/min),Dopamine (nanograms/kg/min),dopamine,nanograms/kg/min,1
+EPINEPHrine(Adrenalin)MAX 30 mg Sodium Chloride 0.9% 250 ml (mcg/min),EPINEPHrine(Adrenalin)MAX 30 mg Sodium Chloride 0.9% 250 ml (mcg/min),epinephrine,Adrenalin | mcg/min,1
+EPINEPHrine(Adrenalin)STD 4 mg Sodium Chloride 0.9% 250 ml (mcg/min),EPINEPHrine(Adrenalin)STD 4 mg Sodium Chloride 0.9% 250 ml (mcg/min),epinephrine,Adrenalin | mcg/min,1
+EPINEPHrine(Adrenalin)STD 4 mg Sodium Chloride 0.9% 500 ml (mcg/min),EPINEPHrine(Adrenalin)STD 4 mg Sodium Chloride 0.9% 500 ml (mcg/min),epinephrine,Adrenalin | mcg/min,1
+EPINEPHrine(Adrenalin)STD 7 mg Sodium Chloride 0.9% 250 ml (mcg/min),EPINEPHrine(Adrenalin)STD 7 mg Sodium Chloride 0.9% 250 ml (mcg/min),epinephrine,Adrenalin | mcg/min,1
+Epinepherine (mcg/min),Epinepherine (mcg/min),epinephrine,mcg/min,1
+Epinephrine,Epinephrine,epinephrine,,1
+Epinephrine (),Epinephrine (),epinephrine,,1
+Epinephrine (mcg/hr),Epinephrine (mcg/hr),epinephrine,mcg/hr,1
+Epinephrine (mcg/kg/min),Epinephrine (mcg/kg/min),epinephrine,mcg/kg/min,1
+Epinephrine (mcg/min),Epinephrine (mcg/min),epinephrine,mcg/min,1
+Epinephrine (mg/hr),Epinephrine (mg/hr),epinephrine,mg/hr,1
+Epinephrine (mg/kg/min),Epinephrine (mg/kg/min),epinephrine,mg/kg/min,1
+Epinephrine (ml/hr),Epinephrine (ml/hr),epinephrine,ml/hr,1
+Levophed (mcg/kg/min),Levophed (mcg/kg/min),norepinephrine,mcg/kg/min,1
+Levophed (mcg/min),Levophed (mcg/min),norepinephrine,mcg/min,1
+Levophed (mg/hr),Levophed (mg/hr),norepinephrine,mg/hr,1
+Levophed (ml/hr),Levophed (ml/hr),norepinephrine,ml/hr,1
+NEO-SYNEPHRINE (mcg/min),NEO-SYNEPHRINE (mcg/min),phenylephrine,mcg/min,1
+Neo Synephrine (mcg/min),Neo Synephrine (mcg/min),phenylephrine,mcg/min,1
+Neo-Synephrine (mcg/min),Neo-Synephrine (mcg/min),phenylephrine,mcg/min,1
+NeoSynephrine (mcg/min),NeoSynephrine (mcg/min),phenylephrine,mcg/min,1
+Neosynephrine (mcg/min),Neosynephrine (mcg/min),phenylephrine,mcg/min,1
+Neosynephrine (ml/hr),Neosynephrine (ml/hr),phenylephrine,ml/hr,1
+Norepinephrine,Norepinephrine,norepinephrine,,1
+Norepinephrine (),Norepinephrine (),norepinephrine,,1
+Norepinephrine (Unknown),Norepinephrine (Unknown),norepinephrine,Unknown,1
+Norepinephrine (mcg/hr),Norepinephrine (mcg/hr),norepinephrine,mcg/hr,1
+Norepinephrine (mcg/kg/hr),Norepinephrine (mcg/kg/hr),norepinephrine,mcg/kg/hr,1
+Norepinephrine (mcg/kg/min),Norepinephrine (mcg/kg/min),norepinephrine,mcg/kg/min,1
+Norepinephrine (mcg/min),Norepinephrine (mcg/min),norepinephrine,mcg/min,1
+Norepinephrine (mg/hr),Norepinephrine (mg/hr),norepinephrine,mg/hr,1
+Norepinephrine (mg/kg/min),Norepinephrine (mg/kg/min),norepinephrine,mg/kg/min,1
+Norepinephrine (mg/min),Norepinephrine (mg/min),norepinephrine,mg/min,1
+Norepinephrine (ml/hr),Norepinephrine (ml/hr),norepinephrine,ml/hr,1
+Norepinephrine (units/min),Norepinephrine (units/min),norepinephrine,units/min,1
+Norepinephrine MAX 32 mg Dextrose 5% 250 ml (mcg/min),Norepinephrine MAX 32 mg Dextrose 5% 250 ml (mcg/min),norepinephrine,mcg/min,1
+Norepinephrine MAX 32 mg Dextrose 5% 500 ml (mcg/min),Norepinephrine MAX 32 mg Dextrose 5% 500 ml (mcg/min),norepinephrine,mcg/min,1
+Norepinephrine STD 32 mg Dextrose 5% 282 ml (mcg/min),Norepinephrine STD 32 mg Dextrose 5% 282 ml (mcg/min),norepinephrine,mcg/min,1
+Norepinephrine STD 32 mg Dextrose 5% 500 ml (mcg/min),Norepinephrine STD 32 mg Dextrose 5% 500 ml (mcg/min),norepinephrine,mcg/min,1
+Norepinephrine STD 4 mg Dextrose 5% 250 ml (mcg/min),Norepinephrine STD 4 mg Dextrose 5% 250 ml (mcg/min),norepinephrine,mcg/min,1
+Norepinephrine STD 4 mg Dextrose 5% 500 ml (mcg/min),Norepinephrine STD 4 mg Dextrose 5% 500 ml (mcg/min),norepinephrine,mcg/min,1
+Norepinephrine STD 8 mg Dextrose 5% 250 ml (mcg/min),Norepinephrine STD 8 mg Dextrose 5% 250 ml (mcg/min),norepinephrine,mcg/min,1
+Norepinephrine STD 8 mg Dextrose 5% 500 ml (mcg/min),Norepinephrine STD 8 mg Dextrose 5% 500 ml (mcg/min),norepinephrine,mcg/min,1
+Phenylephrine,Phenylephrine,phenylephrine,,1
+Phenylephrine  MAX 100 mg Sodium Chloride 0.9% 250 ml (mcg/min),Phenylephrine  MAX 100 mg Sodium Chloride 0.9% 250 ml (mcg/min),phenylephrine,mcg/min,1
+Phenylephrine  STD 20 mg Sodium Chloride 0.9% 250 ml (mcg/min),Phenylephrine  STD 20 mg Sodium Chloride 0.9% 250 ml (mcg/min),phenylephrine,mcg/min,1
+Phenylephrine  STD 20 mg Sodium Chloride 0.9% 500 ml (mcg/min),Phenylephrine  STD 20 mg Sodium Chloride 0.9% 500 ml (mcg/min),phenylephrine,mcg/min,1
+Phenylephrine (),Phenylephrine (),phenylephrine,,1
+Phenylephrine (mcg/hr),Phenylephrine (mcg/hr),phenylephrine,mcg/hr,1
+Phenylephrine (mcg/kg/min),Phenylephrine (mcg/kg/min),phenylephrine,mcg/kg/min,1
+Phenylephrine (mcg/kg/min) (mcg/kg/min),Phenylephrine (mcg/kg/min) (mcg/kg/min),phenylephrine,mcg/kg/min | mcg/kg/min,1
+Phenylephrine (mcg/min),Phenylephrine (mcg/min),phenylephrine,mcg/min,1
+Phenylephrine (mcg/min) (mcg/min),Phenylephrine (mcg/min) (mcg/min),phenylephrine,mcg/min | mcg/min,1
+Phenylephrine (mg/hr),Phenylephrine (mg/hr),phenylephrine,mg/hr,1
+Phenylephrine (mg/kg/min),Phenylephrine (mg/kg/min),phenylephrine,mg/kg/min,1
+Phenylephrine (ml/hr),Phenylephrine (ml/hr),phenylephrine,ml/hr,1
+VAsopressin (units/min),VAsopressin (units/min),vasopressin,units/min,1
+Vasopressin,Vasopressin,vasopressin,,1
+Vasopressin (),Vasopressin (),vasopressin,,1
+Vasopressin (Unknown),Vasopressin (Unknown),vasopressin,Unknown,1
+Vasopressin (mcg/kg/min),Vasopressin (mcg/kg/min),vasopressin,mcg/kg/min,1
+Vasopressin (mcg/min),Vasopressin (mcg/min),vasopressin,mcg/min,1
+Vasopressin (mg/hr),Vasopressin (mg/hr),vasopressin,mg/hr,1
+Vasopressin (mg/min),Vasopressin (mg/min),vasopressin,mg/min,1
+Vasopressin (ml/hr),Vasopressin (ml/hr),vasopressin,ml/hr,1
+Vasopressin (units/hr),Vasopressin (units/hr),vasopressin,units/hr,1
+Vasopressin (units/kg/min),Vasopressin (units/kg/min),vasopressin,units/kg/min,1
+Vasopressin (units/min),Vasopressin (units/min),vasopressin,units/min,1
+Vasopressin 20 Units Sodium Chloride 0.9% 100 ml (units/hr),Vasopressin 20 Units Sodium Chloride 0.9% 100 ml (units/hr),vasopressin,units/hr,1
+Vasopressin 20 Units Sodium Chloride 0.9% 250 ml (units/hr),Vasopressin 20 Units Sodium Chloride 0.9% 250 ml (units/hr),vasopressin,units/hr,1
+Vasopressin 40 Units Sodium Chloride 0.9% 100 ml (Unknown),Vasopressin 40 Units Sodium Chloride 0.9% 100 ml (Unknown),vasopressin,Unknown,1
+Vasopressin 40 Units Sodium Chloride 0.9% 100 ml (units/hr),Vasopressin 40 Units Sodium Chloride 0.9% 100 ml (units/hr),vasopressin,units/hr,1
+Vasopressin 40 Units Sodium Chloride 0.9% 100 ml (units/kg/hr),Vasopressin 40 Units Sodium Chloride 0.9% 100 ml (units/kg/hr),vasopressin,units/kg/hr,1
+Vasopressin 40 Units Sodium Chloride 0.9% 100 ml (units/min),Vasopressin 40 Units Sodium Chloride 0.9% 100 ml (units/min),vasopressin,units/min,1
+Vasopressin 40 Units Sodium Chloride 0.9% 200 ml (units/min),Vasopressin 40 Units Sodium Chloride 0.9% 200 ml (units/min),vasopressin,units/min,1
+Volume (ml) Phenylephrine,Volume (ml) Phenylephrine,phenylephrine,ml,0
+Volume (ml) Phenylephrine (),Volume (ml) Phenylephrine (),phenylephrine,ml | ,0
+dopamine (mcg/kg/min),dopamine (mcg/kg/min),dopamine,mcg/kg/min,1
+levophed  (mcg/min),levophed  (mcg/min),norepinephrine,mcg/min,1
+levophed (mcg/min),levophed (mcg/min),norepinephrine,mcg/min,1
+levophed (ml/hr),levophed (ml/hr),norepinephrine,ml/hr,1
+neo-synephrine (mcg/min),neo-synephrine (mcg/min),phenylephrine,mcg/min,1
+neosynephrine (mcg/min),neosynephrine (mcg/min),phenylephrine,mcg/min,1
+norepinephrine Volume (ml),norepinephrine Volume (ml),norepinephrine,ml,0
+norepinephrine Volume (ml) (ml/hr),norepinephrine Volume (ml) (ml/hr),norepinephrine,ml | ml/hr,0
+vasopressin (ml/hr),vasopressin (ml/hr),vasopressin,ml/hr,1
+vasopressin (units/min),vasopressin (units/min),vasopressin,units/min,1

@@ -1,0 +1,21 @@
+database,scenario,endpoint,stratum,ci_upper,estimate,ci_lower,precision,source_csv,source_line
+MIMIC-IV,Primary five-minute pairing,Missed hypotension rate,bmi40_yes,0.477,0.414,0.343,adequate,S8_subgroup_rates.csv,2
+MIMIC-IV,Primary five-minute pairing,Missed hypotension rate,bmi40_no,0.459,0.438,0.417,adequate,S8_subgroup_rates.csv,3
+MIMIC-IV,Primary five-minute pairing,Missed hypotension rate,af_yes,0.439,0.414,0.390,adequate,S8_subgroup_rates.csv,4
+MIMIC-IV,Primary five-minute pairing,Missed hypotension rate,af_no,0.452,0.428,0.404,adequate,S8_subgroup_rates.csv,5
+MIMIC-IV,Primary five-minute pairing,False-alarm rate,bmi40_yes,0.276,0.239,0.207,adequate,S8_subgroup_rates.csv,6
+MIMIC-IV,Primary five-minute pairing,False-alarm rate,bmi40_no,0.201,0.191,0.180,adequate,S8_subgroup_rates.csv,7
+MIMIC-IV,Primary five-minute pairing,False-alarm rate,af_yes,0.220,0.204,0.189,adequate,S8_subgroup_rates.csv,8
+MIMIC-IV,Primary five-minute pairing,False-alarm rate,af_no,0.207,0.196,0.185,adequate,S8_subgroup_rates.csv,9
+eICU,Primary five-minute pairing,Missed hypotension rate,bmi40_yes,0.471,0.429,0.381,adequate,S8_subgroup_rates.csv,10
+eICU,Primary five-minute pairing,Missed hypotension rate,bmi40_no,0.430,0.412,0.392,adequate,S8_subgroup_rates.csv,11
+eICU,Primary five-minute pairing,Missed hypotension rate,af_yes,0.442,0.391,0.341,adequate,S8_subgroup_rates.csv,12
+eICU,Primary five-minute pairing,Missed hypotension rate,af_no,0.435,0.417,0.398,adequate,S8_subgroup_rates.csv,13
+eICU,Primary five-minute pairing,False-alarm rate,bmi40_yes,0.253,0.215,0.183,adequate,S8_subgroup_rates.csv,14
+eICU,Primary five-minute pairing,False-alarm rate,bmi40_no,0.193,0.183,0.173,insufficient precision,S8_subgroup_rates.csv,15
+eICU,Primary five-minute pairing,False-alarm rate,af_yes,0.236,0.209,0.183,adequate,S8_subgroup_rates.csv,16
+eICU,Primary five-minute pairing,False-alarm rate,af_no,0.194,0.183,0.173,insufficient precision,S8_subgroup_rates.csv,17
+AmsterdamUMCdb,Primary five-minute pairing,Missed hypotension rate,af_yes,0.614,0.539,0.464,adequate,S8_subgroup_rates.csv,18
+AmsterdamUMCdb,Primary five-minute pairing,Missed hypotension rate,af_no,0.581,0.477,0.386,adequate,S8_subgroup_rates.csv,19
+AmsterdamUMCdb,Primary five-minute pairing,False-alarm rate,af_yes,0.232,0.185,0.141,adequate,S8_subgroup_rates.csv,20
+AmsterdamUMCdb,Primary five-minute pairing,False-alarm rate,af_no,0.148,0.111,0.083,adequate,S8_subgroup_rates.csv,21

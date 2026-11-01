@@ -1,0 +1,15 @@
+database,scenario,endpoint,stratum,ci_upper,estimate,ci_lower,precision,source_csv,source_line
+eICU,Original known-dose eICU pairs,Missed hypotension rate,all,0.478,0.451,0.423,adequate,S10_known_dose_only.csv,2
+eICU,Original known-dose eICU pairs,Missed hypotension rate,known,0.478,0.451,0.423,adequate,S10_known_dose_only.csv,3
+eICU,Original known-dose eICU pairs,Missed hypotension rate,<=0.1,0.499,0.469,0.437,adequate,S10_known_dose_only.csv,5
+eICU,Original known-dose eICU pairs,Missed hypotension rate,>0.1-0.25,0.525,0.485,0.447,adequate,S10_known_dose_only.csv,6
+eICU,Original known-dose eICU pairs,Missed hypotension rate,>0.25-0.5,0.478,0.416,0.358,adequate,S10_known_dose_only.csv,7
+eICU,Original known-dose eICU pairs,Missed hypotension rate,>0.5-1.0,0.529,0.467,0.403,adequate,S10_known_dose_only.csv,8
+eICU,Original known-dose eICU pairs,Missed hypotension rate,>1.0,0.408,0.300,0.221,adequate,S10_known_dose_only.csv,9
+eICU,Original known-dose eICU pairs,False-alarm rate,all,0.165,0.153,0.141,adequate,S10_known_dose_only.csv,10
+eICU,Original known-dose eICU pairs,False-alarm rate,known,0.165,0.153,0.141,adequate,S10_known_dose_only.csv,11
+eICU,Original known-dose eICU pairs,False-alarm rate,<=0.1,0.169,0.153,0.138,adequate,S10_known_dose_only.csv,13
+eICU,Original known-dose eICU pairs,False-alarm rate,>0.1-0.25,0.168,0.147,0.128,adequate,S10_known_dose_only.csv,14
+eICU,Original known-dose eICU pairs,False-alarm rate,>0.25-0.5,0.180,0.152,0.129,adequate,S10_known_dose_only.csv,15
+eICU,Original known-dose eICU pairs,False-alarm rate,>0.5-1.0,0.216,0.172,0.135,adequate,S10_known_dose_only.csv,16
+eICU,Original known-dose eICU pairs,False-alarm rate,>1.0,0.226,0.161,0.113,adequate,S10_known_dose_only.csv,17

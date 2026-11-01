@@ -1,0 +1,13 @@
+itemid,label,drug,unitname,linksto,selected
+221289,Epinephrine,epinephrine,mg,inputevents,1
+221662,Dopamine,dopamine,mg,inputevents,1
+221749,Phenylephrine,phenylephrine,mg,inputevents,1
+221906,Norepinephrine,norepinephrine,mg,inputevents,1
+222315,Vasopressin,vasopressin,units,inputevents,1
+229617,Epinephrine.,epinephrine,mg,inputevents,1
+229630,Phenylephrine (50/250),phenylephrine,mg,inputevents,1
+229631,Phenylephrine (200/250)_OLD_1,phenylephrine,mg,inputevents,1
+229632,Phenylephrine (200/250),phenylephrine,mg,inputevents,1
+229709,Angiotensin II (Giapreza),angiotensin_ii,mg,inputevents,1
+229764,Angiotensin II (Giapreza),angiotensin_ii,ng,inputevents,1
+229789,Phenylephrine (Intubation),phenylephrine,mcg,chartevents,0

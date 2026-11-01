@@ -1,0 +1,90 @@
+{
+  "analysis": "Time-window and cuff-anchor selection sensitivity",
+  "client_date": "2026-10-31",
+  "saved_at_system_time": "2026-10-31T01:53:58.748942+08:00",
+  "status": "Recorded after seeing prior native-window summaries and before new common-anchor results",
+  "databases": [
+    "mimic",
+    "eicu"
+  ],
+  "unchanged": [
+    "original cohorts",
+    "cuff anchors and values",
+    "treatment episodes",
+    "dose assignments and five strata",
+    "quality and artifact rules",
+    "original main-analysis CSVs and figures",
+    "all rev4 source files"
+  ],
+  "inputs": "phase1/_restricted/pairs_<db>.parquet, window2_<db>.parquet, same_minute_<db>.parquet",
+  "linkage": "one-to-one cid cuff-anchor identifier; patient clustering uses pid",
+  "windows": {
+    "5min": "original median of valid arterial values within +/-300 seconds in the same treatment episode",
+    "2min": "previously extracted median within +/-120 seconds",
+    "same_minute": "previously extracted median in the same recorded calendar minute, floor(t/60), not an instantaneous synchronized measurement"
+  },
+  "frames": {
+    "native": "all cuff anchors eligible in the respective window",
+    "common": "intersection eligible in all three windows, fixed identical cuff observations across comparisons"
+  },
+  "dose_strata": [
+    "<=0.1",
+    ">0.1-0.25",
+    ">0.25-0.5",
+    ">0.5-1.0",
+    ">1.0"
+  ],
+  "additional_strata": [
+    "all",
+    "known",
+    "unknown"
+  ],
+  "metrics": {
+    "missed": "P(cuff >=65 | arterial <65)",
+    "deep_missed": "P(cuff >=65 | arterial <55)",
+    "cuff_conditioned": "P(arterial <65 | cuff >=65)",
+    "cuff_65_69": "P(arterial <65 | 65 <= cuff <70)",
+    "cuff_65_69_deep": "P(arterial <60 | 65 <= cuff <70)",
+    "hypotension_prevalence": "P(arterial <65) among eligible cuff anchors"
+  },
+  "decomposition": {
+    "reference": "R(native,5min)",
+    "total": "R(common,target)-R(native,5min)",
+    "selection": "R(common,5min)-R(native,5min)",
+    "within_anchor_window": "R(common,target)-R(common,5min)",
+    "targets": [
+      "2min",
+      "same_minute"
+    ],
+    "identity": "total = selection + within_anchor_window; check point estimates and each finite bootstrap replicate",
+    "meaning": "An algebraic decomposition along a stated path, not causal attribution to recording delay. Window changes aggregation and may change the arterial-conditioned denominator even at fixed cuff anchors."
+  },
+  "bootstrap": {
+    "replicates": 2000,
+    "seed": 20261027,
+    "unit": "patient",
+    "frame": "all original paired patients separately within each database",
+    "joint": "reuse identical patient multiplicities for every frame, window, stratum, metric and contrast within a replicate",
+    "CI": "percentile 2.5 and 97.5, finite replicates reported",
+    "zero_denominator": "NA, never zero risk; retain counts",
+    "boundary": "zero/all events retained with boundary flag; do not claim degenerate percentile intervals establish zero uncertainty"
+  },
+  "dose_contrasts": "highest minus lowest stratum for every metric, frame and window, paired joint bootstrap",
+  "precision": "flag denominator pairs <30, denominator patients <30, or total CI width >0.30; retain every cell",
+  "quality_checks": [
+    "compare missingness/distributions by native and common frame",
+    "compare hypotension and deep hypotension prevalence across databases",
+    "report availability and retention by dose",
+    "check cuff counts, nesting, numerators/denominators and algebraic identity",
+    "independent SQL/source reconstruction of bounded sample of cuff anchors across three windows"
+  ],
+  "interpretation": [
+    "No automatic replacement of original primary analysis based on result size",
+    "Report estimates and paired differences, not CI-overlap testing",
+    "Distinguish observed-window definition from sample composition; do not infer causes of pairing",
+    "eICU arterial values are source-level five-minute medians, including in the same-minute analysis",
+    "Do not extrapolate selected dual-monitoring conditional probabilities to cuff-only patients",
+    "No claim that this study validates a vasopressor reduction or confirmation strategy"
+  ],
+  "writing_scope": "Critical Care abstract, Discussion, Conclusions; minimal Methods/Results additions needed to disclose new analyses; supplementary Methods and Tables. ICM unchanged."
+}

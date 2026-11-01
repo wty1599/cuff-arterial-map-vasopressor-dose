@@ -1,0 +1,481 @@
+{
+  "status": "pass",
+  "files_scanned": 152,
+  "python_files_parsed": 64,
+  "notebooks": 0,
+  "gitleaks_status": "pass",
+  "gitleaks_version": "8.30.1",
+  "findings": [],
+  "schema_identifiers_in_code": [
+    {
+      "file": "analysis/legacy/03_generate_pg_exports.py",
+      "schema_tokens": [
+        "hadm_id",
+        "patientunitstayid",
+        "stay_id",
+        "subject_id"
+      ]
+    },
+    {
+      "file": "analysis/legacy/05_scan_amsterdam.py",
+      "schema_tokens": [
+        "admissionid"
+      ]
+    },
+    {
+      "file": "analysis/legacy/08_build_stays_drugs.py",
+      "schema_tokens": [
+        "CaseID",
+        "admissionid",
+        "hadm_id",
+        "patientunitstayid",
+        "pid",
+        "stay_id",
+        "subject_id"
+      ]
+    },
+    {
+      "file": "analysis/legacy/09_build_bp.py",
+      "schema_tokens": [
+        "CaseID",
+        "admissionid",
+        "patientunitstayid",
+        "stay_id"
+      ]
+    },
+    {
+      "file": "analysis/legacy/09_decode_sicdb_vectorized.py",
+      "schema_tokens": [
+        "CaseID"
+      ]
+    },
+    {
+      "file": "analysis/legacy/10_pair_and_counts.py",
+      "schema_tokens": [
+        "cid",
+        "pid"
+      ]
+    },
+    {
+      "file": "analysis/legacy/11_signal_and_audit_sample.py",
+      "schema_tokens": [
+        "cid",
+        "pid"
+      ]
+    },
+    {
+      "file": "analysis/legacy/14_fix_mimic_height.py",
+      "schema_tokens": [
+        "pid",
+        "stay_id"
+      ]
+    },
+    {
+      "file": "analysis/legacy/14_mimic_height_probe.py",
+      "schema_tokens": [
+        "stay_id",
+        "subject_id"
+      ]
+    },
+    {
+      "file": "analysis/legacy/16_complete_aggregates.py",
+      "schema_tokens": [
+        "CaseID",
+        "admissionid",
+        "pid",
+        "stay_id"
+      ]
+    },
+    {
+      "file": "analysis/legacy/19_rounding_and_qc.py",
+      "schema_tokens": [
+        "cid"
+      ]
+    },
+    {
+      "file": "analysis/legacy/21_correct_sicdb_units_af.py",
+      "schema_tokens": [
+        "cid",
+        "pid"
+      ]
+    },
+    {
+      "file": "analysis/legacy/27_mimic_careunit_bound.py",
+      "schema_tokens": [
+        "cid",
+        "hadm_id",
+        "pid"
+      ]
+    },
+    {
+      "file": "analysis/legacy/icm_rev4/01_analyse.py",
+      "schema_tokens": [
+        "cid",
+        "pid"
+      ]
+    },
+    {
+      "file": "analysis/legacy/icm_rev4/audit_bootstrap.py",
+      "schema_tokens": [
+        "pid"
+      ]
+    },
+    {
+      "file": "analysis/legacy/phase1/01_prepare.py",
+      "schema_tokens": [
+        "admissionid",
+        "cid",
+        "patientunitstayid",
+        "pid",
+        "stay_id"
+      ]
+    },
+    {
+      "file": "analysis/legacy/phase1/02_rates.py",
+      "schema_tokens": [
+        "cid"
+      ]
+    },
+    {
+      "file": "analysis/legacy/phase1/04_recovery_sensitivity.py",
+      "schema_tokens": [
+        "cid"
+      ]
+    },
+    {
+      "file": "analysis/legacy/phase1/07_validate.py",
+      "schema_tokens": [
+        "cid"
+      ]
+    },
+    {
+      "file": "analysis/legacy/phase1/eicu_recovery.py",
+      "schema_tokens": [
+        "cid",
+        "patientunitstayid",
+        "pid"
+      ]
+    },
+    {
+      "file": "analysis/legacy/phase2/01_analyses.py",
+      "schema_tokens": [
+        "cid"
+      ]
+    },
+    {
+      "file": "analysis/legacy/phase2/05_complete_metadata.py",
+      "schema_tokens": [
+        "cid"
+      ]
+    },
+    {
+      "file": "analysis/legacy/phase2/06_fill_same_minute_prevalence.py",
+      "schema_tokens": [
+        "cid"
+      ]
+    },
+    {
+      "file": "analysis/legacy/phase2/08_positional_sensitivity.py",
+      "schema_tokens": [
+        "cid"
+      ]
+    },
+    {
+      "file": "analysis/legacy/phase2/standardized.py",
+      "schema_tokens": [
+        "cid"
+      ]
+    },
+    {
+      "file": "analysis/legacy/phase2/table1_build.py",
+      "schema_tokens": [
+        "CaseID",
+        "admissionid",
+        "cid",
+        "patientunitstayid",
+        "stay_id"
+      ]
+    },
+    {
+      "file": "analysis/legacy/phase3/population_prepare.py",
+      "schema_tokens": [
+        "patientunitstayid",
+        "stay_id"
+      ]
+    },
+    {
+      "file": "analysis/legacy/phase4/01_source_extract.py",
+      "schema_tokens": [
+        "CaseID",
+        "admissionid",
+        "stay_id"
+      ]
+    },
+    {
+      "file": "analysis/legacy/phase4/02_analyse.py",
+      "schema_tokens": [
+        "admissionid",
+        "cid"
+      ]
+    },
+    {
+      "file": "analysis/legacy/phase5/01_analyse.py",
+      "schema_tokens": [
+        "cid"
+      ]
+    },
+    {
+      "file": "analysis/legacy/phase6/01_analyse.py",
+      "schema_tokens": [
+        "cid",
+        "pid"
+      ]
+    },
+    {
+      "file": "analysis/privacy_scan.py",
+      "schema_tokens": [
+        "CaseID",
+        "admissionid",
+        "caseid",
+        "cid",
+        "hadm_id",
+        "patient_id",
+        "patientunitstayid",
+        "pid",
+        "stay_id",
+        "subject_id"
+      ]
+    },
+    {
+      "file": "sql/03_export_eicu.sql",
+      "schema_tokens": [
+        "patientunitstayid"
+      ]
+    },
+    {
+      "file": "sql/03_export_mimic.sql",
+      "schema_tokens": [
+        "hadm_id",
+        "stay_id",
+        "subject_id"
+      ]
+    },
+    {
+      "file": "sql/07_eicu_assessment.sql",
+      "schema_tokens": [
+        "patientunitstayid"
+      ]
+    },
+    {
+      "file": "sql/26_mimic_careunit_probe.sql",
+      "schema_tokens": [
+        "hadm_id"
+      ]
+    },
+    {
+      "file": "sql/phase1/covariates_eicu.sql",
+      "schema_tokens": [
+        "patientunitstayid"
+      ]
+    },
+    {
+      "file": "sql/phase1/covariates_mimic.sql",
+      "schema_tokens": [
+        "hadm_id",
+        "stay_id"
+      ]
+    },
+    {
+      "file": "sql/phase1/recovery_export_medication.sql",
+      "schema_tokens": [
+        "patientunitstayid"
+      ]
+    },
+    {
+      "file": "sql/phase2/table1_export_eicu.sql",
+      "schema_tokens": [
+        "patientunitstayid"
+      ]
+    },
+    {
+      "file": "sql/phase2/table1_export_mimic.sql",
+      "schema_tokens": [
+        "hadm_id",
+        "stay_id",
+        "subject_id"
+      ]
+    },
+    {
+      "file": "sql/phase3/population_source_eicu.sql",
+      "schema_tokens": [
+        "patientunitstayid"
+      ]
+    },
+    {
+      "file": "sql/phase3/population_source_mimic.sql",
+      "schema_tokens": [
+        "stay_id"
+      ]
+    },
+    {
+      "file": "sql/phase4/source_mimic.sql",
+      "schema_tokens": [
+        "stay_id"
+      ]
+    }
+  ],
+  "file_sha256": {
+    ".gitattributes": "f867f86c19c7734a4152c5c6c0c885f054be42a92560013e4bef05a001695c54",
+    ".gitignore": "5c086a9fccb0d091ad31399c893bf80cf145c75817014ddd6681a317a30adbe4",
+    ".zenodo.json": "5fdb3dea9ff0d8e3adb2476bea206a21ce424603874cc9d51ed2380f3f529ea2",
+    "analysis/legacy/02_prepare_maps.py": "b226623b4c56ce7ec48a4c10e22df251611418ceb48fd9be20405e94f2ac8530",
+    "analysis/legacy/03_generate_pg_exports.py": "2cf671d9486e5025232e78704763287d9706cdf3f5b524bf13743182ca0a8609",
+    "analysis/legacy/05_scan_amsterdam.py": "444660761a4eea5a754498b52970d9c6ad7cf589badac8c6cab8196512e67ec2",
+    "analysis/legacy/05_scan_sicdb.py": "0bc91f1500ec9b0ad37c74f0611ea9719f5d04f8c1a10982df2eaa5de2f60f0c",
+    "analysis/legacy/05_stage_amsterdam_csv.py": "8157974ca98071c56d3b0b5508b3fb0a64a6fdbab70fd47222eb0e013bce0365",
+    "analysis/legacy/06_probe_and_prepare.py": "816533cdac24f11ed075fffe1454b5f0da446359f860fde22db6879bff6d6b93",
+    "analysis/legacy/08_build_stays_drugs.py": "f8800de918c678f3f731e3ec0468ba790ad1478d0d55242cc8d7e661ca6b89e4",
+    "analysis/legacy/08_core.py": "6a5b7ed4defbff5d7a7f70a2b6f372c2d33afec68a27048e4790ad804f7a63c3",
+    "analysis/legacy/09_build_bp.py": "e25de7a9ec346ded158a11f4c9d5179b32112963860696b484a80c013730a6f5",
+    "analysis/legacy/09_decode_sicdb_vectorized.py": "fc3884a685e82b8ee3bffd8d1a10dcf381691c0f494f9cbca02bf54478a7e963",
+    "analysis/legacy/10_pair_and_counts.py": "65b128a5baa8a6e0e5009cb1e005da0a346ddd1b390da5c4ed7e908441481741",
+    "analysis/legacy/11_signal_and_audit_sample.py": "7427c767cdf83ce7f75d9d7ed8e16788e9baeecc978088acaed26583d28a47d9",
+    "analysis/legacy/12_verify_synthetic.py": "14c989cbd521776a3b8763ad9f0bb64b5eb2b79b723a692374fbbe8b6ddbd7e1",
+    "analysis/legacy/13_source_metadata.py": "88f9e1c6bd73910de8ca6b6a07d0533d597048bb393296b359cee1c018e85f7c",
+    "analysis/legacy/14_fix_mimic_height.py": "f8b2e924a1ffd59d208d31493382deb28525dae9ed83d9cac470c92d10bcd06d",
+    "analysis/legacy/14_mimic_height_probe.py": "a3802a43ec31b7dea0081efcf06dc29d4089277efbc70ae25d5b7040d63dcdb2",
+    "analysis/legacy/15_prepare_missing_check.py": "e69d9daf50f83c354de4438a565d86e28784ea82cea1056b7a3fb692b8a6df28",
+    "analysis/legacy/16_complete_aggregates.py": "b121cd403002737338a6abdecb5f056b4cbf5c4361ec3f856c6c3a7f0daddc1a",
+    "analysis/legacy/17_finalize_mappings.py": "e74e1e6a02dde130c910037fa12b5febcefec9d3eb4c4c136f4311383ff70c89",
+    "analysis/legacy/18_final_metadata.py": "6518d649da7c530c8224da9c01257a4595ccbfe49b948f8f327e37c8bbba4e3b",
+    "analysis/legacy/19_rounding_and_qc.py": "fe5b4808211b44a57903eb75b60f1a83474b890771b9d027f1387a0e350cc21f",
+    "analysis/legacy/20_probe_sicdb_covariates.py": "328eff57c6be20ec680d2944ac7d7699044eb36eaf4982e8510f48d65fa8f7af",
+    "analysis/legacy/21_correct_sicdb_units_af.py": "df918a0860e125afe8c6247f06b143cd70dfdefc976d39953703d769700a865b",
+    "analysis/legacy/22_final_aggregate_checks.py": "588d97b3c6039cc0bedbe8e27f53fe008db42a535f8ed0f1ced449af81da53f4",
+    "analysis/legacy/23_quality_summary_fix.py": "60634d4782970147d5ce3aa79b2a0730cbfc7b2e984bca6800e61d6ff2931877",
+    "analysis/legacy/27_mimic_careunit_bound.py": "20724b8f89abe5aa6379ef4f2750c3e0c7096320e60ac66541ba10a9c563f086",
+    "analysis/legacy/amsterdam_stage_inner.py": "ff8551c4d0d2df29a114cf5f1d370990c3ccc5461d45b41202ca06b7297a3ed8",
+    "analysis/legacy/icm_rev4/01_analyse.py": "c4bc9c565c8ba398712b9e0bd70349648ef1df87d031d0d86877768198c30044",
+    "analysis/legacy/icm_rev4/02_figure.py": "6fc64f8701798c84526d92d814cff667f93488f72368021858bf9c8e4dd2b329",
+    "analysis/legacy/icm_rev4/audit_bootstrap.py": "6f5fa6fc80d67531d28179c4cd97c9410dc0032ea4b48e022f836d6aab397a4a",
+    "analysis/legacy/phase1/01_prepare.py": "df267ec566267c8c612eba750215be97390554a1ab313bea38e459b061690e0a",
+    "analysis/legacy/phase1/02_rates.py": "3b39a51f15a1d41f4709f72f12a4b857372797c5ff69fe46ef29c4181e79eabc",
+    "analysis/legacy/phase1/03_models.R": "6d0852b1a8ff382738af5c043b62a2a7856eb672d0ade552b2eaccb42a8a6024",
+    "analysis/legacy/phase1/04_recovery_sensitivity.py": "8d3e5ddc7c0b025bda5a32a26a63adbafea18b58605bf6399a4c72be853be172",
+    "analysis/legacy/phase1/05_figures.py": "fe459dccf2c4dfc432b39a09672778db1ff1da47275a215ae54645ad32e32262",
+    "analysis/legacy/phase1/06_boundary_labels.py": "bc6bc4b3e254609f620e09b8e50f418ccabdc3583d2f417f4798230b989b2b24",
+    "analysis/legacy/phase1/07_validate.py": "bb057efb1bebb819ac5e749dcd929ef2a368a32b0b96bd089eff5d6148c23950",
+    "analysis/legacy/phase1/08_validate_ba.R": "c39a52fa4fd7c368be24297695e4f5519053cdba53bf1eb802fa8a8221842567",
+    "analysis/legacy/phase1/common.py": "6fde0403981969c4c7cc35e87744b6130dba8df3d204b64a45738aea835fa21a",
+    "analysis/legacy/phase1/eicu_recovery.py": "0bd1b3b889c63c443796db63df1dce42ea67a4284f17ac6698d47944daa7cf68",
+    "analysis/legacy/phase1/recovery_probe.py": "97a1b492caec1438361e9c953e744773e631118bfef20b867cdc891beccc7625",
+    "analysis/legacy/phase2/01_analyses.py": "f7e2930d5b079cd9e0d9b9e6575281b40e39df5f470cf24b984c9019a62b17dd",
+    "analysis/legacy/phase2/02_pool.R": "55d8e6a3970c425de4d3ad61baaa00c165588a6a1b28120f66e847f94fec3af3",
+    "analysis/legacy/phase2/03_validate.py": "9a89e216296acaa3ad2cefb6fe8660f12f7f0c8941c9400fe61ade9591b0b66e",
+    "analysis/legacy/phase2/04_figures.py": "531bcdedf0cd74333e82a3fe9e862853c3147747c918c98e8e7fa586bc9d55ee",
+    "analysis/legacy/phase2/05_complete_metadata.py": "650320bb94e86d8a88f61c3b8db893178795646a93e38021107dba7cfb003a0a",
+    "analysis/legacy/phase2/06_fill_same_minute_prevalence.py": "9cf05424da9e313891551f906ad47382e5569b3127fff660ef01b95379d8c251",
+    "analysis/legacy/phase2/08_positional_sensitivity.py": "e09686ad64599f18b1d98affa8d9491aa109888a37b6798680a4235d2a697113",
+    "analysis/legacy/phase2/common.py": "1a32207312dd6a6194e09ec636ae8a4c8a3e48eb289df175d48a85cabf8aaf17",
+    "analysis/legacy/phase2/standardized.py": "27a6d4dbfa1c14573f048494447e80fa222ab5fca8ed1c3a1485e30a0b6ff420",
+    "analysis/legacy/phase2/table1_build.py": "a11234da5b481b18cd0f05e8253f7d0a5400a0399e65c72b1847d21efc48dd5d",
+    "analysis/legacy/phase2/table1_finalize.py": "0a496d9f871442ccb00bee14db832d272774bca0e7abbac79c091ecf1285c375",
+    "analysis/legacy/phase2/table1_probe.py": "96c190b1ce3766078dfee7d810e5209e0e4c82a916ee1ab3510533027b0e8c87",
+    "analysis/legacy/phase3/population_analyse.py": "c1d8affd3bd0bb385542775bf13a2059f74649acab978d9645a225e2bba215c0",
+    "analysis/legacy/phase3/population_prepare.py": "09d86d5d06b8e894ca2eec8f39c66fd058ece23de5ee4eb6f62c4b036e8ae349",
+    "analysis/legacy/phase4/01_source_extract.py": "ac4aec841309842e72e45ac4b32574dad9206633024aa62d39fd1e648f3c0cd0",
+    "analysis/legacy/phase4/02_analyse.py": "74ebd888c5c9335285d610c1c4f9b5a8942d7aea76495533df57fac446c210b8",
+    "analysis/legacy/phase4/04_figure.py": "9af034b2d24ea33a8fe33875888f9287da6e238f43cc78c07f04828234532bf3",
+    "analysis/legacy/phase5/01_analyse.py": "fdfc128237e0fb795e843091179f5d06820446db12d5fa55777b913f50705704",
+    "analysis/legacy/phase5/04_figure.py": "e04ba8c87610ad6b3a0b8a50450e66da2a89d6ba129d697f122585b33db1faf2",
+    "analysis/legacy/phase5/audit_points.R": "da59970dda00c73db99707b754df25d9e3f4eda7b89365728c222be046af7e8c",
+    "analysis/legacy/phase6/01_analyse.py": "26bb6d31173878c2423bb0957d6f08c128c6568852842855559a848f4c8d6477",
+    "analysis/legacy/phase6/03_figure.py": "68ede3fc74f95f15af64b294f6ce13438ac90279338d12a83f087d049646fc1d",
+    "analysis/legacy/rev8d/sicdb_bootstrap_diagnostics.py": "4e6686839bbb80d16e824ec577541993fc150e4d81379dcc4c4a00c36e73aaf3",
+    "analysis/prepare_workspace.py": "90c3356a2a353cb8a9e175cda655e2b6645bc514d27e37884bd02b31a277a43e",
+    "analysis/privacy_scan.py": "d0eb1cc8d49cf61b6c8f6efba7304caa136308fcf8f01861dca916333c7b02dc",
+    "analysis/reproduce_aggregate.py": "5bd72019dc4bde9af29fdc900c8571f8312bd530c0c5df506d732c67b349a222",
+    "analysis/run_private.py": "d93cd8c53f436a06ed9a6fc6d50e7eb761e97b5dc5baa9eac9a4ad033d7855a7",
+    "CITATION.cff": "415724d48182ac1a45d83115cb66e43f3be73085b51db858e8c054c8ff90b736",
+    "config/mappings/map_bp_amsterdam.csv": "683a051dc8e12a0144e23861aa9c21e4d330329fac4832d13e56fe7d7fd65826",
+    "config/mappings/map_bp_eicu.csv": "699368a3d1b43c7dbe661204fe8929a7017fa92cbe04a102731697dfa8dc58ba",
+    "config/mappings/map_bp_mimic.csv": "73ca1e3bd1795e043d6c9672e8a8862e82f687da05e68aacb7c1a91a747e6fe0",
+    "config/mappings/map_bp_sicdb.csv": "5643e880a2091e288d443a847f8974048281c56381c15e8172e6421126ba0808",
+    "config/mappings/map_careunit_mimic_transfers.csv": "cd1c1009fee4fca85076020aee22d982f00bb79616c728f5342094d7a579bd1c",
+    "config/mappings/map_careunit_sicdb.csv": "cc4306f8f2310430b6fc5b7a37bc455acd8b3fef8e76cf98aaaeae8fa67f3cf8",
+    "config/mappings/map_covariates_mimic.csv": "aa42d86afdada1407d03f7d3a1575fa2dee6466a98b07114bdb9ab4213e2dae3",
+    "config/mappings/map_vaso_amsterdam.csv": "e430ee18e783cdac18667fc930eb061af0edd7da2deaced5703834f9ef149338",
+    "config/mappings/map_vaso_eicu.csv": "335d21f3792e8bb4f10ee8e72241222c0923253dff218c6997050ac7f0cfd120",
+    "config/mappings/map_vaso_mimic.csv": "1177185508444c8a1694a4c137fc4b683001298557a6fd00c46dc967494b9df0",
+    "config/mappings/map_vaso_sicdb.csv": "2095073b9745a425e64894ba007c0d352378f51d0c2381f9d15151143319bffc",
+    "config/parameter_targets.json": "276a6e076807d9ec96017a7c7ca5ef1d10fe2b39cb15309185cdccccea0b0c65",
+    "config/parameters/icm_rev4_params.yaml": "10417403d77f4a5b28e78f69e63e57d16348518d839d7e288f26f761078f2e95",
+    "config/parameters/phase0_parameters.json": "2b1e32b7bd4c75093824b00276b10ee6da330243fa89162b86c4517a4a00a5d4",
+    "config/parameters/phase1_parameters.json": "b6598a6f2a5a6f0160cfcfc8d3f6a0c004edb4d9ec928318f9a16d1f2853bdc9",
+    "config/parameters/phase2_parameters.json": "907768e782b7b4b74c7379493f833d58cd83519c277384dc8da3df96eb84a6a0",
+    "config/parameters/phase4_params.yaml": "6dc43e8a0216c7428c98c4e32d1f905e38aa8480820ab0167705fa743216433b",
+    "config/parameters/phase5_params.yaml": "8fcf90a23d1fcf6ba88c936cd6619e47fa341260bcd896dc5e5518590edb3f21",
+    "config/parameters/phase6_params.yaml": "39bf72f9af493d6ddb6b060605e530f17e3d50a9b97bfee4aecaa7e74a9bbea1",
+    "config/parameters/population_parameters.json": "322978e3a3912d4c512a806218942744b35105c9ba4ad92e0ceb1479fa46080d",
+    "config/parameters/SICdb_bootstrap_parameters.json": "1a321336d73786bf490b269b13febe51ca6a876136f6e006d147b5c718142353",
+    "docs/aggregate_inventory.csv": "1ad3d91fb856f016bfed365d229f89fe07ab436a2300373c8c04eac754747df1",
+    "docs/aggregate_release_policy.md": "64d2166273e031298e6b2b8cad6b73545b13e110411c8c92b94e503dadba077a",
+    "docs/analysis_chronology.md": "16f9acc6c3d4cf51bea0a12ef02ab3a782d78169b0d8a7359796236a890c1f6b",
+    "docs/code_manifest.csv": "6515b42dd563041ebb53de02e5447b47f55b72ed3d23beebef87a8d2400c8c61",
+    "docs/data_use_review.md": "214191cf0a322414b463388f8797dfc5c4f45dd4c92da86fbed0ff073eba1dd3",
+    "docs/script_output_map.md": "4329f2763e24b5cbebb726a79c3a3df8ffdb37f45b1d0c8ac3eb399ffed9a85c",
+    "docs/software_versions.md": "a65b6b3d3b1b821d2c8760b270509af364f643b66ede235d1134239f4cd833d4",
+    "docs/zenodo_checklist.md": "7c3c774f3f86ea3590b51b74fac42fcab4c947027cfab614c7a7ab288ef9e734",
+    "LICENSE": "c9f759ac940268b5674558033e59bbff5fbfb3660bbe239496c724b8341c5de8",
+    "outputs/aggregate/phase4_S3_site.csv": "c2a8485fbed4fdc0d5af37bd209fc58a8af40c274cb71df0469045ee64f2fb0d",
+    "outputs/aggregate/phase5_S5_counterfactual.csv": "804227a20986867023c339556e798b2a150e2e6559136a5bbb673d349f30affb",
+    "outputs/aggregate/S10_exclude_flagged.csv": "c3efef00d47dea1579a5a5f80f19a825e538b2f7d2cbfdfcc5a84cd3e7bbb39e",
+    "outputs/aggregate/S10_exclude_positional_waveform.csv": "d02d7ca6d46d9a651e95e593cf5ea0f1fbaf3aabbc962064ce999aa0251dc857",
+    "outputs/aggregate/S10_first_low_pair.csv": "e125339aef8c11b6a7677fed99043d9368082250037c0e2f485e3bdd7434c2c4",
+    "outputs/aggregate/S10_known_dose_only.csv": "8d25aa918d680640ce21d2108e178bb4eef1c2614cf9701a29c457fac75d366f",
+    "outputs/aggregate/S10_recovered_dose_explanatory.csv": "362c72e068b577795239416fd3bab0e7e9e7495c146f43355a784192b40cdb4e",
+    "outputs/aggregate/S10_recovered_dose_primary.csv": "8ff4fc47f2d490ed047f883d46ff1ca1c04b7577f5e061a85de98494da58a80f",
+    "outputs/aggregate/S10_recovered_missed_distribution.csv": "7c2dd90139fd5bec12f326276978218214b52ce6b1c0649b111d4c180abb18ae",
+    "outputs/aggregate/S10_same_minute_explanatory.csv": "92699ed10c223993dda661973cd2c0a170e9cf534db5275203387c792bcacd78",
+    "outputs/aggregate/S10_same_minute_primary.csv": "812f95ee78a0520d7b97dacbaaaf13f195bd4136e25991bb6c0578c01bbfbe49",
+    "outputs/aggregate/S10_two_minute_window.csv": "4d9f398d4b25ca5a1083f227ed3a0fa4a93680b4db95239f25e7fca6648ec0a8",
+    "outputs/aggregate/S17_cuff_ge70.csv": "055cbb020e85af65d8bb8d77c747dc10b501126e70b8643f81d2782dc6bef142",
+    "outputs/aggregate/S18_likelihood_ratios.csv": "63441e596a2fed5f4c3eafb7287a11f26522eb5d1458a9a6d2c0c03e8b81ec0f",
+    "outputs/aggregate/S2_deep_missed_hypotension.csv": "b1a78b3b862fb68186efddaca9fb742d23da4e9e0f33ec73ea62f2fa2990d803",
+    "outputs/aggregate/S2_missed_and_false_alarm.csv": "d57707ea2ff3ff34bbcf9cc0babc8d1d81d3c2491b62bdda8ab37133a746bb13",
+    "outputs/aggregate/S2_missed_pressure_distribution.csv": "150a5dadf415ba9378f91b6ffa9c0ced3db488436dab34d638e5b5243f6ffd52",
+    "outputs/aggregate/S2_pooled_deep_missed_hypotension.csv": "bdc28edac8bf574122968937103b63f84f8281872e53e44ef9cfc843ffcc47eb",
+    "outputs/aggregate/S2_pooled_missed_and_false_alarm.csv": "48261dc7c9a0c5e2f14d8daa9eaec80685c1dbc44491dc5cf79ea2078f51cad5",
+    "outputs/aggregate/S3_cuff_conditioned_probabilities.csv": "24feae3beaec2d66214f3f9575f3891e1621597b94b27515edae7e1c76bfa30f",
+    "outputs/aggregate/S4_dose_by_pressure.csv": "6ff979ff7951df2f06a0508f9853da488eedaa5a45785fc36c7463aeb8d3a325",
+    "outputs/aggregate/S5_standardized_missed_hypotension.csv": "2ad882abb33a5c5c33b805aafd06607d769d1bc3c881bc66299b49788a26483c",
+    "outputs/aggregate/S8_subgroup_rates.csv": "3df8d5b94c6617030a5074d63076e1d0b51d0b57a8cd7d088b29c083d65b28fc",
+    "outputs/aggregate/S9_population_sensitivity.csv": "9e4d588e5702432bb286d25d05ed18746f48562199196bb2bf74c4ca97b97e9a",
+    "README.md": "8811efff01460f12985c13de659b324116a9dac4a7d76e3d429caec126f94897",
+    "requirements-analysis.txt": "662f9e45e44fb8c332e985d20bfc04342a6b86f0e48a27992c2bc3a20eb2345c",
+    "requirements-audit.txt": "6570ec716a31cf52ba51f4ccef723387d019d994bda80266389b2e4b6fae675f",
+    "requirements.txt": "3d8fed912091377490b51a31e3d205f65fde34cf35f6a0154216198b3aae2514",
+    "sql/00_inventory.sql": "cc84d35415b46d38327aa829c4a5552d5bee5d122a3cc98f6cc76339325d5686",
+    "sql/01_eicu_dictionary.sql": "e9b5af943b1d5c7273034f1ade229dc10eb2b908969330dc157706f5ca3903e9",
+    "sql/01_mimic_dictionary.sql": "d980169270b9771243616257ae201008ce33141cc2794cb9143097ce02604d44",
+    "sql/03_export_eicu.sql": "b39c2aff86723b94c17aace279a9f608226a1a98a1f250ff96c168edb86cceed",
+    "sql/03_export_mimic.sql": "1c3ee585bd021aad3fc299ff5676bceaddaf5c4a493c78f4e4f9378456d93bbc",
+    "sql/07_eicu_assessment.sql": "6be192ae5ae052a9cd1eab815b61ee6f19e0dae32f3a6e301f80682fbc64b6a8",
+    "sql/07_metadata_followup.sql": "17b23f9912a81145bf58360e0f93d31bc611bdcdfc26a0dd49a133b269f555f8",
+    "sql/07_reextract_eicu_drugs.sql": "e6c5b31e5f28f05a074b5013f3a5f7972dc6b330d6547322e9152cacd3a301a5",
+    "sql/13_eicu_source_metadata.sql": "8ddf07f1a69458cc43d72feec8335ad72f4e3b6223fb0424f8c1496d876b369f",
+    "sql/13_mimic_source_metadata.sql": "b63951318f8abcbc972655e7199ce8f9038e97598cf5340e532782680535e34e",
+    "sql/26_mimic_careunit_probe.sql": "190079fedc1b0c9876bc3884dfa1fc1368983ccadabaf75909c7a1961ab97016",
+    "sql/phase1/covariates_eicu.sql": "5af0b134b140cc3380622dcc5ce88085148902ba4eed0234a12cccf3a71ca9eb",
+    "sql/phase1/covariates_mimic.sql": "d27ee11594511a8b56190e3dc5463d0be64e99937591af5c42e4bc3d8fcb66d7",
+    "sql/phase1/recovery_export_medication.sql": "fda80fef990fddf22a6fc2df28068afca1fd95ab1d1c006cd1e7fcbc33e4057c",
+    "sql/phase2/table1_export_eicu.sql": "b323f6334d77de8b95e7d22f3e8822dbcb6e6a6e7cb7c52fbdd9e4f295325c7b",
+    "sql/phase2/table1_export_mimic.sql": "edc3c03b2f8dbcfbef900df590d46649fc4450180ffcd60688d65a31e7f92909",
+    "sql/phase2/table1_probe_eicu.sql": "8e20fb2228fce58c20f015f46dc88f8255eeae2e8fef2a871ffe1bb08960a926",
+    "sql/phase2/table1_probe_mimic.sql": "99f4ecb2495fdfd87ea224e8b2f884c08cc5ac7c7d155b0f907f5bcd305065cd",
+    "sql/phase3/population_source_eicu.sql": "ed1ce612317fe42320d8612a63092c69a51eb29d7431a899f57c7b6b2fd91ec1",
+    "sql/phase3/population_source_mimic.sql": "7fb2a0829c6c99899747d2a13afe8928f63402c40242d894c407d3ef99c3827e",
+    "sql/phase4/source_eicu.sql": "1ec4b9727d869e7cc6a88facf60ce88fffbeece3cbcd86ae8997270a958eaa01",
+    "sql/phase4/source_mimic.sql": "fbd59a65d8beb094b5e48cf7ce59f4623ef881ba12068d74fba51cbd59bc6abf"
+  }
+}

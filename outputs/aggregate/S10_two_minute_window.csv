@@ -1,0 +1,58 @@
+database,scenario,endpoint,stratum,ci_upper,estimate,ci_lower,precision,source_csv,source_line
+MIMIC-IV,Two-minute pairing,Missed hypotension rate,all,0.430,0.413,0.395,adequate,S10_two_minute_window.csv,2
+MIMIC-IV,Two-minute pairing,Missed hypotension rate,known,0.432,0.414,0.397,adequate,S10_two_minute_window.csv,3
+MIMIC-IV,Two-minute pairing,Missed hypotension rate,unknown,0.355,0.290,0.228,adequate,S10_two_minute_window.csv,4
+MIMIC-IV,Two-minute pairing,Missed hypotension rate,<=0.1,0.427,0.405,0.385,adequate,S10_two_minute_window.csv,5
+MIMIC-IV,Two-minute pairing,Missed hypotension rate,>0.1-0.25,0.447,0.416,0.387,adequate,S10_two_minute_window.csv,6
+MIMIC-IV,Two-minute pairing,Missed hypotension rate,>0.25-0.5,0.503,0.463,0.422,adequate,S10_two_minute_window.csv,7
+MIMIC-IV,Two-minute pairing,Missed hypotension rate,>0.5-1.0,0.451,0.404,0.358,adequate,S10_two_minute_window.csv,8
+MIMIC-IV,Two-minute pairing,Missed hypotension rate,>1.0,0.434,0.341,0.257,adequate,S10_two_minute_window.csv,9
+MIMIC-IV,Two-minute pairing,False-alarm rate,all,0.207,0.197,0.188,insufficient precision,S10_two_minute_window.csv,10
+MIMIC-IV,Two-minute pairing,False-alarm rate,known,0.206,0.197,0.187,insufficient precision,S10_two_minute_window.csv,11
+MIMIC-IV,Two-minute pairing,False-alarm rate,unknown,0.309,0.262,0.218,adequate,S10_two_minute_window.csv,12
+MIMIC-IV,Two-minute pairing,False-alarm rate,<=0.1,0.219,0.206,0.194,adequate,S10_two_minute_window.csv,13
+MIMIC-IV,Two-minute pairing,False-alarm rate,>0.1-0.25,0.212,0.197,0.183,adequate,S10_two_minute_window.csv,14
+MIMIC-IV,Two-minute pairing,False-alarm rate,>0.25-0.5,0.192,0.172,0.152,adequate,S10_two_minute_window.csv,15
+MIMIC-IV,Two-minute pairing,False-alarm rate,>0.5-1.0,0.202,0.175,0.149,adequate,S10_two_minute_window.csv,16
+MIMIC-IV,Two-minute pairing,False-alarm rate,>1.0,0.255,0.206,0.158,adequate,S10_two_minute_window.csv,17
+eICU,Two-minute pairing,Missed hypotension rate,all,0.435,0.418,0.400,adequate,S10_two_minute_window.csv,18
+eICU,Two-minute pairing,Missed hypotension rate,known,0.482,0.455,0.427,adequate,S10_two_minute_window.csv,19
+eICU,Two-minute pairing,Missed hypotension rate,unknown,0.425,0.404,0.383,adequate,S10_two_minute_window.csv,20
+eICU,Two-minute pairing,Missed hypotension rate,<=0.1,0.498,0.466,0.436,adequate,S10_two_minute_window.csv,21
+eICU,Two-minute pairing,Missed hypotension rate,>0.1-0.25,0.533,0.494,0.452,adequate,S10_two_minute_window.csv,22
+eICU,Two-minute pairing,Missed hypotension rate,>0.25-0.5,0.480,0.420,0.359,adequate,S10_two_minute_window.csv,23
+eICU,Two-minute pairing,Missed hypotension rate,>0.5-1.0,0.541,0.479,0.413,adequate,S10_two_minute_window.csv,24
+eICU,Two-minute pairing,Missed hypotension rate,>1.0,0.413,0.304,0.219,adequate,S10_two_minute_window.csv,25
+eICU,Two-minute pairing,False-alarm rate,all,0.196,0.187,0.178,insufficient precision,S10_two_minute_window.csv,26
+eICU,Two-minute pairing,False-alarm rate,known,0.164,0.151,0.139,adequate,S10_two_minute_window.csv,27
+eICU,Two-minute pairing,False-alarm rate,unknown,0.212,0.200,0.189,adequate,S10_two_minute_window.csv,28
+eICU,Two-minute pairing,False-alarm rate,<=0.1,0.166,0.150,0.135,adequate,S10_two_minute_window.csv,29
+eICU,Two-minute pairing,False-alarm rate,>0.1-0.25,0.168,0.147,0.128,adequate,S10_two_minute_window.csv,30
+eICU,Two-minute pairing,False-alarm rate,>0.25-0.5,0.178,0.151,0.126,adequate,S10_two_minute_window.csv,31
+eICU,Two-minute pairing,False-alarm rate,>0.5-1.0,0.216,0.170,0.132,adequate,S10_two_minute_window.csv,32
+eICU,Two-minute pairing,False-alarm rate,>1.0,0.220,0.155,0.109,adequate,S10_two_minute_window.csv,33
+AmsterdamUMCdb,Two-minute pairing,Missed hypotension rate,all,0.565,0.496,0.427,adequate,S10_two_minute_window.csv,34
+AmsterdamUMCdb,Two-minute pairing,Missed hypotension rate,known,0.577,0.497,0.415,adequate,S10_two_minute_window.csv,35
+AmsterdamUMCdb,Two-minute pairing,Missed hypotension rate,unknown,0.590,0.493,0.376,adequate,S10_two_minute_window.csv,36
+AmsterdamUMCdb,Two-minute pairing,Missed hypotension rate,<=0.1,0.535,0.459,0.390,adequate,S10_two_minute_window.csv,37
+AmsterdamUMCdb,Two-minute pairing,Missed hypotension rate,>0.1-0.25,0.597,0.503,0.412,adequate,S10_two_minute_window.csv,38
+AmsterdamUMCdb,Two-minute pairing,Missed hypotension rate,>0.25-0.5,0.735,0.512,0.284,insufficient,S10_two_minute_window.csv,39
+AmsterdamUMCdb,Two-minute pairing,Missed hypotension rate,>0.5-1.0,0.616,0.537,0.456,adequate,S10_two_minute_window.csv,40
+AmsterdamUMCdb,Two-minute pairing,Missed hypotension rate,>1.0,0.692,0.485,0.260,insufficient,S10_two_minute_window.csv,41
+AmsterdamUMCdb,Two-minute pairing,False-alarm rate,all,0.169,0.138,0.109,adequate,S10_two_minute_window.csv,42
+AmsterdamUMCdb,Two-minute pairing,False-alarm rate,known,0.137,0.113,0.090,adequate,S10_two_minute_window.csv,43
+AmsterdamUMCdb,Two-minute pairing,False-alarm rate,unknown,0.308,0.238,0.151,adequate,S10_two_minute_window.csv,44
+AmsterdamUMCdb,Two-minute pairing,False-alarm rate,<=0.1,0.132,0.097,0.070,adequate,S10_two_minute_window.csv,45
+AmsterdamUMCdb,Two-minute pairing,False-alarm rate,>0.1-0.25,0.115,0.082,0.055,adequate,S10_two_minute_window.csv,46
+AmsterdamUMCdb,Two-minute pairing,False-alarm rate,>0.25-0.5,0.197,0.147,0.103,adequate,S10_two_minute_window.csv,47
+AmsterdamUMCdb,Two-minute pairing,False-alarm rate,>0.5-1.0,0.239,0.140,0.084,adequate,S10_two_minute_window.csv,48
+AmsterdamUMCdb,Two-minute pairing,False-alarm rate,>1.0,0.524,0.358,0.129,insufficient,S10_two_minute_window.csv,49
+SICdb,Two-minute pairing,Missed hypotension rate,all,0.417,0.347,0.258,adequate,S10_two_minute_window.csv,50
+SICdb,Two-minute pairing,Missed hypotension rate,known,0.423,0.349,0.258,adequate,S10_two_minute_window.csv,51
+SICdb,Two-minute pairing,Missed hypotension rate,<=0.1,0.442,0.355,0.235,adequate,S10_two_minute_window.csv,53
+SICdb,Two-minute pairing,Missed hypotension rate,>0.1-0.25,0.422,0.313,0.223,adequate,S10_two_minute_window.csv,54
+SICdb,Two-minute pairing,Missed hypotension rate,>0.25-0.5,0.541,0.345,0.183,insufficient,S10_two_minute_window.csv,55
+SICdb,Two-minute pairing,False-alarm rate,all,0.479,0.391,0.213,adequate,S10_two_minute_window.csv,58
+SICdb,Two-minute pairing,False-alarm rate,known,0.480,0.393,0.214,adequate,S10_two_minute_window.csv,59
+SICdb,Two-minute pairing,False-alarm rate,<=0.1,0.509,0.434,0.223,adequate,S10_two_minute_window.csv,61
+SICdb,Two-minute pairing,False-alarm rate,>0.1-0.25,0.368,0.218,0.134,adequate,S10_two_minute_window.csv,62

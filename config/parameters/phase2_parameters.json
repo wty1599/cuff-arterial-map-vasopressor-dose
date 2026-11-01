@@ -1,0 +1,60 @@
+{
+  "stage": "phase2_explanatory_analyses_mapping_pending",
+  "specified_before_phase2_results": true,
+  "phase1_definitions_unchanged": true,
+  "seed": 20261027,
+  "bootstrap_replicates": 2000,
+  "main_databases": [
+    "mimic",
+    "eicu"
+  ],
+  "supplementary_databases": [
+    "amsterdam",
+    "sicdb"
+  ],
+  "dose_edges": [
+    0.1,
+    0.25,
+    0.5,
+    1.0
+  ],
+  "A_missed_arterial_bins": [
+    "[60,65)",
+    "[55,60)",
+    "[50,55)",
+    "<50"
+  ],
+  "A_deep_thresholds": [
+    55,
+    60
+  ],
+  "B_cuff_bins": [
+    "[65,70)",
+    "[70,75)",
+    "[75,80)",
+    ">=80"
+  ],
+  "C_arterial_bins": [
+    "[60,65)",
+    "[55,60)",
+    "<55"
+  ],
+  "figure_dose_groups": [
+    "<=0.25",
+    ">0.25-1.0",
+    ">1.0"
+  ],
+  "strata_policy": "All-pair overall metrics include unknown dose. Five-dose strata and known-dose totals use original phase1 clean known doses, never recovered doses. Unknown-dose rows are separate. C standardization presents five known strata per main database.",
+  "C_standard_population": "All low-arterial-MAP (<65) phase1 5-minute pairs from MIMIC-IV and eICU combined, including pairs with unknown dose. Pair-weighted three-bin distribution, fixed population definition.",
+  "C_bootstrap": "Within each database independently resample all paired patient clusters, 2000 replicates using two child streams spawned by root SeedSequence(20261027). In each replicate reconstruct the common standard bin weights from both resampled main databases and use them with the same replicate's database/stratum/bin rates. No missing-cell renormalization; an empty required cell makes that replicate unestimable and valid replicate count is reported. Independent child-stream implementation corrected after initial phase2 output; point estimates and interpretation unchanged.",
+  "C_interpretation": "Per main database, compare the point-estimate maximum-minus-minimum across the five standardized dose strata with 0.05. Only when the standardized span is <=0.05 and smaller than the raw span, write the user's specified sentence. Otherwise report standardized gaps without further mechanism explanation. This is an operational descriptive rule, not a causal decomposition or equivalence test.",
+  "bootstrap_rates": "Patient-cluster percentile 95% CI, pair-weighted ratio, whole patients resampled, same phase1 seed and replicate count. Boundary-degenerate CIs retain counts and are flagged boundary_not_informative.",
+  "precision": "Denominator pairs <30 -> insufficient precision; retain cells. Also retain phase1 CI width >0.30 flag and boundary flag separately.",
+  "B_prevalence": "Each rate row includes the arterial<65 prevalence in its dose stratum, and the arterial<65 prevalence inside that row's cuff-defined denominator, with explicit numerators and denominators. No meta-analysis of B.",
+  "sensitivities": "Same-minute: only A arterial<55/cuff>=65 and B cuff>=65/arterial<65, overall and >1.0, all applicable databases for A and only main databases for B. eICU recovered-dose sensitivity: A/B/C requested metrics, only overall and >1.0; original-known main versions remain separate. C recovered version does not apply the five-stratum interpretation rule. No new model.",
+  "source_audit": "30 deep missed pairs (arterial<55,cuff>=65) per database, seed20261027; avoid earlier audit samples when possible. Independent raw source queries of values/times. If fewer than30 exist, inspect all and report the shortfall without inventing samples. Do not infer arterial damping/flush from discordance alone; report source-supported suspected artifact evidence, otherwise unassessable. Only add artifact-exclusion sensitivity if source-supported suspected artifacts are identified; never change main analysis.",
+  "table1": "Paired patients, one baseline row per patient from phase1. Use source admission type if readily available. Drug use is any positive source treatment segment in the index eligible ICU stay; not prescription-only. Maximum NE-eq is the time-varying total over observed treatment segments within the eligible ICU stay, respecting original unknown components and phase1 quality rules; if only paired-time maximum is available, label it separately rather than calling it treatment-period maximum. Descriptive hospital death only where genuinely observed; do not substitute ICU death or unspecified date of death. Severity only existing derived tables, no new scoring pipeline; new complex extraction beyond2hours omitted with reason.",
+  "figure_backend": "Python Matplotlib, phase1 palette/font/export settings",
+  "EVERDAC_annotation": "Show2.5 norepinephrine-tartrate protocol dose and approximately1.25 norepinephrine-base dose, with an explicit pure-norepinephrine conversion caveat because the protocol sums tartrate plus epinephrine and is not a generic multi-drug NE-eq threshold.",
+  "output_language": "Chinese internal report; no manuscript text; no mortality/AKI associations or prediction models"
+}

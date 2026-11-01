@@ -1,0 +1,47 @@
+careunit,classification
+Cardiac Surgery,other
+Cardiac Vascular Intensive Care Unit (CVICU),ICU
+Cardiology,other
+Cardiology Surgery Intermediate,MC
+Coronary Care Unit (CCU),ICU
+Discharge Lounge,other
+Emergency Department,other
+Emergency Department Observation,other
+Hematology/Oncology,other
+Hematology/Oncology Intermediate,MC
+Intensive Care Unit (ICU),ICU
+Labor & Delivery,other
+Med/Surg,other
+Med/Surg/GYN,other
+Med/Surg/Trauma,other
+Medical Intensive Care Unit (MICU),ICU
+Medical/Surgical (Gynecology),other
+Medical/Surgical Intensive Care Unit (MICU/SICU),ICU
+Medicine,other
+Medicine/Cardiology,other
+Medicine/Cardiology Intermediate,MC
+Neuro Intermediate,MC
+Neuro Stepdown,MC
+Neuro Surgical Intensive Care Unit (Neuro SICU),ICU
+Neurology,other
+Nursery,other
+Observation,other
+Obstetrics (Postpartum & Antepartum),other
+Obstetrics Antepartum,other
+Obstetrics Postpartum,other
+Oncology,other
+PACU,other
+Psychiatry,other
+Special Care Nursery (SCN),other
+Surgery,other
+Surgery/Pancreatic/Biliary/Bariatric,other
+Surgery/Trauma,other
+Surgery/Vascular/Intermediate,MC
+Surgical Intensive Care Unit (SICU),ICU
+Surgical Intermediate,MC
+Thoracic Surgery,other
+Transplant,other
+Trauma SICU (TSICU),ICU
+UNKNOWN,unknown
+Unknown,unknown
+Vascular,other

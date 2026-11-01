@@ -1,0 +1,10 @@
+ReferenceGlobalID,ReferenceValue,ReferenceDescription,classification
+2,INIC,9 bed intermediate care ward,MC
+3,CWIN,14 bed intensive care ward,ICU
+4,INBD,9 bed intensive care ward,ICU
+5,INID,"9 bed mixed ward (intermediate care, non-invasive-ventilation possible)",MC
+2291,NCIN,,unknown
+2292,NEAT,,unknown
+2293,NEIN,,unknown
+2294,ANM2,,unknown
+2295,AUOP,,unknown

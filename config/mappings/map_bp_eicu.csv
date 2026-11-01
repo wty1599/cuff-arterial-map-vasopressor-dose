@@ -1,0 +1,7 @@
+itemid,label,classification,component,unitname,selected
+vitalperiodic.systemicmean,systemicmean,arterial,map,mmHg,1
+vitalperiodic.systemicsystolic,systemicsystolic,arterial,sbp,mmHg,1
+vitalperiodic.systemicdiastolic,systemicdiastolic,arterial,dbp,mmHg,1
+vitalaperiodic.noninvasivemean,noninvasivemean,cuff,map,mmHg,1
+vitalaperiodic.noninvasivesystolic,noninvasivesystolic,cuff,sbp,mmHg,1
+vitalaperiodic.noninvasivediastolic,noninvasivediastolic,cuff,dbp,mmHg,1

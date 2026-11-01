@@ -1,0 +1,8 @@
+# Original analysis package versions, recorded from the study environment.
+# Raw-data stages require approved source access and R/PostgreSQL as documented.
+numpy==2.3.5
+pandas==3.0.1
+duckdb==1.4.3
+pyarrow==26.0.0
+scipy==1.18.1
+matplotlib==3.11.2

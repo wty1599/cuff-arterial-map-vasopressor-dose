@@ -1,0 +1,74 @@
+{
+  "stage": "phase1_main_analysis_mapping_pending",
+  "created_before_phase1_stratified_results": true,
+  "seed": 20261027,
+  "bootstrap_replicates": 2000,
+  "source_phase0_read_only": true,
+  "main_databases": [
+    "mimic",
+    "eicu"
+  ],
+  "supplementary_databases": [
+    "amsterdam",
+    "sicdb"
+  ],
+  "dose_edges": [
+    0.1,
+    0.25,
+    0.5,
+    1.0
+  ],
+  "weight_kg_range": [
+    30,
+    300
+  ],
+  "height_cm_range": [
+    120,
+    230
+  ],
+  "bmi_range": [
+    12,
+    80
+  ],
+  "nee_max": 5.0,
+  "quality_action": "Set out-of-range values to unknown; retain pairs. Recompute BMI from range-checked weight and height. Dose already normalized by an invalid source weight becomes unknown if that conversion required weight. Do not invalidate directly recorded per-kg rates solely for missing admission anthropometry.",
+  "main_unit": "cuff-anchored phase0 primary pairs; pair-weighted proportions; patient-cluster resampling",
+  "same_minute": "Recalculate arterial median using only source readings in the same recorded clock minute as cuff, within same treatment episode; not the full 5-minute median.",
+  "coverage": "Within each continuous treatment episode containing both valid modalities, shared observed span is max(first cuff,first arterial) to min(last cuff,last arterial); denominator is cuff readings inside this span, numerator those paired within 5 minutes. This is an observed-span proxy, not proven catheter presence.",
+  "bootstrap": "Resample all paired patients in a database with replacement; carry all their observations; percentile 95% CI. Use the same weights for subgroup differences. Empty bootstrap denominators excluded and counted.",
+  "precision_flag": "95% CI total width >0.30 is insufficient precision; never merge or omit strata for width.",
+  "meta": "Known-dose pairs only, per endpoint and dose stratum; logit of observed rate, 0.5 correction to event and non-event counts only for boundary meta transforms; within-database variance from patient bootstrap logit SD; REML random effects, modified Hartung-Knapp (test=adhoc), I2 reported. Fewer than 2 usable databases: no pooled estimate.",
+  "model_databases": [
+    "mimic",
+    "eicu"
+  ],
+  "model_sample": "Low arterial MAP, known clean dose, complete observed age/sex/BMI/AF covariates. No missing-as-negative substitution. AF comparator is observed non-AF rhythm or diagnosis coverage without AF code; diagnosis absence without coverage is unknown.",
+  "model_knots": "Three restricted-cubic-spline knots at the 10th,50th,90th percentiles of eligible pair-level dose; tied knots use linear fallback.",
+  "model": "Binomial logit mixed model, patient random intercept, dose spline + arterial MAP + age + sex + BMI>40 + AF + database. Center/scale continuous covariates. glmer Laplace nAGQ=1, bobyqa maxfun=200000. Nonconvergence fallback: linear dose, then GLM with patient-cluster robust SE.",
+  "model_estimand": "Pair-weighted marginal standardization over complete-case covariates, integrating a normal patient random intercept with 30-node Gauss-Hermite quadrature. 95% CI by delta method on standardized logit using fixed-effect covariance, random-effect variance treated as plug-in; label this approximation. Association estimation, not prediction-tool development.",
+  "model_dose_points": [
+    0.1,
+    0.25,
+    0.5,
+    1.0,
+    2.0
+  ],
+  "bland_altman": "Intercept plus patient random intercept, REML variance components; population LoA=bias +/-1.96*sqrt(patient variance+residual variance); separate arterial-MAP and dose stratifications plus cross-stratification supplement; LoA are not confidence intervals.",
+  "af_subgroups": "MIMIC and Amsterdam rhythm-only; eICU documented AF diagnosis versus diagnosis-covered without AF diagnosis; SICdb excluded. Amsterdam AF is an explicit supplementary exception to no-subgroup default.",
+  "sensitivity": [
+    "plus_minus_2_minutes",
+    "same_recorded_minute",
+    "first_low_arterial_pair_per_patient",
+    "eicu_known_dose",
+    "exclude_any_flagged_anthropometry_or_dose",
+    "eicu_recovered_dose_if_available"
+  ],
+  "eicu_recovery_time_limit": "1 working day, nonblocking; only unambiguous dose units and concentration provenance; no cross-patient carry or guesses",
+  "source_audit": "New random 50 low-arterial-MAP pairs per database, seed20261027; independent source SQL; local row-level evidence only",
+  "figure_backend": "Python/Matplotlib, continuing the phase0 Python workflow; R only for statistical computations",
+  "everdac_annotation": "Retain requested 2.5 reference on a separate protocol-dose ruler. Original trial threshold is norepinephrine tartrate plus epinephrine, not generic NE-eq; do not put an unlabeled equivalent cutoff on the NE-eq axis.",
+  "claims": {
+    "positive": "升压药剂量越高，袖带越容易漏判低血压；在 NE-eq >X 时漏判率达到 Y%，提示 EVERDAC 的袖带优先策略在高剂量患者中需要补置动脉导管。",
+    "negative": "各剂量层的漏判率相近，袖带优先策略可外推到 EVERDAC 覆盖不足的高剂量患者。"
+  }
+}

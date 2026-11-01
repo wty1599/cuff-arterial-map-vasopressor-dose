@@ -1,0 +1,58 @@
+itemid,label,abbreviation,category,unitname,linksto,classification,component,family,selected
+220050,Arterial Blood Pressure systolic,ABPs,Routine Vital Signs,mmHg,chartevents,arterial,sbp,art1,1
+220051,Arterial Blood Pressure diastolic,ABPd,Routine Vital Signs,mmHg,chartevents,arterial,dbp,art1,1
+220052,Arterial Blood Pressure mean,ABPm,Routine Vital Signs,mmHg,chartevents,arterial,map,art1,1
+220056,Arterial Blood Pressure Alarm - Low,ABP Alarm - Low,Alarms,mmHg,chartevents,other,,,0
+220058,Arterial Blood Pressure Alarm - High,ABP Alarm - High,Alarms,mmHg,chartevents,other,,,0
+220179,Non Invasive Blood Pressure systolic,NBPs,Routine Vital Signs,mmHg,chartevents,cuff,sbp,cuff,1
+220180,Non Invasive Blood Pressure diastolic,NBPd,Routine Vital Signs,mmHg,chartevents,cuff,dbp,cuff,1
+220181,Non Invasive Blood Pressure mean,NBPm,Routine Vital Signs,mmHg,chartevents,cuff,map,cuff,1
+220224,Arterial O2 pressure,PO2 (Arterial),Labs,mmHg,chartevents,other,,,0
+220227,Arterial O2 Saturation,SaO2,Labs,%,chartevents,other,,,0
+220235,Arterial CO2 Pressure,PCO2 (Arterial),Labs,mmHg,chartevents,other,,,0
+223751,Non-Invasive Blood Pressure Alarm - High,NBP Alarm - High,Alarms,mmHg,chartevents,other,,,0
+223752,Non-Invasive Blood Pressure Alarm - Low,NBP Alarm - Low,Alarms,mmHg,chartevents,other,,,0
+223830,PH (Arterial),PH (Arterial),Labs,None,chartevents,other,,,0
+224167,Manual Blood Pressure Systolic Left,Manual BPs L,Routine Vital Signs,mmHg,chartevents,other,,,0
+224284,Arterial line Cap Change,Arterial line Cap Change,Access Lines - Invasive,,datetimeevents,other,,,0
+224285,Arterial line Change over Wire Date,Arterial line Change over Wire Date,Access Lines - Invasive,,datetimeevents,other,,,0
+224287,Arterial Line Dressing Change,Arterial Line Dressing Change,Access Lines - Invasive,,datetimeevents,other,,,0
+224288,Arterial line Insertion Date,Arterial line Insertion Date,Access Lines - Invasive,,datetimeevents,other,,,0
+224289,Arterial line Site Appear,Arterial line Site Appear,Access Lines - Invasive,,chartevents,other,,,0
+224290,Arterial line Tubing Change,Arterial line Tubing Change,Access Lines - Invasive,,datetimeevents,other,,,0
+224291,Arterial line Waveform Appear,Arterial line Waveform Appear,Access Lines - Invasive,,chartevents,other,,,0
+224404,ART Lumen Volume,ART Lumen Volume,Dialysis,mL,chartevents,other,,,0
+224643,Manual Blood Pressure Diastolic Left,Manual BPd L,Routine Vital Signs,mmHg,chartevents,other,,,0
+224828,Arterial Base Excess,Arterial Base Excess,Labs,None,chartevents,other,,,0
+225210,Arterial Line Zero/Calibrate,Arterial Line Zero/Calibrate,Access Lines - Invasive,,chartevents,other,,,0
+225309,ART BP Systolic,ART BP Systolic,Routine Vital Signs,mmHg,chartevents,arterial,sbp,art1,1
+225310,ART BP Diastolic,ART BP Diastolic,Routine Vital Signs,mmHg,chartevents,arterial,dbp,art1,1
+225312,ART BP Mean,ART BP Mean,Routine Vital Signs,mmHg,chartevents,arterial,map,art1,1
+225341,IABP Art. Waveform Appear,IABP Art. Waveform Appear,Access Lines - Invasive,,chartevents,other,,,0
+225556,Replaced previous Arterial line over wire,Replaced previous Arterial line,Arterial Line Insertion,,chartevents,other,,,0
+225575,Arterial Line ordered on POE,Arterial Line ordered on POE,Arterial Line Insertion,,chartevents,other,,,0
+225698,TCO2 (calc) Arterial,TCO2 (calc) Arterial,Labs,None,chartevents,other,,,0
+225722,Arterial Line Tip Cultured,Arterial Line Tip Cultured,Access Lines - Invasive,,chartevents,other,,,0
+225737,Arterial Line Discontinued,Arterial Line Discontinued,Access Lines - Invasive,,chartevents,other,,,0
+225752,Arterial Line,Arterial Line,Access Lines - Invasive,None,procedureevents,other,,,0
+225794,Non-invasive Ventilation,Non-invasive Ventilation,2-Ventilation,None,procedureevents,other,,,0
+225986,IABP Arterial Waveform Source,IABP Arterial Waveform Source,Access Lines - Invasive,,chartevents,other,,,0
+226008,Arterial line sutured,Arterial line sutured,Arterial Line Insertion,,chartevents,other,,,0
+226107,Arterial Line placed in outside facility,Arterial Line placed in outside facility,Access Lines - Invasive,,chartevents,other,,,0
+226861,ART %O2 saturation (PA Line),ART %O2 saturation (PA Line),PA Line Insertion,%,chartevents,other,,,0
+227239,ABP Alarm Source,ABP Alarm Source,Alarms,,chartevents,other,,,0
+227240,NBP Alarm Source,NBP Alarm Source,Alarms,,chartevents,other,,,0
+227242,Manual Blood Pressure Diastolic Right,Manual BPd R,Routine Vital Signs,mmHg,chartevents,other,,,0
+227243,Manual Blood Pressure Systolic Right,Manual BPs R,Routine Vital Signs,mmHg,chartevents,other,,,0
+227292,Arterial Line Dressing Occlusive,Arterial Line Dressing Occlusive,Access Lines - Invasive,,chartevents,other,,,0
+227537,ART Blood Pressure Alarm - High,ART BP Alarm - High,Alarms,mmHg,chartevents,other,,,0
+227538,ART Blood Pressure Alarm - Low,ART BP Alarm - Low,Alarms,mmHg,chartevents,other,,,0
+227539,ART Blood Pressure Alarm Source,ART BP Alarm Source,Alarms,,chartevents,other,,,0
+227543,CO (Arterial),CO (Arterial),Hemodynamics,L/min,chartevents,other,,,0
+227546,SVV (Arterial),SVV (Arterial),Hemodynamics,%,chartevents,other,,,0
+227547,SV (Arterial),SV (Arterial),Hemodynamics,mL/beat,chartevents,other,,,0
+228022,Replaced previous Arterial line over wire,Replaced previous Arterial line over wire,Arterial Line Insertion,,chartevents,other,,,0
+228023,Arterial line sutured,Arterial line sutured,Arterial Line Insertion,,chartevents,other,,,0
+228026,Arterial Line ordered on POE,Arterial Line ordered on POE,Arterial Line Insertion,,chartevents,other,,,0
+229525,Sheath (Arterial),Sheath (Arterial),Access Lines - Invasive,None,procedureevents,other,,,0
+229853,Art Bubble (CH),Art Bubble (CH),ECMO,,chartevents,other,,,0

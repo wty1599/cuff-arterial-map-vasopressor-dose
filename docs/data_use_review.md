@@ -1,0 +1,14 @@
+# Data-use review
+
+Official sources checked on 2026-11-02. This review records the applicable public access descriptions; it does not replace the investigator's signed agreement.
+
+| Source | Verified terms relevant to this repository | Aggregate disclosure decision |
+|---|---|---|
+| [MIMIC-IV license](https://physionet.org/content/mimiciv/view-license/3.1/) | PhysioNet Credentialed Health Data License 1.5.0 requires protection against identity disclosure, individual access, security and lawful scientific use; publication-related code must be contributed to an open research repository. | No universal numeric small-cell threshold was found on the reviewed page. No raw data or exact counts are released; rounded rates/intervals and a conservative ten-patient minimum are used. |
+| [eICU license](https://physionet.org/content/eicu-crd/view-license/2.0/) | The same Credentialed Health Data License 1.5.0 conditions apply. | The same conservative aggregate policy applies; no assumption that restricted records may be redistributed. |
+| [SICdb license](https://physionet.org/content/sicdb/view-license/1.0.8/) and [access page](https://physionet.org/content/sicdb/1.0.8/) | The Contributor Review Health Data License 1.5.0 retains restrictions on disclosure and sharing. Access additionally requires contributor approval of the proposed research. | No patient contributions, source-audit records or bootstrap draws are released. Small cells and cells without denominator evidence are omitted. |
+| [AmsterdamUMCdb official access page](https://amsterdammedicaldatascience.nl/) | Access is personal and bound to an End User License accepted by the investigator and clinical reference. The public page specifies lawful non-commercial scientific research. | The complete current signed license was not retrievable from the public page. The former public EULA PDF URL returned 404. Exact aggregate-count permission remains unconfirmed; only rounded rates/intervals are included. |
+
+The ten-patient rule is a conservative project disclosure choice and the explicit author instruction for this repository, not a claim that every database license prescribes the same cutoff. Exact counts, marginal totals and full-precision ratios are withheld to reduce cross-table reconstruction. Source licenses remain controlling. The [AmsterdamUMCdb GitHub MIT license](https://github.com/AmsterdamUMC/AmsterdamUMCdb/blob/master/LICENSE) applies to its software and must not be mistaken for a license to redistribute patient data.
+
+The current private staging repository does not itself fulfill PhysioNet's publication-code availability condition. An author-controlled public code release is prepared but has not been performed. Before public release, confirm the signed AmsterdamUMCdb agreement and review the repository together with the manuscript's existing disclosures.

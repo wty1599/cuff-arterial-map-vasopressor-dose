@@ -1,0 +1,58 @@
+database,scenario,endpoint,stratum,ci_upper,estimate,ci_lower,precision,source_csv,source_line
+MIMIC-IV,Exclude flagged anthropometric or dose records,Missed hypotension rate,all,0.440,0.422,0.404,adequate,S10_exclude_flagged.csv,2
+MIMIC-IV,Exclude flagged anthropometric or dose records,Missed hypotension rate,known,0.442,0.424,0.406,adequate,S10_exclude_flagged.csv,3
+MIMIC-IV,Exclude flagged anthropometric or dose records,Missed hypotension rate,unknown,0.348,0.290,0.232,adequate,S10_exclude_flagged.csv,4
+MIMIC-IV,Exclude flagged anthropometric or dose records,Missed hypotension rate,<=0.1,0.441,0.419,0.398,adequate,S10_exclude_flagged.csv,5
+MIMIC-IV,Exclude flagged anthropometric or dose records,Missed hypotension rate,>0.1-0.25,0.450,0.421,0.392,adequate,S10_exclude_flagged.csv,6
+MIMIC-IV,Exclude flagged anthropometric or dose records,Missed hypotension rate,>0.25-0.5,0.507,0.470,0.433,adequate,S10_exclude_flagged.csv,7
+MIMIC-IV,Exclude flagged anthropometric or dose records,Missed hypotension rate,>0.5-1.0,0.457,0.412,0.369,adequate,S10_exclude_flagged.csv,8
+MIMIC-IV,Exclude flagged anthropometric or dose records,Missed hypotension rate,>1.0,0.435,0.344,0.259,adequate,S10_exclude_flagged.csv,9
+MIMIC-IV,Exclude flagged anthropometric or dose records,False-alarm rate,all,0.208,0.199,0.190,insufficient precision,S10_exclude_flagged.csv,10
+MIMIC-IV,Exclude flagged anthropometric or dose records,False-alarm rate,known,0.208,0.198,0.189,insufficient precision,S10_exclude_flagged.csv,11
+MIMIC-IV,Exclude flagged anthropometric or dose records,False-alarm rate,unknown,0.302,0.261,0.221,adequate,S10_exclude_flagged.csv,12
+MIMIC-IV,Exclude flagged anthropometric or dose records,False-alarm rate,<=0.1,0.219,0.207,0.195,adequate,S10_exclude_flagged.csv,13
+MIMIC-IV,Exclude flagged anthropometric or dose records,False-alarm rate,>0.1-0.25,0.212,0.199,0.185,adequate,S10_exclude_flagged.csv,14
+MIMIC-IV,Exclude flagged anthropometric or dose records,False-alarm rate,>0.25-0.5,0.195,0.175,0.155,adequate,S10_exclude_flagged.csv,15
+MIMIC-IV,Exclude flagged anthropometric or dose records,False-alarm rate,>0.5-1.0,0.211,0.183,0.160,adequate,S10_exclude_flagged.csv,16
+MIMIC-IV,Exclude flagged anthropometric or dose records,False-alarm rate,>1.0,0.280,0.223,0.168,adequate,S10_exclude_flagged.csv,17
+eICU,Exclude flagged anthropometric or dose records,Missed hypotension rate,all,0.430,0.413,0.396,adequate,S10_exclude_flagged.csv,18
+eICU,Exclude flagged anthropometric or dose records,Missed hypotension rate,known,0.477,0.450,0.424,adequate,S10_exclude_flagged.csv,19
+eICU,Exclude flagged anthropometric or dose records,Missed hypotension rate,unknown,0.419,0.399,0.378,adequate,S10_exclude_flagged.csv,20
+eICU,Exclude flagged anthropometric or dose records,Missed hypotension rate,<=0.1,0.497,0.467,0.437,adequate,S10_exclude_flagged.csv,21
+eICU,Exclude flagged anthropometric or dose records,Missed hypotension rate,>0.1-0.25,0.522,0.485,0.447,adequate,S10_exclude_flagged.csv,22
+eICU,Exclude flagged anthropometric or dose records,Missed hypotension rate,>0.25-0.5,0.475,0.415,0.357,adequate,S10_exclude_flagged.csv,23
+eICU,Exclude flagged anthropometric or dose records,Missed hypotension rate,>0.5-1.0,0.530,0.467,0.404,adequate,S10_exclude_flagged.csv,24
+eICU,Exclude flagged anthropometric or dose records,Missed hypotension rate,>1.0,0.401,0.297,0.216,adequate,S10_exclude_flagged.csv,25
+eICU,Exclude flagged anthropometric or dose records,False-alarm rate,all,0.196,0.186,0.178,insufficient precision,S10_exclude_flagged.csv,26
+eICU,Exclude flagged anthropometric or dose records,False-alarm rate,known,0.166,0.153,0.142,adequate,S10_exclude_flagged.csv,27
+eICU,Exclude flagged anthropometric or dose records,False-alarm rate,unknown,0.211,0.199,0.188,adequate,S10_exclude_flagged.csv,28
+eICU,Exclude flagged anthropometric or dose records,False-alarm rate,<=0.1,0.168,0.153,0.138,adequate,S10_exclude_flagged.csv,29
+eICU,Exclude flagged anthropometric or dose records,False-alarm rate,>0.1-0.25,0.168,0.148,0.129,adequate,S10_exclude_flagged.csv,30
+eICU,Exclude flagged anthropometric or dose records,False-alarm rate,>0.25-0.5,0.180,0.153,0.128,adequate,S10_exclude_flagged.csv,31
+eICU,Exclude flagged anthropometric or dose records,False-alarm rate,>0.5-1.0,0.216,0.174,0.134,adequate,S10_exclude_flagged.csv,32
+eICU,Exclude flagged anthropometric or dose records,False-alarm rate,>1.0,0.225,0.162,0.113,adequate,S10_exclude_flagged.csv,33
+AmsterdamUMCdb,Exclude flagged anthropometric or dose records,Missed hypotension rate,all,0.571,0.509,0.450,adequate,S10_exclude_flagged.csv,34
+AmsterdamUMCdb,Exclude flagged anthropometric or dose records,Missed hypotension rate,known,0.584,0.510,0.435,adequate,S10_exclude_flagged.csv,35
+AmsterdamUMCdb,Exclude flagged anthropometric or dose records,Missed hypotension rate,unknown,0.601,0.507,0.405,adequate,S10_exclude_flagged.csv,36
+AmsterdamUMCdb,Exclude flagged anthropometric or dose records,Missed hypotension rate,<=0.1,0.541,0.469,0.398,adequate,S10_exclude_flagged.csv,37
+AmsterdamUMCdb,Exclude flagged anthropometric or dose records,Missed hypotension rate,>0.1-0.25,0.633,0.537,0.442,adequate,S10_exclude_flagged.csv,38
+AmsterdamUMCdb,Exclude flagged anthropometric or dose records,Missed hypotension rate,>0.25-0.5,0.729,0.524,0.301,insufficient,S10_exclude_flagged.csv,39
+AmsterdamUMCdb,Exclude flagged anthropometric or dose records,Missed hypotension rate,>0.5-1.0,0.624,0.541,0.462,adequate,S10_exclude_flagged.csv,40
+AmsterdamUMCdb,Exclude flagged anthropometric or dose records,Missed hypotension rate,>1.0,0.673,0.473,0.275,insufficient,S10_exclude_flagged.csv,41
+AmsterdamUMCdb,Exclude flagged anthropometric or dose records,False-alarm rate,all,0.170,0.142,0.115,adequate,S10_exclude_flagged.csv,42
+AmsterdamUMCdb,Exclude flagged anthropometric or dose records,False-alarm rate,known,0.143,0.119,0.096,adequate,S10_exclude_flagged.csv,43
+AmsterdamUMCdb,Exclude flagged anthropometric or dose records,False-alarm rate,unknown,0.303,0.236,0.152,adequate,S10_exclude_flagged.csv,44
+AmsterdamUMCdb,Exclude flagged anthropometric or dose records,False-alarm rate,<=0.1,0.132,0.098,0.072,adequate,S10_exclude_flagged.csv,45
+AmsterdamUMCdb,Exclude flagged anthropometric or dose records,False-alarm rate,>0.1-0.25,0.126,0.093,0.066,adequate,S10_exclude_flagged.csv,46
+AmsterdamUMCdb,Exclude flagged anthropometric or dose records,False-alarm rate,>0.25-0.5,0.218,0.163,0.115,adequate,S10_exclude_flagged.csv,47
+AmsterdamUMCdb,Exclude flagged anthropometric or dose records,False-alarm rate,>0.5-1.0,0.232,0.140,0.077,adequate,S10_exclude_flagged.csv,48
+AmsterdamUMCdb,Exclude flagged anthropometric or dose records,False-alarm rate,>1.0,0.577,0.373,0.154,insufficient,S10_exclude_flagged.csv,49
+SICdb,Exclude flagged anthropometric or dose records,Missed hypotension rate,all,0.438,0.358,0.261,adequate,S10_exclude_flagged.csv,50
+SICdb,Exclude flagged anthropometric or dose records,Missed hypotension rate,known,0.445,0.361,0.262,adequate,S10_exclude_flagged.csv,51
+SICdb,Exclude flagged anthropometric or dose records,Missed hypotension rate,<=0.1,0.465,0.370,0.237,adequate,S10_exclude_flagged.csv,53
+SICdb,Exclude flagged anthropometric or dose records,Missed hypotension rate,>0.1-0.25,0.429,0.317,0.222,adequate,S10_exclude_flagged.csv,54
+SICdb,Exclude flagged anthropometric or dose records,Missed hypotension rate,>0.25-0.5,0.545,0.351,0.180,insufficient,S10_exclude_flagged.csv,55
+SICdb,Exclude flagged anthropometric or dose records,False-alarm rate,all,0.490,0.399,0.226,adequate,S10_exclude_flagged.csv,58
+SICdb,Exclude flagged anthropometric or dose records,False-alarm rate,known,0.491,0.401,0.227,adequate,S10_exclude_flagged.csv,59
+SICdb,Exclude flagged anthropometric or dose records,False-alarm rate,<=0.1,0.523,0.444,0.241,adequate,S10_exclude_flagged.csv,61
+SICdb,Exclude flagged anthropometric or dose records,False-alarm rate,>0.1-0.25,0.362,0.219,0.135,adequate,S10_exclude_flagged.csv,62

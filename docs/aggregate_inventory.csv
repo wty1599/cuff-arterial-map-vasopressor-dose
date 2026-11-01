@@ -1,0 +1,87 @@
+source_csv,released,reason
+A1_cuff_ge70.csv,no,"Count/identifier/audit/metadata output, duplicate, or no sufficient patient-denominator evidence for this release"
+A2_likelihood_ratios.csv,no,"Count/identifier/audit/metadata output, duplicate, or no sufficient patient-denominator evidence for this release"
+A_flow.csv,no,"Count/identifier/audit/metadata output, duplicate, or no sufficient patient-denominator evidence for this release"
+derived_numbers.csv,no,"Count/identifier/audit/metadata output, duplicate, or no sufficient patient-denominator evidence for this release"
+electronic_data_index.csv,no,"Count/identifier/audit/metadata output, duplicate, or no sufficient patient-denominator evidence for this release"
+independent_four_cell_counts.csv,no,"Count/identifier/audit/metadata output, duplicate, or no sufficient patient-denominator evidence for this release"
+independent_three_rates.csv,no,"Count/identifier/audit/metadata output, duplicate, or no sufficient patient-denominator evidence for this release"
+literature_numbers.csv,no,"Count/identifier/audit/metadata output, duplicate, or no sufficient patient-denominator evidence for this release"
+literature_verified_facts.csv,no,"Count/identifier/audit/metadata output, duplicate, or no sufficient patient-denominator evidence for this release"
+parameters_and_locators.csv,no,"Count/identifier/audit/metadata output, duplicate, or no sufficient patient-denominator evidence for this release"
+phase2_positional_sensitivity_counts.csv,no,"Count/identifier/audit/metadata output, duplicate, or no sufficient patient-denominator evidence for this release"
+phase2_sensitivity_exclude_source_positional.csv,no,"Count/identifier/audit/metadata output, duplicate, or no sufficient patient-denominator evidence for this release"
+phase4_S3_baseline.csv,no,"Count/identifier/audit/metadata output, duplicate, or no sufficient patient-denominator evidence for this release"
+phase4_S3_comparison.csv,no,"Count/identifier/audit/metadata output, duplicate, or no sufficient patient-denominator evidence for this release"
+phase4_S3_site.csv,yes,Only conditional probabilities/intervals with verified patient denominator; mean-difference rows and counts withheld.
+phase4_S4_bias_by_range.csv,no,This conservative release contains probabilities/likelihood ratios and their intervals only; pressure-difference aggregates are withheld.
+phase4_S4_existing_overall_BA.csv,no,"Count/identifier/audit/metadata output, duplicate, or no sufficient patient-denominator evidence for this release"
+phase4_site_availability.csv,no,"Count/identifier/audit/metadata output, duplicate, or no sufficient patient-denominator evidence for this release"
+phase4_site_distribution.csv,no,"Count/identifier/audit/metadata output, duplicate, or no sufficient patient-denominator evidence for this release"
+phase5_S5_counterfactual.csv,yes,Rounded rate/CI rows with verified patient denominator; counts withheld
+phase5_table6_comparison.csv,no,"Count/identifier/audit/metadata output, duplicate, or no sufficient patient-denominator evidence for this release"
+prior_literature_numeric_facts.csv,no,"Count/identifier/audit/metadata output, duplicate, or no sufficient patient-denominator evidence for this release"
+reference_identifiers.csv,no,"Count/identifier/audit/metadata output, duplicate, or no sufficient patient-denominator evidence for this release"
+S10_exclude_flagged.csv,yes,Rounded rate/CI rows with verified patient denominator; counts withheld
+S10_exclude_positional_waveform.csv,yes,Rounded rate/CI rows with verified patient denominator; counts withheld
+S10_first_low_pair.csv,yes,Rounded rate/CI rows with verified patient denominator; counts withheld
+S10_known_dose_only.csv,yes,Rounded rate/CI rows with verified patient denominator; counts withheld
+S10_positional_exclusion_counts.csv,no,"Count/identifier/audit/metadata output, duplicate, or no sufficient patient-denominator evidence for this release"
+S10_recovered_dose_explanatory.csv,yes,Rounded rate/CI rows with verified patient denominator; counts withheld
+S10_recovered_dose_primary.csv,yes,Rounded rate/CI rows with verified patient denominator; counts withheld
+S10_recovered_missed_distribution.csv,yes,Rounded rate/CI rows with verified patient denominator; counts withheld
+S10_same_minute_explanatory.csv,yes,Rounded rate/CI rows with verified patient denominator; counts withheld
+S10_same_minute_primary.csv,yes,Rounded rate/CI rows with verified patient denominator; counts withheld
+S10_two_minute_window.csv,yes,Rounded rate/CI rows with verified patient denominator; counts withheld
+S11_baseline_source_checks.csv,no,"Count/identifier/audit/metadata output, duplicate, or no sufficient patient-denominator evidence for this release"
+S11_boundary_intervals.csv,no,"Count/identifier/audit/metadata output, duplicate, or no sufficient patient-denominator evidence for this release"
+S11_deep_missed_source_checks.csv,no,"Count/identifier/audit/metadata output, duplicate, or no sufficient patient-denominator evidence for this release"
+S11_low_pressure_source_checks.csv,no,"Count/identifier/audit/metadata output, duplicate, or no sufficient patient-denominator evidence for this release"
+S11_population_source_checks.csv,no,"Count/identifier/audit/metadata output, duplicate, or no sufficient patient-denominator evidence for this release"
+S11_waveform_record_coverage.csv,no,"Count/identifier/audit/metadata output, duplicate, or no sufficient patient-denominator evidence for this release"
+S17_cuff_ge70.csv,yes,Rounded rate/CI rows with verified patient denominator; counts withheld
+S18_likelihood_ratios.csv,yes,Rounded rate/CI rows with verified patient denominator; counts withheld
+S1_baseline.csv,no,"Count/identifier/audit/metadata output, duplicate, or no sufficient patient-denominator evidence for this release"
+S1_cohort_flow.csv,no,"Count/identifier/audit/metadata output, duplicate, or no sufficient patient-denominator evidence for this release"
+S1_dose_counts.csv,no,"Count/identifier/audit/metadata output, duplicate, or no sufficient patient-denominator evidence for this release"
+S1_dose_recovery_counts.csv,no,"Count/identifier/audit/metadata output, duplicate, or no sufficient patient-denominator evidence for this release"
+S1_dose_recovery_reasons.csv,no,"Count/identifier/audit/metadata output, duplicate, or no sufficient patient-denominator evidence for this release"
+S1_dose_recovery_summary.csv,no,"Count/identifier/audit/metadata output, duplicate, or no sufficient patient-denominator evidence for this release"
+S1_paired_coverage.csv,no,"Count/identifier/audit/metadata output, duplicate, or no sufficient patient-denominator evidence for this release"
+S1_range_checks.csv,no,"Count/identifier/audit/metadata output, duplicate, or no sufficient patient-denominator evidence for this release"
+S2_deep_missed_hypotension.csv,yes,Rounded rate/CI rows with verified patient denominator; counts withheld
+S2_false_alarm_display.csv,no,"Count/identifier/audit/metadata output, duplicate, or no sufficient patient-denominator evidence for this release"
+S2_missed_and_false_alarm.csv,yes,Rounded rate/CI rows with verified patient denominator; counts withheld
+S2_missed_pressure_distribution.csv,yes,Rounded rate/CI rows with verified patient denominator; counts withheld
+S2_pooled_deep_missed_hypotension.csv,yes,Rounded rate/CI rows with verified patient denominator; counts withheld
+S2_pooled_missed_and_false_alarm.csv,yes,Rounded rate/CI rows with verified patient denominator; counts withheld
+S3_cuff_conditioned_probabilities.csv,yes,Rounded rate/CI rows with verified patient denominator; counts withheld
+S4_arterial_hypotension_depth.csv,no,"Count/identifier/audit/metadata output, duplicate, or no sufficient patient-denominator evidence for this release"
+S4_dose_by_pressure.csv,yes,Rounded rate/CI rows with verified patient denominator; counts withheld
+S5_hypotension_depth_distribution.csv,no,"Count/identifier/audit/metadata output, duplicate, or no sufficient patient-denominator evidence for this release"
+S5_reference_distribution.csv,no,"Count/identifier/audit/metadata output, duplicate, or no sufficient patient-denominator evidence for this release"
+S5_resampling_design.csv,no,"Count/identifier/audit/metadata output, duplicate, or no sufficient patient-denominator evidence for this release"
+S5_standardized_missed_hypotension.csv,yes,Rounded rate/CI rows with verified patient denominator; counts withheld
+S5_standardized_spans.csv,no,"Count/identifier/audit/metadata output, duplicate, or no sufficient patient-denominator evidence for this release"
+S6_bland_altman.csv,no,"Count/identifier/audit/metadata output, duplicate, or no sufficient patient-denominator evidence for this release"
+S6_bland_altman_density.csv,no,"Count/identifier/audit/metadata output, duplicate, or no sufficient patient-denominator evidence for this release"
+S7_complete_case_flow.csv,no,"Count/identifier/audit/metadata output, duplicate, or no sufficient patient-denominator evidence for this release"
+S7_convergence.csv,no,"Count/identifier/audit/metadata output, duplicate, or no sufficient patient-denominator evidence for this release"
+S7_dose_association_coefficients.csv,no,"Count/identifier/audit/metadata output, duplicate, or no sufficient patient-denominator evidence for this release"
+S7_dose_association_contrasts.csv,no,"Count/identifier/audit/metadata output, duplicate, or no sufficient patient-denominator evidence for this release"
+S7_dose_association_curve.csv,no,"Count/identifier/audit/metadata output, duplicate, or no sufficient patient-denominator evidence for this release"
+S7_dose_association_estimates.csv,no,"Count/identifier/audit/metadata output, duplicate, or no sufficient patient-denominator evidence for this release"
+S7_dose_association_tests.csv,no,"Count/identifier/audit/metadata output, duplicate, or no sufficient patient-denominator evidence for this release"
+S7_dose_support.csv,no,"Count/identifier/audit/metadata output, duplicate, or no sufficient patient-denominator evidence for this release"
+S7_model_fit.csv,no,"Count/identifier/audit/metadata output, duplicate, or no sufficient patient-denominator evidence for this release"
+S7_spline_parameters.csv,no,"Count/identifier/audit/metadata output, duplicate, or no sufficient patient-denominator evidence for this release"
+S8_subgroup_comparisons.csv,no,"Count/identifier/audit/metadata output, duplicate, or no sufficient patient-denominator evidence for this release"
+S8_subgroup_rates.csv,yes,Rounded rate/CI rows with verified patient denominator; counts withheld
+S9_index_unit_mapping.csv,no,"Count/identifier/audit/metadata output, duplicate, or no sufficient patient-denominator evidence for this release"
+S9_population_ascertainment.csv,no,"Count/identifier/audit/metadata output, duplicate, or no sufficient patient-denominator evidence for this release"
+S9_population_availability.csv,no,"Count/identifier/audit/metadata output, duplicate, or no sufficient patient-denominator evidence for this release"
+S9_population_counts.csv,no,"Count/identifier/audit/metadata output, duplicate, or no sufficient patient-denominator evidence for this release"
+S9_population_sensitivity.csv,yes,Rounded rate/CI rows with verified patient denominator; counts withheld
+S9_unavailable_restrictions.csv,no,"Count/identifier/audit/metadata output, duplicate, or no sufficient patient-denominator evidence for this release"
+SICdb_false_alarm_source_audit_summary.csv,no,"Count/identifier/audit/metadata output, duplicate, or no sufficient patient-denominator evidence for this release"
+Table2_rev8a.csv,no,"Count/identifier/audit/metadata output, duplicate, or no sufficient patient-denominator evidence for this release"

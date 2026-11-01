@@ -1,0 +1,13 @@
+database,scenario,stratum,method,ci_upper,estimate,ci_lower,raw_missed_rate,precision,source_csv,source_line
+MIMIC-IV,Primary five-minute pairing,<=0.1,direct_standardization_independent_database_patient_cluster_percentile_2000,0.429,0.409,0.388,0.419,adequate,S5_standardized_missed_hypotension.csv,2
+MIMIC-IV,Primary five-minute pairing,>0.1-0.25,direct_standardization_independent_database_patient_cluster_percentile_2000,0.445,0.415,0.387,0.421,adequate,S5_standardized_missed_hypotension.csv,3
+MIMIC-IV,Primary five-minute pairing,>0.25-0.5,direct_standardization_independent_database_patient_cluster_percentile_2000,0.510,0.471,0.433,0.468,adequate,S5_standardized_missed_hypotension.csv,4
+MIMIC-IV,Primary five-minute pairing,>0.5-1.0,direct_standardization_independent_database_patient_cluster_percentile_2000,0.474,0.431,0.387,0.412,adequate,S5_standardized_missed_hypotension.csv,5
+MIMIC-IV,Primary five-minute pairing,>1.0,direct_standardization_independent_database_patient_cluster_percentile_2000,0.518,0.435,0.349,0.344,adequate,S5_standardized_missed_hypotension.csv,6
+eICU,Primary five-minute pairing,<=0.1,direct_standardization_independent_database_patient_cluster_percentile_2000,0.496,0.462,0.430,0.469,adequate,S5_standardized_missed_hypotension.csv,7
+eICU,Primary five-minute pairing,>0.1-0.25,direct_standardization_independent_database_patient_cluster_percentile_2000,0.517,0.480,0.442,0.485,adequate,S5_standardized_missed_hypotension.csv,8
+eICU,Primary five-minute pairing,>0.25-0.5,direct_standardization_independent_database_patient_cluster_percentile_2000,0.492,0.429,0.369,0.416,adequate,S5_standardized_missed_hypotension.csv,9
+eICU,Primary five-minute pairing,>0.5-1.0,direct_standardization_independent_database_patient_cluster_percentile_2000,0.561,0.502,0.434,0.467,adequate,S5_standardized_missed_hypotension.csv,10
+eICU,Primary five-minute pairing,>1.0,direct_standardization_independent_database_patient_cluster_percentile_2000,0.472,0.379,0.293,0.300,adequate,S5_standardized_missed_hypotension.csv,11
+eICU,Recovered-dose sensitivity,all,direct_standardization_independent_database_patient_cluster_percentile_2000,0.432,0.414,0.396,0.413,adequate,S5_standardized_missed_hypotension.csv,12
+eICU,Recovered-dose sensitivity,>1.0,direct_standardization_independent_database_patient_cluster_percentile_2000,0.463,0.393,0.323,0.317,adequate,S5_standardized_missed_hypotension.csv,13

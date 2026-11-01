@@ -1,0 +1,2 @@
+# Preserve reviewed file bytes so clone hashes match the release audit.
+* -text

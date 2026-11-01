@@ -1,0 +1,9 @@
+# Aggregate disclosure policy
+
+This repository distributes rounded proportions and confidence limits only. It does not distribute patient or pair counts, individual contributions, patient identifiers, timestamps, bootstrap replicates, or source-audit records. Any cell whose contributing denominator includes fewer than ten patients is omitted. Likelihood-ratio cells require at least ten reference-positive and ten reference-negative patients. Cells without adequate denominator evidence are also omitted.
+
+Proportions and limits are rounded to 0.001 (0.1 percentage point); likelihood ratios to two decimals. Precision flags and original intervals are retained for releasable cells. The requested operational flag also covers estimates less than one percentage point from a confidence bound, which can include narrow intervals in large samples; the label alone does not demonstrate low precision. These display changes do not alter the original estimates or analytical definitions. The detailed suppression ledger remains in the restricted local audit and is not included here.
+
+Complementary-cell protection: no exact counts, marginal totals, patient counts, per-patient contribution percentages, or full-precision ratios are distributed anywhere in the repository. Model/density outputs without a defensible patient denominator are withheld. The public plots and tables are built solely from these reduced aggregates. External manuscript disclosures must be reviewed together with this package before a future public release.
+
+The reconstructed Brief Report tables show the published rate components with the current display rules; they intentionally omit the original count columns. This is not a claim of byte-for-byte reproduction of the manuscript tables. The figure is redrawn from display-precision summaries; uncertainty comes from the original analysis, not from a new fit.

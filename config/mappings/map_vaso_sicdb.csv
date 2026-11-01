@@ -1,0 +1,15 @@
+itemid,label,drug,unitname,category,selected
+480,Adrenalin im Plasma (ZL),epinephrine,ng/L,Laboratory,0
+596,PFA100-Kollagen/Epinephrin (ZL),epinephrine,sec,Laboratory,0
+605,Angiotensin conv. Enzym (ZL),angiotensin_ii,U/L,Laboratory,0
+733,Norepinephrin,norepinephrine,,SignalDrug,0
+734,NorepinephrinpKG,norepinephrine,,SignalDrug,0
+772,NorepinephrinPerHour,norepinephrine,,DrugDosagePerHour,0
+773,NorepinephrinPerHourWeight,norepinephrine,,DrugDosagePerHour,0
+1502,EPINEPHrin,epinephrine,g,Drug,1
+1550,Vasopressin,vasopressin,IE,Drug,1
+1562,Norepinephrin,norepinephrine,g,Drug,1
+1593,Phenylephrin,phenylephrine,g,Drug,1
+1618,DOPamin,dopamine,g,Drug,1
+1738,Lidocain 2% /Epinephrin,epinephrine,g,Drug,0
+1764,Pitressin,vasopressin,,Drug,1

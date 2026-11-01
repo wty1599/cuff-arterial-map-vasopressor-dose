@@ -1,0 +1,85 @@
+{
+  "stage": "phase0_feasibility_only",
+  "seed": 20261027,
+  "cohort": "age >=18; first ICU stay per patient; all ICU stays count-only sensitivity",
+  "gap_minutes_primary": 60,
+  "gap_minutes_count_sensitivity": 30,
+  "pair_windows_minutes": [
+    2,
+    5,
+    10
+  ],
+  "pair_window_primary": 5,
+  "pair_anchor": "each cuff MAP reading; median of arterial MAP within symmetric window",
+  "map_range_inclusive": [
+    20,
+    200
+  ],
+  "exclude_sbp_le_dbp": true,
+  "exclude_pulse_pressure_lt": 10,
+  "exclude_sbp_gt": 300,
+  "nee_factors_mcg_kg_min": {
+    "norepinephrine": 1,
+    "epinephrine": 1,
+    "phenylephrine": 0.1,
+    "dopamine": 0.01
+  },
+  "vasopressin_units_min_factor": 2.5,
+  "angiotensin_ii_ng_kg_min_factor": 0.01,
+  "nee_cutpoints": [
+    0.1,
+    0.25,
+    0.5,
+    1.0
+  ],
+  "signal_sample_patient_fraction": 0.1,
+  "signal_allowed": "unstratified cuff MAP >=65 among arterial MAP <65; patient-cluster 95% CI",
+  "no_stratified_agreement": true,
+  "no_outcome_association": true,
+  "no_models": true,
+  "mimic_observation_time": "charttime; no storetime filter",
+  "source_database_writes": false,
+  "row_level_directory": "@CUFF_WORKSPACE@/phase0/_restricted",
+  "R1": {
+    "continue_databases": 2,
+    "patients_per_database": 500,
+    "pairs_per_patient": 10
+  },
+  "R2": {
+    "primary_nee_above": 1,
+    "alternative_nee_above": 0.5,
+    "patients": 100,
+    "pairs": 250
+  },
+  "R3": {
+    "continue_pair_fraction": 0.5,
+    "adjust_min_pair_fraction": 0.3
+  },
+  "R4": {
+    "continue_patients": 100,
+    "describe_min_patients": 50
+  },
+  "eicu_interval_rule": {
+    "authorized_by_user": true,
+    "positive_rate_carry_until": "min(next_same_drug_record, current_time+60 minutes, ICU discharge)",
+    "sensitivity_max_minutes": 30,
+    "evidence_type": "inferred infusion period; not directly recorded start/end"
+  },
+  "implementation_details": {
+    "bp_same_time_components": "Use same modality and family at exact recorded time; median exact duplicates. Reject each observed artifact criterion; missing SBP/DBP are unknown for those checks and reported separately, not automatically abnormal.",
+    "pair_arterial_window": "Cuff anchor must be inside treatment episode. Arterial measurements must be in the same treatment episode; deduplicate identical time within modality, then median valid MAP values in each window.",
+    "time_difference": "For each cuff with any arterial value within 10 min, report nearest absolute source time difference; median-window MAP has no single source timestamp. Same-minute fraction uses floor(source_time/minute).",
+    "dose_during_bridged_gap": "Coverage can bridge gap <=60/30 min; do not invent an infusion rate during a direct-record gap. NE-eq is unknown unless active source dose records cover that anchor. Build continuity episodes for each drug; if ANY expected constituent is in an undocumented gap or has unconvertible dose, TOTAL NE-eq is unknown even when other drugs have known active rates.",
+    "bmi": "Use admission or earliest clinically recorded height/weight, not per-infusion patientweight. Interval-valued Amsterdam BMI is a midpoint proxy and separately reports definite/possible BMI>40 bounds.",
+    "af": "Rhythm observation anywhere during eligible ICU stay; any positive AF record overrides other rhythms. Only if no usable rhythm charting, use diagnosis fallback. Counts describe patients, not contemporaneous AF exposure.",
+    "cluster_ci": "Patient-level bootstrap percentile 95% CI, 2000 replicates, seed=20261027. Patients sampled without replacement at ceil(10% of primary paired patients); resample all selected patient clusters including zero low-MAP denominators.",
+    "first_stay_eicu": "Earliest hospitaldischargeyear; only a unique hospitalization in that year can establish ordering. Within that hospitalization earliest ICU start by hospitaladmitoffset, then unitvisitnumber. Same-year multiple-hospitalization order unknown: exclude from first-stay primary, retain all-stay count sensitivity.; hospitaladmitoffset DESC (earliest ICU start), never ascending.",
+    "first_stay_amsterdam": "Identify earliest admission containing IC per patient, then primary only if location=IC. Earlier mixed IC/MC with unlocatable conversion makes first ICU unknown; pure MC excluded. All locations reported.",
+    "first_stay_sicdb": "Map complete unit dictionary; use unitlog to identify cases with any ICU. Earliest such case by OffsetAfterFirstAdmission + ICUOffset is primary only when all recorded units are ICU; mixed/unknown first cases excluded and reported. No ICU/MC assumption from cases.HospitalUnit alone.",
+    "bootstrap_scope": "Never calculate stratified agreement or associate mortality/AKI with exposures.",
+    "mimic_height_correction": "Closest valid height linked to the same ICU stay, including charttime before ICU intime; inches converted to cm. Correction after missingness red flag, logged D007.",
+    "sicdb_weight": "Released WeightOnAdmission is grams; divide by 1000 to kg before BMI and mass/kg dosing. Corrected after preliminary results, D008.",
+    "sicdb_af": "Main diagnosis only; explicit AF I48.0/.1/.2 or unambiguous AF text. I48 and I48.9 represent AF/flutter ambiguity and are not confirmed AF.",
+    "mimic_care_scope": "Primary uses source icustays as provided, not proven pure ICU at every time. Post-result bounded transfers probe recorded D011; original main counts unchanged."
+  }
+}

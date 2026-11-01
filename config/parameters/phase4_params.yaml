@@ -1,0 +1,116 @@
+{
+  "recorded_at": "2026-10-29T22:36:03.523198+08:00",
+  "stage": "After source schema/dictionary inspection; before S3 site assignments or S4 new results",
+  "source_inputs": "Read-only phase1/_restricted/pairs_<db>.parquet; original source tables for catheter intervals; unchanged phase2 patient baseline",
+  "unchanged": [
+    "adult/index ICU cohort",
+    "cuff anchors",
+    "arterial median within plus/minus 5 minutes",
+    "treatment episodes",
+    "artifact/quality filters",
+    "original known NE-equivalent doses and five strata",
+    "all original results"
+  ],
+  "database_roles": {
+    "primary": [
+      "mimic",
+      "eicu"
+    ],
+    "site_availability": [
+      "mimic",
+      "eicu",
+      "amsterdam",
+      "sicdb"
+    ]
+  },
+  "bootstrap": {
+    "replicates": 2000,
+    "seed": 20261027,
+    "unit": "patient",
+    "interval": "percentile 95%",
+    "sorting": "sorted original patient identifier within database",
+    "weights": "whole patients sampled multinomial in batches of 50; all original paired patients in each database jointly resampled for subgroup estimates and differences",
+    "empty_denominators": "NA, retain counts",
+    "zero_all_events": "retain counts and mark boundary-degenerate intervals",
+    "small_denominator": "<30 or interval width >0.30 marked insufficient"
+  },
+  "S3": {
+    "candidate_sources": {
+      "mimic": "d_items label Arterial Line -> procedureevents itemid 225752, location, starttime/endtime; inspect chartevents labels and values separately; BP itemids 220052 and 225312 are mean pressure labels, not sites",
+      "amsterdam": "dictionary-labelled Arterielijn processitems with start/stop: Radialis 9159, Femoralis 9160, Brachialis 9186, Ulnaris 10619, Dorsalis Pedis 10620, Axillaris 13099; listitems ABP Plaats is a point record, not an interval",
+      "eicu": "Full nurseassessment/nursecharting/treatment dictionaries plus nursecare and careplangeneral source label census; pulse or reflex assessment is not catheter location",
+      "sicdb": "Complete d_references and data_range schema; investigate ArterialLine DataID 3045 Data payload, not blood-pressure field ID"
+    },
+    "assignment_time": "Original cuff-anchor t; same ICU stay/case; start <= t <= end, closed endpoints as requested",
+    "invalid_intervals": "Missing start/end or end<start cannot establish current site; do not extrapolate; interval records marked Rewritten excluded if this status is present",
+    "site_mapping": "Dictionary label plus observed anatomical location text; preserve laterality to detect distinct concurrent sites, collapse laterality for rate comparisons. Never infer location from ABP itemid, pulse examination, CVP, dialysis catheter, ECMO or IABP.",
+    "overlap": "Duplicate same anatomical site/laterality collapsed. Two different anatomical locations or opposite laterality at same moment -> mixed. Unresolved location plus a known active line -> unknown/ambiguous. No usable line -> unknown.",
+    "coverage": "Unique named anatomical site / all original pairs and patients with >=1 such pair / all original paired patients; mixed/unknown reported separately. Patient-level site categories can overlap across time.",
+    "dose_groups": [
+      "<=0.25",
+      ">0.25-1.0",
+      ">1.0"
+    ],
+    "overall_dose": "Includes unknown original dose; stratification uses known dose only; no recovery",
+    "endpoints": {
+      "missed": "P(cuff>=65 | arterial<65), overall and three dose groups",
+      "deep_missed": "P(cuff>=65 | arterial<55), overall and >1.0",
+      "cuff_perspective": "P(arterial<65 | cuff>=65), overall and >1.0, with layer arterial<65 prevalence",
+      "low_pressure_difference": "Arithmetic pair-weighted mean cuff minus arterial among arterial<55, overall; patient-cluster CI"
+    },
+    "femoral_sparse_rule": "If femoral has <1000 pairs OR <100 patients, report only overall estimates for that database, mark insufficient precision, and restrict manuscript inference to direction; no high-dose/site strata",
+    "other_sites_rule": "Report separately if >=1000 pairs AND >=100 patients; otherwise include distribution only",
+    "difference": "Femoral minus radial missed-hypotension probability overall; CI from joint patient-cluster replicates, accounting for patients observed at both sites",
+    "interpretation": "For adequately sized femoral data: difference >= -0.10 -> missed hypotension also occurs with femoral reference and radial under-reading alone is insufficient to explain it; difference < -0.10 -> report estimate and CI, put first in issues; preserve clinical main line pending Han. Sparse data always override definitive interpretation. No severity adjustment or causal attribution.",
+    "baseline": "Patients with any pair assigned to each compared site; overlapping patients identified; age, maximum original treatment-period NE-eq, hospital mortality from existing phase2 baseline; missingness shown; no tests or adjustment"
+  },
+  "S4": {
+    "difference_sign": "cuff MAP minus arterial reference MAP, mmHg",
+    "full_range": "Reuse existing phase1_secondary_bland_altman.csv random-intercept REML bias and limits of agreement for overall/all; no refit",
+    "grouping_axes": [
+      "arterial_MAP",
+      "mean_of_cuff_and_arterial_MAP"
+    ],
+    "edges": [
+      55,
+      65,
+      75,
+      85,
+      95
+    ],
+    "labels": [
+      "<55",
+      "55-64",
+      "65-74",
+      "75-84",
+      "85-94",
+      ">=95"
+    ],
+    "boundaries": "lower inclusive, upper exclusive; no rounding before grouping",
+    "per_group": "Arithmetic pair-weighted mean difference and patient-cluster bootstrap CI, pair/patient counts; explicit distinction from model-estimated repeated-measures BA bias retained in Supplementary Table 6",
+    "low_bins": [
+      "<55",
+      "55-64"
+    ],
+    "high_bins": [
+      "85-94",
+      ">=95"
+    ],
+    "interpretation": "Evaluate observed signs before inferential language. If both axes have positive low-bin and negative high-bin means, describe pressure-level-dependent direction. Report attenuation when grouping by the average; if arterial-defined low bias weakens, disappears or reverses with mean grouping, flag in issues and keep wording descriptive. If only arterial grouping reverses, do not attribute to device mechanism. CIs crossing zero qualify the observed direction. Full-range agreement with Jiang is asserted only if the observed full-range sign matches.",
+    "mean_grouping_caution": "Symmetric Bland-Altman grouping reduces dependence on the arterial reference alone; it does not prove absence of mathematical coupling or identify physiology."
+  },
+  "source_audit": {
+    "mimic": "30 anchors stratified by site/unknown/mixed, independent SQL from original procedures and BP chart events; counts only in public outputs",
+    "amsterdam": "up to30 anchors stratified by site/unknown/mixed; independently query original processitems CSV with duckdb, not the extracted interval file",
+    "other_databases": "Inspect all dictionary/schema candidates; if site unidentifiable, verify no usable anatomical interval instead of treating absent as radial",
+    "unchanged_variables": "Reuse previous source audits for unchanged pairing, dose and baseline; report scope explicitly"
+  },
+  "writing_constraints": {
+    "target": "Critical Care original research and English supplement",
+    "do_not_edit": "ICM letter, rev2 originals, original analyses/tables/figures",
+    "main_text_max_increase": 300,
+    "discussion_max_words": 726,
+    "conflicting_requested_discussion_target": "1100-1300 conflicts with no increase from rev2 726; prioritize hard no-increase limit and record in issues",
+    "claims": "Restore measurement-based confirmation-before-vasopressor-reduction implication as requested; do not label cuff>=80 universally safe or claim monitoring-strategy outcomes"
+  }
+}

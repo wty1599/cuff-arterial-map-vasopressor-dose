@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "Author metadata and archival DOI remain to be confirmed before publication. Cite the finalized archive when available."
+type: software
+title: "Same cuff, different meaning: vasopressor dose and arterial hypotension behind an acceptable cuff reading in four ICU databases: analysis code"
+authors:
+  - name: "AUTHOR TO CONFIRM"
+version: 0.1.0-draft
+license: MIT
+keywords:
+  - mean arterial pressure
+  - vasopressors
+  - intensive care
+  - measurement disagreement
+  - patient-cluster bootstrap
+abstract: >-
+  Analysis code and rounded disclosure-controlled aggregates for cuff and arterial
+  MAP comparisons in four ICU databases. Draft prepared for submission to Critical
+  Care. Related manuscript label requested by the authors: submitted to Critical
+  Care [AUTHOR TO CONFIRM; submission is not yet verified].
