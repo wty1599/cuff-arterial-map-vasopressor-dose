@@ -4,6 +4,8 @@ import argparse
 import os
 import subprocess
 import sys
+import json
+import tempfile
 
 REPO=Path(__file__).resolve().parents[1]
 
@@ -34,6 +36,13 @@ def main():
     if path.suffix.lower()=='.sql' and forwarded:parser.error('SQL options belong to the launcher; argument forwarding is for Python/R scripts')
     command+=forwarded
     if args.check:print('Prepared script boundary verified; no data read or analysis executed.');return
-    subprocess.run(command,cwd=work,check=True)
+    logdir=work/'restricted/agent_run_logs'
+    logdir.mkdir(parents=True,exist_ok=True)
+    with tempfile.NamedTemporaryFile(mode='wb',prefix=path.stem+'_',suffix='.log',dir=logdir,delete=False) as handle:
+        logfile=Path(handle.name)
+        result=subprocess.run(command,cwd=work,stdout=handle,stderr=subprocess.STDOUT,check=False)
+    with logfile.open('rb') as handle:lines=sum(1 for _ in handle)
+    print(json.dumps({'status':'completed' if result.returncode==0 else 'failed','diagnostic_log':str(logfile),'log_lines':lines,'clinical_rows_returned':False}))
+    if result.returncode:raise SystemExit(result.returncode)
 
 if __name__=='__main__':main()

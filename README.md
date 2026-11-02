@@ -102,3 +102,11 @@ The verified aggregate environment uses Python 3.12, NumPy 2.3.5 and Matplotlib 
 ## Citation and archive
 
 `CITATION.cff` and `.zenodo.json` are drafts with author placeholders. Confirm authors and submission status before archival publication. Follow [the Zenodo checklist](docs/zenodo_checklist.md); changing visibility, connecting Zenodo and publishing a release remain author actions.
+
+## Data-use checks before transfer
+
+Read `DATA_USE_RULES.md` and install the local pre-commit and pre-push hooks with `python tools/install_data_use_hooks.py`. The hooks and `tools/package_with_gate.py` block transfer when the current payload fails `tools/small_cell_gate.py`. Run `python tools/test_small_cell_gate.py` for synthetic boundary tests; XLSX and Parquet checks require openpyxl and pyarrow and fail closed if a reader is unavailable.
+
+The withdrawn unsuppressed S6 density export is not distributed. The replacement exporter retains the original grid but releases only bins with at least 10 pairs and at least 10 distinct patients. Full-data bias and limits of agreement are unchanged. Single-patient contribution and deletion outputs are not returned by diagnostic stdout or included in delivery payloads. The private launcher redirects complete stdout and stderr to an external workspace's `restricted/agent_run_logs/` and returns only a status and log location.
+
+JSON schema-clock parameter strings are source field definitions, not patient timestamps. A passing data-format check does not replace review of Word, PDF or image contents; these require the documented figure-source and document checks. Do not bypass hooks or rename fields to avoid a failure.

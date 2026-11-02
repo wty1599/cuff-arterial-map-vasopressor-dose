@@ -42,10 +42,33 @@ LABELS = ['<=0.1', '>0.1-0.25', '>0.25-0.5', '>0.5-1.0', '>1.0']
 checks = []
 
 def write_csv(path, rows):
-    with path.open('w', encoding='utf-8-sig', newline='') as f:
-        writer = csv.DictWriter(f, fieldnames=list(rows[0]))
+    # R1/R2: single-patient contribution and deletion details never leave
+    # the restricted workspace. All other tabular exports pass the gate.
+    from pathlib import Path
+    import io, importlib.util
+    path = Path(path)
+    rows = list(rows)
+    if path.name == 'SICdb_patient_contribution_shares.csv':
+        rows = [r for r in rows if int(r.get('top_patients', 0)) >= 10]
+    elif path.name == 'SICdb_high_contributor_exclusion.csv':
+        path = DETAIL / path.name
+    stream = io.StringIO(newline='')
+    if rows:
+        writer = csv.DictWriter(stream, fieldnames=list(rows[0]))
         writer.writeheader()
         writer.writerows(rows)
+    payload = stream.getvalue().encode('utf-8-sig')
+    gate_path = next((parent / 'tools/small_cell_gate.py' for parent in Path(__file__).resolve().parents if (parent / 'tools/small_cell_gate.py').is_file()), ROOT / 'tools/small_cell_gate.py')
+    if not gate_path.is_file():
+        raise RuntimeError('data_gate_required')
+    spec = importlib.util.spec_from_file_location('diagnostic_data_gate', gate_path)
+    gate = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(gate)
+    hits, _ = gate.scan_bytes(payload, str(path))
+    if hits:
+        path = DETAIL / 'blocked_exports' / path.name
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_bytes(payload)
 
 def record(item, observed, expected, scope='aggregate_reproduction', atol=1e-12):
     if isinstance(observed, (str, bool)) or isinstance(expected, (str, bool)):
@@ -247,7 +270,8 @@ timeline_path=OUT/'diagnostics/SICdb_bootstrap_decision_timeline.json'
 timeline=json.loads(timeline_path.read_text(encoding='utf-8')) if timeline_path.exists() else []
 timeline.append({'recorded_at_utc':receipt['completed_at_utc'],'stage':'after diagnostic results','decision':'Production percentiles and logit SD verified; BCa and influence diagnostics retained separately without modifying manuscript results.','context':f"{len(checks)} checks, {len(failed)} discrepancies; author flags recorded in summary.",'numbering':'Root to assign D142 onward'})
 (OUT/'diagnostics/SICdb_bootstrap_decision_timeline.json').write_text(json.dumps(timeline,ensure_ascii=False,indent=2),encoding='utf-8')
-print(json.dumps({'checks':len(checks),'failed':len(failed),'outputs':'private workspace only'}))
+print(json.dumps({'status': 'completed', 'restricted_directory': str(DETAIL), 'check_rows': len(checks), 'patient_level_stdout': False}))
 if failed:
-    print(json.dumps({'discrepancies':failed},ensure_ascii=False))
+    write_csv(DETAIL / 'failed_checks.csv', failed)
+    print(json.dumps({'failed_count': len(failed), 'restricted_directory': str(DETAIL), 'clinical_values_returned': False}))
     raise RuntimeError('Aggregate diagnostic checks failed; inspect aggregate audit output.')

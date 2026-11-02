@@ -40,6 +40,9 @@ def save(fig,name,caption):
  plt.close(fig);(OUT/f'{name}_caption.txt').write_text(caption+'\n',encoding='utf-8')
 
 ba=load('phase1_secondary_bland_altman.csv');density=load('phase1_bland_altman_density.csv')
+if 'n_patients' not in density.columns:
+    raise RuntimeError('Regenerate S6 with patient-aware suppression before plotting')
+density = density.loc[(density.n_pairs >= 10) & (density.n_patients >= 10)].copy()
 fig,axes=plt.subplots(2,2,figsize=(7.2,6.0),sharex=True,sharey=True)
 fig.subplots_adjust(left=.09,right=.96,top=.91,bottom=.13,wspace=.30,hspace=.34)
 for i,(ax,db) in enumerate(zip(axes.flat,NAMES)):
@@ -71,7 +74,7 @@ for ax in axes[:,0]:ax.set_ylabel('Cuff − arterial reference MAP (mmHg)',fonts
 for ax in axes[1,:]:ax.set_xlabel('Mean of cuff and arterial reference MAP (mmHg)',fontsize=6.8)
 fig.text(.09,.97,'Repeated-measures Bland–Altman analysis',fontsize=9,fontweight='bold')
 fig.text(.09,.035,'Solid line: bias. Dashed lines: 95% limits of agreement. Density cells contain ≥5 pairs.',fontsize=6.5)
-save(fig,'FigureS1_bland_altman','Supplementary Figure 1. Repeated-measures Bland–Altman analysis. The horizontal solid line is the estimated cuff-minus-arterial-reference MAP bias; dashed lines are 95% population limits of agreement from a REML patient random-intercept model, calculated as bias ±1.96 × the square root of the sum of patient and residual variances. Limits of agreement describe the distribution of differences and are not confidence intervals. Colour indicates counts in 2-mmHg density bins; bins with fewer than five pairs are not displayed. Displayed axes crop the density to improve readability, while all eligible pairs contribute to the estimates. The colour scale is logarithmic and database-specific.')
+save(fig,'FigureS1_bland_altman','Supplementary Figure 1. Repeated-measures Bland–Altman analysis. The horizontal solid line is the estimated cuff-minus-arterial-reference MAP bias; dashed lines are 95% population limits of agreement from a REML patient random-intercept model, calculated as bias ±1.96 × the square root of the sum of patient and residual variances. Limits of agreement describe the distribution of differences and are not confidence intervals. Colour indicates counts in 2-mmHg density bins; bins with fewer than 10 pairs or fewer than 10 distinct patients are not displayed. Displayed axes crop the density to improve readability, while all eligible pairs contribute to the estimates. The colour scale is logarithmic and database-specific.')
 
 curve=load('phase1_secondary_model_curve.csv');points=load('phase1_secondary_model_predictions.csv')
 z=curve[curve.nee.le(2.5)]

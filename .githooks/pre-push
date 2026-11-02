@@ -1,0 +1,4 @@
+#!/bin/sh
+set -eu
+cd "$(git rev-parse --show-toplevel)"
+python tools/small_cell_gate.py --pre-push --repo . --report "$(git rev-parse --git-path small_cell_gate/pre_push.json)"

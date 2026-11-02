@@ -101,8 +101,18 @@ def main():
         # All displayed BA points represent aggregated cells, never individual observations.
         mean=(d.cuff_map+d.art_map)/2;delta=d.cuff_map-d.art_map
         hist,xe,ye=np.histogram2d(mean,delta,bins=[np.arange(20,202,2),np.arange(-180,182,2)])
-        for i,j in zip(*np.where(hist>0)):
-            dens.append(dict(database=db,mean_map=(xe[i]+xe[i+1])/2,difference=(ye[j]+ye[j+1])/2,n_pairs=int(hist[i,j])))
+        # R1 disclosure layer: preserve the original 2-mmHg grid, but only
+        # export coordinates/counts for bins with >=10 pairs AND >=10 patients.
+        # Bias and limits of agreement still use the complete eligible dataset.
+        _density_x = np.searchsorted(xe, mean, side='right') - 1
+        _density_y = np.searchsorted(ye, delta, side='right') - 1
+        _density_x[mean == xe[-1]] = len(xe) - 2
+        _density_y[delta == ye[-1]] = len(ye) - 2
+        _density_coverage = pd.DataFrame({'ix': _density_x, 'iy': _density_y, 'patient': d.patient.to_numpy()})
+        _density_patient_counts = _density_coverage.groupby(['ix', 'iy']).patient.nunique().to_dict()
+        for i, j in zip(*np.where(hist > 0)):
+            if hist[i, j] >= 10 and _density_patient_counts.get((i, j), 0) >= 10:
+                dens.append(dict(database=db, mean_map=(xe[i] + xe[i + 1]) / 2, difference=(ye[j] + ye[j + 1]) / 2, n_pairs=int(hist[i, j]), n_patients=int(_density_patient_counts.get((i, j), 0))))
         if db in P['model_databases']:
             m=d[d.art_map<65][['patient','cid','database','nee','art_map','age','sex','bmi40','af_model','cuff_map']].copy();m['missed']=(m.cuff_map>=65).astype(int);model.append(m)
         print(json.dumps({'database':db,'rates_and_bland_altman':'complete'}),flush=True)

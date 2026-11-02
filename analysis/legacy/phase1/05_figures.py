@@ -55,6 +55,9 @@ fig.supxlabel('MIMIC-IV + eICU · patient random intercept · marginal standardi
 finish(fig,'phase1_dose_curve','Association model in complete-case low-arterial-MAP pairs from MIMIC-IV and eICU. Three-knot restricted cubic spline, adjusted for arterial MAP, age, sex, BMI >40, AF ascertainment, and database; patient random intercept. Marginal standardization integrates the fitted normal random intercept. Delta-method CIs use fixed-effect covariance with random-effect variance treated as plug-in. This figure displays doses 0-2.5; the full evaluated curve to the observed maximum is in the source CSV. It does not estimate the effect or safety of monitoring strategies.','phase1_secondary_model_curve.csv;phase1_secondary_model_predictions.csv')
 
 ba=pd.read_csv(OUT/'phase1_secondary_bland_altman.csv');den=pd.read_csv(OUT/'phase1_bland_altman_density.csv')
+if 'n_patients' not in den.columns:
+    raise RuntimeError('Regenerate S6 with patient-aware suppression before plotting')
+den = den.loc[(den.n_pairs >= 10) & (den.n_patients >= 10)].copy()
 fig,axs=plt.subplots(2,2,figsize=(9,7.2),sharex=True,sharey=True,layout='constrained')
 for ax,db in zip(axs.flat,DBS):
     z=den[den.database.eq(db)&den.n_pairs.ge(5)];xb=np.arange(20,202,2);yb=np.arange(-180,182,2);h=np.full((90,180),np.nan)
@@ -71,6 +74,6 @@ for ax in axs[1,:]:ax.set_xlabel('Mean of cuff and arterial MAP (mmHg)')
 for ax in axs[:,0]:ax.set_ylabel('Cuff − arterial MAP (mmHg)')
 fig.suptitle('Repeated-measures Bland–Altman analysis',x=.02,ha='left',fontweight='bold',fontsize=12)
 fig.supxlabel('REML patient random-intercept LoA; density bins contain ≥5 pairs.\nDisplay limits crop the density only; all eligible pairs contribute to estimation. Mapping review pending.',fontsize=8)
-finish(fig,'phase1_bland_altman','Supplementary repeated-measures Bland-Altman display. Bias and 95% population limits of agreement derive from a REML patient random-intercept model, bias +/-1.96*sqrt(patient variance + residual variance). The density display uses 2-mmHg bins and shows only bins containing at least five pairs. Axis cropping does not exclude pairs from estimation. Limits of agreement are not confidence intervals. MAP- and dose-stratified results appear in the accompanying CSV.','phase1_secondary_bland_altman.csv;phase1_bland_altman_density.csv')
+finish(fig,'phase1_bland_altman','Supplementary repeated-measures Bland-Altman display. Bias and 95% population limits of agreement derive from a REML patient random-intercept model, bias +/-1.96*sqrt(patient variance + residual variance). The density display uses 2-mmHg bins and shows only bins containing at least 10 pairs from at least 10 distinct patients. Axis cropping does not exclude pairs from estimation. Limits of agreement are not confidence intervals. MAP- and dose-stratified results appear in the accompanying CSV.','phase1_secondary_bland_altman.csv;phase1_bland_altman_density.csv')
 save(pd.DataFrame(export),'phase1_figure_sources.csv')
 print('FIGURES_COMPLETE',flush=True)

@@ -64,7 +64,6 @@ S5_resampling_design.csv,no,"Count/identifier/audit/metadata output, duplicate, 
 S5_standardized_missed_hypotension.csv,yes,Rounded rate/CI rows with verified patient denominator; counts withheld
 S5_standardized_spans.csv,no,"Count/identifier/audit/metadata output, duplicate, or no sufficient patient-denominator evidence for this release"
 S6_bland_altman.csv,no,"Count/identifier/audit/metadata output, duplicate, or no sufficient patient-denominator evidence for this release"
-S6_bland_altman_density.csv,no,"Count/identifier/audit/metadata output, duplicate, or no sufficient patient-denominator evidence for this release"
 S7_complete_case_flow.csv,no,"Count/identifier/audit/metadata output, duplicate, or no sufficient patient-denominator evidence for this release"
 S7_convergence.csv,no,"Count/identifier/audit/metadata output, duplicate, or no sufficient patient-denominator evidence for this release"
 S7_dose_association_coefficients.csv,no,"Count/identifier/audit/metadata output, duplicate, or no sufficient patient-denominator evidence for this release"
