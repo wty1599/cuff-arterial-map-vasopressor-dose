@@ -4,6 +4,8 @@ Research code and disclosure-controlled aggregate results for a retrospective pa
 
 **Manuscript status:** draft prepared for submission to *Critical Care*. Submission has not been confirmed. The requested related-manuscript label “submitted to Critical Care” remains an author-confirmation placeholder in the archival metadata. This repository is prepared as a private review repository; no public release or archival DOI has been issued.
 
+The v5 supplementary display uses database-specific disclosure grids. See [v5 display preparation](docs/brief_report_v5.md) for the current figure export code and retained S6 layer. This update preserves the primary analyses and private review status.
+
 The clinical question is how often a cuff reading at or above the treatment threshold accompanies arterial reference hypotension in patients receiving vasopressors with both measurements available. The study does not establish the effect of a cuff-first monitoring strategy or transportability to patients monitored only by cuff.
 
 ## Reproduce the two Brief Report tables and Figure 1

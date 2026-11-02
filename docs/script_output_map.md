@@ -132,3 +132,10 @@ requirements and non-executable DuckDB query companions. Their historical
 sampling and statistical rules remain intact. Source-review records and
 patient-specific outputs are not included; none of these checks was rerun as
 part of the repository-completeness update.
+# Brief Report v5 display additions
+
+| Script | Inputs | Outputs and scope |
+|---|---|---|
+| `analysis/v5/regenerate_s6.py` | Approved local pair Parquet files and existing full-data reference lines | Dual-threshold retained density bins, whole-database range coverage and Supplementary Figure 1; no estimate refit |
+| `analysis/v5/export_figure1.py` | Existing repository display-precision summaries | Four-panel Figure 1 at 170 mm and 600 dpi; no model fitting |
+

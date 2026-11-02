@@ -1,0 +1,5 @@
+database,grid_width_mmHg,coverage_fraction,central95_lower_mmHg,central95_upper_mmHg,qualifies,display_mode,final_grid_width_mmHg
+MIMIC-IV,2,1.0,-30.0,24.0,True,density,2
+eICU,2,1.0,-30.0,25.5,True,density,2
+AmsterdamUMCdb,10,1.0,-42.0,40.15000000000009,True,density,10
+SICdb,10,0.9649125268255041,-25.000003814697266,31.99998559951782,True,density,10
