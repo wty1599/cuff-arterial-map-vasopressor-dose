@@ -24,7 +24,7 @@
       "affiliation": "Department of Anaesthesiology, The First Affiliated Hospital of Soochow University, Suzhou, Jiangsu, China; Intensive Care Unit Division, The First Affiliated Hospital of Soochow University, Suzhou, Jiangsu, China"
     }
   ],
-  "license": "MIT",
+  "license": "mit",
   "keywords": [
     "mean arterial pressure",
     "vasopressors",
@@ -32,5 +32,6 @@
     "measurement disagreement",
     "patient-cluster bootstrap"
   ],
-  "version": "1.0.0"
+  "version": "1.0.0",
+  "access_right": "open"
 }
