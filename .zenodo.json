@@ -1,10 +1,27 @@
 {
   "title": "Same cuff, different meaning: vasopressor dose and arterial hypotension behind an acceptable cuff reading in four ICU databases: analysis code",
   "upload_type": "software",
-  "description": "Draft metadata. The manuscript is prepared for submission to Critical Care. Related manuscript: submitted to Critical Care [AUTHOR TO CONFIRM; submission has not been verified]. No DOI has been issued.",
+  "description": "Analysis code and disclosure-controlled aggregate results accompanying the manuscript \"Same cuff, different meaning: vasopressor dose and arterial hypotension behind an acceptable cuff reading in four ICU databases\". The repository includes extraction and analysis templates for MIMIC-IV, eICU, AmsterdamUMCdb and SICdb, aggregate-reproduction scripts, and figure code. Source patient records, paired observations, identifiers, bootstrap replicates and restricted source-audit evidence are not included. Reproduction of source-data analyses requires separately approved database access. Original software is licensed under MIT; this license does not grant access to the clinical databases or license their records. See README.md and docs/aggregate_release_policy.md for the verified reproduction scope and aggregate disclosure rules.",
   "creators": [
     {
-      "name": "AUTHOR TO CONFIRM"
+      "name": "Wang, Tianyi",
+      "affiliation": "Department of Anaesthesiology, The First Affiliated Hospital of Soochow University, Suzhou, Jiangsu, China"
+    },
+    {
+      "name": "Zhang, Yukun",
+      "affiliation": "Intensive Care Unit Division, The First Affiliated Hospital of Soochow University, Suzhou, Jiangsu, China"
+    },
+    {
+      "name": "Fan, Chunlei",
+      "affiliation": "Intensive Care Unit Division, The First Affiliated Hospital of Soochow University, Suzhou, Jiangsu, China"
+    },
+    {
+      "name": "Zang, Shouhua",
+      "affiliation": "Intensive Care Unit Division, The First Affiliated Hospital of Soochow University, Suzhou, Jiangsu, China"
+    },
+    {
+      "name": "Chen, Jun",
+      "affiliation": "Department of Anaesthesiology, The First Affiliated Hospital of Soochow University, Suzhou, Jiangsu, China; Intensive Care Unit Division, The First Affiliated Hospital of Soochow University, Suzhou, Jiangsu, China"
     }
   ],
   "license": "MIT",
@@ -15,5 +32,5 @@
     "measurement disagreement",
     "patient-cluster bootstrap"
   ],
-  "version": "0.1.0-draft"
+  "version": "1.0.0"
 }

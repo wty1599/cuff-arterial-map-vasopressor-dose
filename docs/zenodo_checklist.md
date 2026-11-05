@@ -1,12 +1,14 @@
-# Author actions for Zenodo
+# Versioned code archive
 
-No release, public visibility change, Zenodo connection, deposition or DOI modification is performed by this package.
+The authors authorized public repository visibility and a DOI archive on 6 November 2026. Version 1.0.0 uses the manuscript author order and affiliations. The existing MIT license covers original software and documentation; source databases remain subject to their own access terms.
 
-1. Confirm the final manuscript status and replace author placeholders in `CITATION.cff` and `.zenodo.json`. The phrase “submitted to Critical Care” is a requested label awaiting confirmation, not an established fact.
-2. Review the applicable signed database agreements, the disclosure policy and the final manuscript together. Confirm the final repository contains only approved code and aggregates.
-3. **Hard deadline: complete public visibility and the versioned code release in steps 3–5 by manuscript acceptance, before formal publication.** Make this main GitHub repository public. Include the full study analysis code across all four databases, as required by the investigator's applicable AmsterdamUMCdb EULA. Preserve the verified AmsterdamUMCdb v1.0.2 data-release label. Review the visibility confirmation carefully.
-4. Sign in to Zenodo, connect the intended GitHub account, and enable archival capture for this repository. Check the imported title, authors, keywords, related manuscript and code-only MIT scope.
-5. Create and publish the `v1.0.0` GitHub release by the deadline in step 3, after enabling Zenodo capture. Check the resulting Zenodo record, version DOI and concept DOI. Do not treat a draft or reserved DOI as a published archive.
-6. Add the verified code DOI and repository URL to the manuscript placeholders and final citation metadata. Check both manuscript versions and supplementary documentation for consistency.
+For this and subsequent versions:
+
+1. Review the tracked release tree and the history exposed by repository visibility. Exclude patient records, paired observations, source-audit evidence and withdrawn aggregate exports.
+2. Run the current small-cell gate against the exact release payload. Preserve complementary-cell suppression and the patient-denominator requirements.
+3. Pin the commit and tag. Verify author metadata, version, software type and license before publishing the archive.
+4. Archive the approved release on Zenodo, through its GitHub integration or a verified upload of the tagged source snapshot. Do not include manuscript submission packages.
+5. Verify the public record, downloadable archive, version DOI and concept DOI. A draft or reserved DOI is not a completed published archive.
+6. Update the citation metadata and README with the verified DOI and keep a local receipt with archive hashes.
 
 Reference: [Zenodo GitHub integration guidance](https://help.zenodo.org/docs/github/).

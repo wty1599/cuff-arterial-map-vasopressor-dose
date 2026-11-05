@@ -2,9 +2,9 @@
 
 Research code and disclosure-controlled aggregate results for a retrospective paired-measurement study in MIMIC-IV, eICU, AmsterdamUMCdb and SICdb.
 
-**Manuscript status:** draft prepared for submission to *Critical Care*. Submission has not been confirmed. The requested related-manuscript label “submitted to Critical Care” remains an author-confirmation placeholder in the archival metadata. This repository is prepared as a private review repository; no public release or archival DOI has been issued.
+**Software release:** v1.0.0. This repository contains the research code and approved disclosure-controlled aggregates accompanying the manuscript named above. Manuscript submission, acceptance and publication status are separate from this software release.
 
-The v5 supplementary display uses database-specific disclosure grids. See [v5 display preparation](docs/brief_report_v5.md) for the current figure export code and retained S6 layer. This update preserves the primary analyses and private review status.
+The v5 supplementary display uses database-specific disclosure grids. See [v5 display preparation](docs/brief_report_v5.md) for the current figure export code and retained S6 layer. The public release preserves the primary analytical definitions and the aggregate disclosure rules.
 
 The clinical question is how often a cuff reading at or above the treatment threshold accompanies arterial reference hypotension in patients receiving vasopressors with both measurements available. The study does not establish the effect of a cuff-first monitoring strategy or transportability to patients monitored only by cuff.
 
@@ -52,7 +52,7 @@ This study uses **AmsterdamUMCdb v1.0.2 (legacy CSV release)**, with the origina
 
 Database citation: Thoral PJ, Peppink JM, Driessen RH, et al. Sharing ICU Patient Data Responsibly Under the Society of Critical Care Medicine/European Society of Intensive Care Medicine Joint Data Science Collaboration: The Amsterdam University Medical Centers Database (AmsterdamUMCdb) Example. *Crit Care Med.* 2021;49:e563–e577. [doi:10.1097/CCM.0000000000004916](https://doi.org/10.1097/CCM.0000000000004916).
 
-Code is shared in accordance with the AmsterdamUMCdb End User License. The investigator supplied the applicable requirement to deposit all code behind publications in a public repository no later than publication. This main repository is the release location for the complete study code across all four databases. It remains private during submission; the author checklist requires public visibility and a versioned release **by manuscript acceptance, before formal publication**. Source records remain subject to the database agreement, and aggregate results follow the disclosure policy above.
+Code is shared in accordance with the AmsterdamUMCdb End User License. The investigator supplied the applicable requirement to deposit all code behind publications in a public repository no later than publication. This main repository is the release location for the complete study code across all four databases. The authors authorized public release of this repository on 6 November 2026. Source records remain subject to the database agreement, and aggregate results follow the disclosure policy above.
 
 ## Run the full analysis with approved data access
 
@@ -103,7 +103,7 @@ The verified aggregate environment uses Python 3.12, NumPy 2.3.5 and Matplotlib 
 
 ## Citation and archive
 
-`CITATION.cff` and `.zenodo.json` are drafts with author placeholders. Confirm authors and submission status before archival publication. Follow [the Zenodo checklist](docs/zenodo_checklist.md); changing visibility, connecting Zenodo and publishing a release remain author actions.
+`CITATION.cff` and `.zenodo.json` provide the software title, manuscript-aligned author list, affiliations, version and license. The versioned GitHub release is the archival source. See [the archive checklist](docs/zenodo_checklist.md) for the publication and verification steps. A reserved DOI is not described as a published archive until the record and its files are publicly accessible.
 
 ## Data-use checks before transfer
 
